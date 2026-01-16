@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Profile: Kate Patterson | Central Wyoming College</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Brand Colors from Specifications */
+            --cwc-orange: #F36821;    /* Pantone Orange 021 U */
+            --cwc-teal: #2A5766;      /* Pantone 3165 U */
+            --cwc-gray: #585958;      /* Pantone 419 U */
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif; /* Lato Regular for body text */
+            color: var(--cwc-gray);
+            line-height: 1.5;
+            margin: 0;
+            padding: 0;
+            background-color: #fefefe;
+        }
+
+        header {
+            border-top: 8px solid var(--cwc-orange);
+            background-color: var(--white);
+            padding: 20px 5%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+        }
+
+        /* Branding following text lock-up styles */
+        .brand-text {
+            line-height: 1;
+            text-transform: uppercase;
+        }
+        .brand-bold { font-weight: 900; color: var(--cwc-teal); font-size: 1.4rem; }
+        .brand-reg { font-weight: 400; color: var(--cwc-gray); font-size: 1.4rem; }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 40px;
+            padding: 0 20px;
+        }
+
+        /* Profile Image styling */
+        .profile-card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 4px solid var(--cwc-teal);
+            border-radius: 2px;
+        }
+
+        .contact-box {
+            background-color: #f4f4f4;
+            padding: 15px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Headings using Lato Black for emphasis */
+        h1, h2, h3 { 
+            font-weight: 900; 
+            color: var(--cwc-teal); 
+            text-transform: uppercase; 
+            margin-top: 0;
+        }
+
+        h1 { font-size: 2.2rem; margin-bottom: 5px; color: var(--cwc-teal); }
+        .sub-title { 
+            color: var(--cwc-orange); 
+            font-weight: 900; 
+            font-size: 1.1rem; 
+            margin-bottom: 25px; 
+        }
+
+        h2 { 
+            font-size: 1.2rem; 
+            border-bottom: 2px solid #ddd; 
+            padding-bottom: 5px; 
+            margin-top: 25px;
+        }
+
+        .hours-list { list-style: none; padding: 0; font-size: 0.95rem; }
+        .hours-list li { margin-bottom: 5px; }
+
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            background-color: var(--cwc-teal);
+            color: var(--white);
+            text-align: center;
+            font-size: 0.8rem;
+        }
+
+        a { color: var(--cwc-teal); text-decoration: none; font-weight: bold; }
+        a:hover { color: var(--cwc-orange); }
+
+        @media (max-width: 700px) {
+            .container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="brand-text">
+        <span class="brand-bold">Central Wyoming</span><br>
+        <span class="brand-reg">College</span>
+    </div>
+</header>
+
+<div class="container">
+    <div class="profile-card">
+        <img src="KatePatterson_3626.jpg" alt="Kate Patterson">
+        
+        <div class="contact-box">
+            <h3>Contact Info</h3>
+            <p><strong>Office:</strong> Main Hall 155</p>
+            <p><strong>Email:</strong> <a href="mailto:kate@cwc.edu">kate@cwc.edu</a></p>
+            <p><strong>Phone:</strong> (307) 855-2059</p>
+        </div>
+
+        <h2>Office Hours</h2>
+        <ul class="hours-list">
+            <li><strong>Mon/Wed:</strong> 10:00 AM – 12:00 PM</li>
+            <li><strong>Tue/Thu:</strong> 1:00 PM – 2:30 PM</li>
+            <li><em>Friday by appointment</em></li>
+        </ul>
+    </div>
+
+    <main>
+        <h1>Kate Patterson</h1>
+        <div class="sub-title">Associate Professor, Mathematics</div>
+
+        <section>
+            <h2>Biography</h2>
+            <p>
+                A native of Lander, Wyoming, Kate Patterson joined Central Wyoming College in 2014. Before returning home, 
+                she spent three years as a research fellow at the University of Auckland in New Zealand. 
+            </p>
+            <p>
+                Kate earned her Ph.D. in Mathematics from Montana State University-Bozeman and her B.S. from the University of Wyoming. 
+                She is dedicated to fostering "shared curiosity" in her classrooms, empowering students to explore the deep beauty 
+                of mathematical structures.
