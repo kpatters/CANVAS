@@ -4,148 +4,197 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faculty Profile: Kate Patterson | Central Wyoming College</title>
+    <!-- Lato font is mandatory per brand guidelines -->
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,900;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
-            /* Brand Colors from Specifications */
+            /* CWC Official Color Specifications */
             --cwc-orange: #F36821;    /* Pantone Orange 021 U */
             --cwc-teal: #2A5766;      /* Pantone 3165 U */
             --cwc-gray: #585958;      /* Pantone 419 U */
             --white: #ffffff;
+            --light-bg: #f8f9f9;
         }
 
         body {
-            font-family: 'Lato', sans-serif; /* Lato Regular for body text */
+            font-family: 'Lato', sans-serif;
             color: var(--cwc-gray);
-            line-height: 1.5;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #fefefe;
+            background-color: var(--light-bg);
         }
 
+        /* Header following brand lock-up guidelines */
         header {
-            border-top: 8px solid var(--cwc-orange);
             background-color: var(--white);
-            padding: 20px 5%;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            border-top: 6px solid var(--cwc-orange);
+            padding: 25px 10%;
             display: flex;
             align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
-        /* Branding following text lock-up styles */
-        .brand-text {
-            line-height: 1;
+        .brand-lockup {
             text-transform: uppercase;
+            line-height: 1.1;
         }
-        .brand-bold { font-weight: 900; color: var(--cwc-teal); font-size: 1.4rem; }
+
+        .brand-bold { font-weight: 900; color: var(--cwc-teal); font-size: 1.4rem; display: block; }
         .brand-reg { font-weight: 400; color: var(--cwc-gray); font-size: 1.4rem; }
 
         .container {
-            max-width: 900px;
-            margin: 30px auto;
-            display: grid;
-            grid-template-columns: 280px 1fr;
-            gap: 40px;
+            max-width: 1000px;
+            margin: 40px auto;
             padding: 0 20px;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 50px;
         }
 
-        /* Profile Image styling */
-        .profile-card img {
+        /* Sidebar & Image */
+        .sidebar img {
             width: 100%;
             height: auto;
-            border-bottom: 4px solid var(--cwc-teal);
+            border-bottom: 5px solid var(--cwc-teal);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .contact-card {
+            background-color: var(--white);
+            padding: 20px;
+            margin-top: 25px;
+            border-left: 4px solid var(--cwc-orange);
+        }
+
+        /* Headlines using Lato Black */
+        h1, h2, h3 { 
+            font-weight: 900; 
+            text-transform: uppercase; 
+            margin-top: 0;
+            color: var(--cwc-teal);
+        }
+
+        h1 { font-size: 2.4rem; margin-bottom: 5px; }
+        .professor-title { 
+            color: var(--cwc-orange); 
+            font-weight: 900; 
+            font-size: 1.2rem; 
+            margin-bottom: 30px; 
+        }
+
+        h2 { font-size: 1.3rem; border-bottom: 2px solid #e1e1e1; padding-bottom: 8px; margin-top: 30px; }
+
+        /* Office Hours Styling */
+        .schedule-box {
+            background-color: #f1f4f5;
+            padding: 20px;
             border-radius: 2px;
         }
 
-        .contact-box {
-            background-color: #f4f4f4;
-            padding: 15px;
-            margin-top: 20px;
-            font-size: 0.9rem;
+        .schedule-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
 
-        /* Headings using Lato Black for emphasis */
-        h1, h2, h3 { 
-            font-weight: 900; 
-            color: var(--cwc-teal); 
-            text-transform: uppercase; 
-            margin-top: 0;
+        .schedule-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
         }
 
-        h1 { font-size: 2.2rem; margin-bottom: 5px; color: var(--cwc-teal); }
-        .sub-title { 
-            color: var(--cwc-orange); 
-            font-weight: 900; 
-            font-size: 1.1rem; 
-            margin-bottom: 25px; 
-        }
-
-        h2 { 
-            font-size: 1.2rem; 
-            border-bottom: 2px solid #ddd; 
-            padding-bottom: 5px; 
-            margin-top: 25px;
-        }
-
-        .hours-list { list-style: none; padding: 0; font-size: 0.95rem; }
-        .hours-list li { margin-bottom: 5px; }
+        .schedule-list li:last-child { border-bottom: none; }
+        .label { font-weight: 900; color: var(--cwc-teal); }
+        .tutor-highlight { color: var(--cwc-orange); font-weight: 900; text-decoration: underline; }
+        .tutor-highlight:hover { color: var(--cwc-teal); }
 
         footer {
-            margin-top: 50px;
-            padding: 20px;
+            margin-top: 60px;
+            padding: 30px;
             background-color: var(--cwc-teal);
             color: var(--white);
             text-align: center;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
         }
 
-        a { color: var(--cwc-teal); text-decoration: none; font-weight: bold; }
+        a { color: var(--cwc-teal); text-decoration: none; font-weight: 900; }
         a:hover { color: var(--cwc-orange); }
 
-        @media (max-width: 700px) {
+        @media (max-width: 800px) {
             .container { grid-template-columns: 1fr; }
+            .sidebar { max-width: 400px; margin: 0 auto; }
         }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="brand-text">
-        <span class="brand-bold">Central Wyoming</span><br>
+    <div class="brand-lockup">
+        <span class="brand-bold">Central Wyoming</span>
         <span class="brand-reg">College</span>
     </div>
 </header>
 
 <div class="container">
-    <div class="profile-card">
-        <img src="KatePatterson_3626.jpg" alt="Kate Patterson">
+    <!-- Visuals and Logistics -->
+    <aside class="sidebar">
+        <img src="KatePatterson_3626.jpg" alt="Kate Patterson, Associate Professor of Mathematics">
         
-        <div class="contact-box">
-            <h3>Contact Info</h3>
+        <div class="contact-card">
+            <h3>Contact Information</h3>
             <p><strong>Office:</strong> Main Hall 155</p>
             <p><strong>Email:</strong> <a href="mailto:kate@cwc.edu">kate@cwc.edu</a></p>
             <p><strong>Phone:</strong> (307) 855-2059</p>
         </div>
+    </aside>
 
-        <h2>Office Hours</h2>
-        <ul class="hours-list">
-            <li><strong>Mon/Wed:</strong> 10:00 AM – 12:00 PM</li>
-            <li><strong>Tue/Thu:</strong> 1:00 PM – 2:30 PM</li>
-            <li><em>Friday by appointment</em></li>
-        </ul>
-    </div>
-
+    <!-- Content and Schedule -->
     <main>
         <h1>Kate Patterson</h1>
-        <div class="sub-title">Associate Professor, Mathematics</div>
+        <div class="professor-title">Associate Professor, Mathematics</div>
+
+        <section>
+            <h2>Office Hours</h2>
+            <div class="schedule-box">
+                <ul class="schedule-list">
+                    <li><span class="label">Monday</span> <span>11:00 AM – 11:20 AM</span></li>
+                    <li><span class="label">Tuesday</span> <span>8:00 AM – 9:50 AM <br> 1:00 PM – 2:20 PM</span></li>
+                    <li><span class="label">Wednesday</span> <span>10:00 AM – 11:20 AM</span></li>
+                    <li><span class="label">By Appointment</span> <span>Please email to schedule</span></li>
+                </ul>
+            </div>
+
+            <h2 style="margin-top: 20px;">Academic Support</h2>
+            <div class="schedule-box" style="border-left: 4px solid var(--cwc-teal);">
+                <ul class="schedule-list">
+                    <li>
+                        <a href="https://www.cwc.edu/tutoring/" class="label tutor-highlight" target="_blank">Tutor Lab Hour</a> 
+                        <span>Monday: 10:00 AM – 10:50 AM</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
         <section>
             <h2>Biography</h2>
             <p>
-                A native of Lander, Wyoming, Kate Patterson joined Central Wyoming College in 2014. Before returning home, 
-                she spent three years as a research fellow at the University of Auckland in New Zealand. 
+                Dr. Kate Patterson joined Central Wyoming College in 2014. Originally from Lander, Wyoming, she returned to the region after serving as a research fellow at the University of Auckland, New Zealand.
             </p>
             <p>
-                Kate earned her Ph.D. in Mathematics from Montana State University-Bozeman and her B.S. from the University of Wyoming. 
-                She is dedicated to fostering "shared curiosity" in her classrooms, empowering students to explore the deep beauty 
-                of mathematical structures.
+                She holds a Ph.D. in Mathematics from Montana State University-Bozeman and a B.S. from the University of Wyoming. Her teaching philosophy centers on "shared curiosity," encouraging students to explore the elegance and complexity of mathematical modeling.
+            </p>
+            <p>
+                Kate is actively involved in collaborative scientific research, most notably participating in the <a href="https://eclipse.montana.edu/" target="_blank">Nationwide Eclipse Ballooning Project (NEBP)</a>. Working alongside Dr. Bill Finney and the <a href="https://www.cwc.edu/2024/05/07/ballooning-project/" target="_blank">CWC Ballooning Team</a>, she contributes her mathematical expertise to atmospheric data collection and high-altitude <a href="https://libguides.cwc.edu/science/balloons" target="_blank">scientific ballooning initiatives</a>.
+            </p>
+        </section>
+    </main>
+</div>
+
+<footer>
+    Central Wyoming College | 2660 Peck Avenue, Riverton, WY 82501 | (307) 855-2000
+</footer>
+
+</body>
+</html>
