@@ -4,11 +4,7 @@
 <meta charset="UTF-8">
 <title>Stat 2050 Project Instructions</title>
 <style>
-    /* WCAG 2.1 AA Compliant Stylesheet
-       - High contrast text colors
-       - Readable font stack
-       - Responsive tables
-    */
+    /* WCAG 2.1 AA Compliant Stylesheet */
     .stat-project-container {
         font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         max-width: 950px;
@@ -64,7 +60,7 @@
         font-size: 1.3em;
     }
 
-    /* Alert Boxes - Colors verified for contrast */
+    /* Alert Boxes */
     .stat-alert {
         background-color: #fff3cd;
         border: 1px solid #ffeeba;
@@ -89,10 +85,10 @@
         font-family: 'Times New Roman', serif;
         font-style: italic;
         padding: 0 2px;
-        white-space: nowrap; /* Prevents line breaks inside formulas */
+        white-space: nowrap; 
     }
 
-    /* Table Styles for Accessibility */
+    /* Table Styles */
     .rubric-table-wrapper {
         overflow-x: auto;
         margin-top: 20px;
@@ -103,7 +99,7 @@
     .rubric-table {
         width: 100%;
         border-collapse: collapse;
-        min-width: 600px; /* Ensures table doesn't squish on mobile */
+        min-width: 600px;
     }
 
     .rubric-table caption {
@@ -131,7 +127,7 @@
     .rubric-table th[scope="row"] {
         background-color: #f8f9fa;
         font-weight: bold;
-        width: 25%; /* Increased width for headers */
+        width: 25%;
     }
 
     /* List Styles */
@@ -223,44 +219,58 @@
         <!-- Phase 1 Rubric -->
         <div class="rubric-table-wrapper">
             <table class="rubric-table">
-                <caption>Phase 1 Grading Rubric (20 Points)</caption>
+                <caption>Phase 1 Grading Rubric (25 Points)</caption>
                 <thead>
                     <tr>
                         <th scope="col">Criteria</th>
-                        <th scope="col">Excellent (5 pts)</th>
-                        <th scope="col">Proficient (4 pts)</th>
-                        <th scope="col">Developing (2-3 pts)</th>
-                        <th scope="col">Beginning (0-1 pts)</th>
+                        <th scope="col">Excellent</th>
+                        <th scope="col">Proficient</th>
+                        <th scope="col">Developing</th>
+                        <th scope="col">Beginning/Missing</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row">Data Cleaning & Org<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1)</span></th>
-                        <td>All height data converted correctly. Frequency & Relative Frequency table included and correctly grouped by Gender.</td>
-                        <td>Minor errors in conversion. Table included but missing Relative Frequency or not grouped by Gender.</td>
-                        <td>Significant mixed units (feet/inches). Text remains in numeric columns.</td>
-                        <td>Raw data used. No frequency table.</td>
+                        <td><strong>(5 pts)</strong> All height data converted correctly. Freq/Rel Freq table included and correctly grouped by Gender.</td>
+                        <td><strong>(4 pts)</strong> Minor errors in conversion. Table included but missing Relative Frequency or not grouped by Gender.</td>
+                        <td><strong>(2-3 pts)</strong> Significant mixed units. Text remains in numeric columns.</td>
+                        <td><strong>(0-1 pts)</strong> Raw data used. No frequency table.</td>
                     </tr>
                     <tr>
                         <th scope="row">Visualization<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1)</span></th>
-                        <td>Histogram, Bar Graph, and Side-by-Side Boxplots present with correct titles, labels, and units.</td>
-                        <td>All graphs present but missing minor labels. Boxplots may not share scale.</td>
-                        <td>Incorrect graph types (e.g., Pie chart). Missing titles/units.</td>
-                        <td>Graphs missing or unreadable.</td>
+                        <td><strong>(5 pts)</strong> Histogram, Bar Graph, and Side-by-Side Boxplots present with correct titles, labels, and units.</td>
+                        <td><strong>(4 pts)</strong> All graphs present but missing minor labels. Boxplots may not share scale.</td>
+                        <td><strong>(2-3 pts)</strong> Incorrect graph types (e.g., Pie chart). Missing titles/units.</td>
+                        <td><strong>(0-1 pts)</strong> Graphs missing or unreadable.</td>
                     </tr>
                     <tr>
                         <th scope="row">Numerical Summaries<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1)</span></th>
-                        <td>Mean, Median, Mode, Range, SD, and 5-number summary precise. Correct notation (<span class="math-symbol" aria-label="x-bar">x&#772;</span>, <span class="math-symbol" aria-label="s">s</span>).</td>
-                        <td>Calculation errors minor. Notation missing/incorrect.</td>
-                        <td>Major errors due to bad data.</td>
-                        <td>Missing summary stats.</td>
+                        <td><strong>(5 pts)</strong> Mean, Median, Mode, Range, SD, and 5-number summary precise. Correct notation.</td>
+                        <td><strong>(4 pts)</strong> Calculation errors minor. Notation missing/incorrect.</td>
+                        <td><strong>(2-3 pts)</strong> Major errors due to bad data.</td>
+                        <td><strong>(0-1 pts)</strong> Missing summary stats.</td>
                     </tr>
                     <tr>
                         <th scope="row">Statistical Argument<br><span style="font-weight:normal; font-size:0.85em;">(CLO 5)</span></th>
-                        <td>Calculation shown and correct. Interpretation explicitly mentions SDs and "unusual" status.</td>
-                        <td>Z-score correct, but calculation not shown or interpretation is generic.</td>
-                        <td>Formula applied incorrectly. Interpretation contradicts math.</td>
-                        <td>Calculation missing.</td>
+                        <td><strong>(5 pts)</strong> Calculation shown and correct. Interpretation explicitly mentions SDs and "unusual" status.</td>
+                        <td><strong>(4 pts)</strong> Z-score correct, but calculation not shown or interpretation is generic.</td>
+                        <td><strong>(2-3 pts)</strong> Formula applied incorrectly. Interpretation contradicts math.</td>
+                        <td><strong>(0-1 pts)</strong> Calculation missing.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Methods Section</th>
+                        <td><strong>(3 pts)</strong> Clear explanation of tools used. Discusses data cleaning challenges specifically.</td>
+                        <td><strong>(2 pts)</strong> Tools mentioned but vague. No mention of cleanup.</td>
+                        <td><strong>(1 pts)</strong> Very brief or unclear.</td>
+                        <td><strong>(0 pts)</strong> Section missing.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Neatness & Formatting</th>
+                        <td><strong>(2 pts)</strong> Professional PDF. Graphs clear and well-placed. Easy to read.</td>
+                        <td><strong>(1 pts)</strong> Formatting issues. Hard to follow.</td>
+                        <td><strong>(0.5 pts)</strong> Major formatting errors.</td>
+                        <td><strong>(0 pts)</strong> Unreadable / Wrong format.</td>
                     </tr>
                 </tbody>
             </table>
@@ -301,44 +311,58 @@
         <!-- Phase 2 Rubric -->
         <div class="rubric-table-wrapper">
             <table class="rubric-table">
-                <caption>Phase 2 Grading Rubric (20 Points)</caption>
+                <caption>Phase 2 Grading Rubric (25 Points)</caption>
                 <thead>
                     <tr>
                         <th scope="col">Criteria</th>
-                        <th scope="col">Excellent (5 pts)</th>
-                        <th scope="col">Proficient (4 pts)</th>
-                        <th scope="col">Developing (2-3 pts)</th>
-                        <th scope="col">Beginning (0-1 pts)</th>
+                        <th scope="col">Excellent</th>
+                        <th scope="col">Proficient</th>
+                        <th scope="col">Developing</th>
+                        <th scope="col">Beginning/Missing</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row">Regression Analysis<br><span style="font-weight:normal; font-size:0.85em;">(CLO 3)</span></th>
-                        <td>Variables identified correctly. <span class="math-symbol" aria-label="r">r</span>, <span class="math-symbol" aria-label="r-squared">R<sup>2</sup></span> accurate. Equation written in context.</td>
-                        <td>Calculations correct, but equation uses generic variables. Interpretation weak.</td>
-                        <td>Scatter plot axes reversed. <span class="math-symbol" aria-label="r">r</span> interpreted as slope.</td>
-                        <td>Missing analysis.</td>
+                        <td><strong>(5 pts)</strong> Variables identified correctly. <span class="math-symbol" aria-label="r">r</span>, <span class="math-symbol" aria-label="r-squared">R<sup>2</sup></span> accurate. Equation written in context.</td>
+                        <td><strong>(4 pts)</strong> Calculations correct, but equation uses generic variables. Interpretation weak.</td>
+                        <td><strong>(2-3 pts)</strong> Scatter plot axes reversed. <span class="math-symbol" aria-label="r">r</span> interpreted as slope.</td>
+                        <td><strong>(0-1 pts)</strong> Missing analysis.</td>
                     </tr>
                     <tr>
                         <th scope="row">Predictions & Residuals<br><span style="font-weight:normal; font-size:0.85em;">(CLO 3, 5)</span></th>
-                        <td>Both predictions (68" & Personal) correct. Residual calculated and interpreted correctly.</td>
-                        <td>Predictions made, but residual calculation missing or sign flipped.</td>
-                        <td>Plugged values into wrong variables. No comparison made.</td>
-                        <td>Predictions not attempted.</td>
+                        <td><strong>(5 pts)</strong> Both predictions (68" & Personal) correct. Residual calculated and interpreted correctly.</td>
+                        <td><strong>(4 pts)</strong> Predictions made, but residual calculation missing or sign flipped.</td>
+                        <td><strong>(2-3 pts)</strong> Plugged values into wrong variables. No comparison made.</td>
+                        <td><strong>(0-1 pts)</strong> Predictions not attempted.</td>
                     </tr>
                     <tr>
                         <th scope="row">Contingency Table<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1, 2)</span></th>
-                        <td>Table clearly labeled with Row/Column totals. Marginal distributions sum correctly.</td>
-                        <td>Table present but totals missing or inaccurate.</td>
-                        <td>Table constructed incorrectly.</td>
-                        <td>No table provided.</td>
+                        <td><strong>(5 pts)</strong> Table clearly labeled with Row/Column totals. Marginal distributions sum correctly.</td>
+                        <td><strong>(4 pts)</strong> Table present but totals missing or inaccurate.</td>
+                        <td><strong>(2-3 pts)</strong> Table constructed incorrectly.</td>
+                        <td><strong>(0-1 pts)</strong> No table provided.</td>
                     </tr>
                     <tr>
                         <th scope="row">Probability Calculations<br><span style="font-weight:normal; font-size:0.85em;">(CLO 2)</span></th>
-                        <td>Correctly differentiates AND, OR, GIVEN. Work/Fractions shown.</td>
-                        <td>Answers correct, work hidden. Minor confusion on Union/Intersection.</td>
-                        <td>Denominators incorrect for Conditional Prob.</td>
-                        <td>Probabilities not calculated.</td>
+                        <td><strong>(5 pts)</strong> Correctly differentiates AND, OR, GIVEN. Work/Fractions shown.</td>
+                        <td><strong>(4 pts)</strong> Answers correct, work hidden. Minor confusion on Union/Intersection.</td>
+                        <td><strong>(2-3 pts)</strong> Denominators incorrect for Conditional Prob.</td>
+                        <td><strong>(0-1 pts)</strong> Probabilities not calculated.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Methods Section</th>
+                        <td><strong>(3 pts)</strong> Clear explanation of tools used for regression and tables.</td>
+                        <td><strong>(2 pts)</strong> Tools mentioned but vague.</td>
+                        <td><strong>(1 pts)</strong> Very brief or unclear.</td>
+                        <td><strong>(0 pts)</strong> Section missing.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Neatness & Formatting</th>
+                        <td><strong>(2 pts)</strong> Professional PDF. Graphs clear and well-placed. Easy to read.</td>
+                        <td><strong>(1 pts)</strong> Formatting issues. Hard to follow.</td>
+                        <td><strong>(0.5 pts)</strong> Major formatting errors.</td>
+                        <td><strong>(0 pts)</strong> Unreadable / Wrong format.</td>
                     </tr>
                 </tbody>
             </table>
@@ -373,44 +397,58 @@
         <!-- Phase 3 Rubric -->
         <div class="rubric-table-wrapper">
             <table class="rubric-table">
-                <caption>Phase 3 Grading Rubric (20 Points)</caption>
+                <caption>Phase 3 Grading Rubric (25 Points)</caption>
                 <thead>
                     <tr>
                         <th scope="col">Criteria</th>
-                        <th scope="col">Excellent (5 pts)</th>
-                        <th scope="col">Proficient (4 pts)</th>
-                        <th scope="col">Developing (2-3 pts)</th>
-                        <th scope="col">Beginning (0-1 pts)</th>
+                        <th scope="col">Excellent</th>
+                        <th scope="col">Proficient</th>
+                        <th scope="col">Developing</th>
+                        <th scope="col">Beginning/Missing</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row">Binomial Simulation<br><span style="font-weight:normal; font-size:0.85em;">(CLO 2)</span></th>
-                        <td>Data recorded. Expected value/SD correct. Z-score correctly assesses "unusual."</td>
-                        <td>Simulation done, calculations correct. Interpretation vague.</td>
-                        <td>Calculations use wrong formulas or fake data.</td>
-                        <td>Simulation not conducted.</td>
+                        <td><strong>(5 pts)</strong> Data recorded. Expected value/SD correct. Z-score correctly assesses "unusual."</td>
+                        <td><strong>(4 pts)</strong> Simulation done, calculations correct. Interpretation vague.</td>
+                        <td><strong>(2-3 pts)</strong> Calculations use wrong formulas or fake data.</td>
+                        <td><strong>(0-1 pts)</strong> Simulation not conducted.</td>
                     </tr>
                     <tr>
                         <th scope="row">CI (Proportion)<br><span style="font-weight:normal; font-size:0.85em;">(CLO 4)</span></th>
-                        <td>Conditions checked. Correct Critical Value (<span class="math-symbol" aria-label="z-star">z*</span>). Interval accurate.</td>
-                        <td>Interval calculated correctly, conditions not checked.</td>
-                        <td>Used T instead of Z. Math errors.</td>
-                        <td>No interval.</td>
+                        <td><strong>(5 pts)</strong> Conditions checked. Correct Critical Value (<span class="math-symbol" aria-label="z-star">z*</span>). Interval accurate.</td>
+                        <td><strong>(4 pts)</strong> Interval calculated correctly, conditions not checked.</td>
+                        <td><strong>(2-3 pts)</strong> Used T instead of Z. Math errors.</td>
+                        <td><strong>(0-1 pts)</strong> No interval.</td>
                     </tr>
                     <tr>
                         <th scope="row">CI (Mean)<br><span style="font-weight:normal; font-size:0.85em;">(CLO 4)</span></th>
-                        <td>Correct Critical Value (<span class="math-symbol" aria-label="t-star">t*</span>) based on degrees of freedom. Interval accurate.</td>
-                        <td>Used <span class="math-symbol" aria-label="z-star">z*</span> instead of <span class="math-symbol" aria-label="t-star">t*</span>. Math otherwise correct.</td>
-                        <td>Major calculation errors.</td>
-                        <td>No interval.</td>
+                        <td><strong>(5 pts)</strong> Correct Critical Value (<span class="math-symbol" aria-label="t-star">t*</span>) based on degrees of freedom. Interval accurate.</td>
+                        <td><strong>(4 pts)</strong> Used <span class="math-symbol" aria-label="z-star">z*</span> instead of <span class="math-symbol" aria-label="t-star">t*</span>. Math otherwise correct.</td>
+                        <td><strong>(2-3 pts)</strong> Major calculation errors.</td>
+                        <td><strong>(0-1 pts)</strong> No interval.</td>
                     </tr>
                     <tr>
                         <th scope="row">Statistical Interpretation<br><span style="font-weight:normal; font-size:0.85em;">(CLO 5)</span></th>
-                        <td>States "We are XX% confident the <em>true population parameter</em> lies..."</td>
-                        <td>Interpretation sounds like probability ("95% chance").</td>
-                        <td>Interprets interval as capturing sample data.</td>
-                        <td>No interpretation.</td>
+                        <td><strong>(5 pts)</strong> States "We are XX% confident the <em>true population parameter</em> lies..."</td>
+                        <td><strong>(4 pts)</strong> Interpretation sounds like probability ("95% chance").</td>
+                        <td><strong>(2-3 pts)</strong> Interprets interval as capturing sample data.</td>
+                        <td><strong>(0-1 pts)</strong> No interpretation.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Methods Section</th>
+                        <td><strong>(3 pts)</strong> Clear explanation of simulation process and tools.</td>
+                        <td><strong>(2 pts)</strong> Tools mentioned but vague.</td>
+                        <td><strong>(1 pts)</strong> Very brief or unclear.</td>
+                        <td><strong>(0 pts)</strong> Section missing.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Neatness & Formatting</th>
+                        <td><strong>(2 pts)</strong> Professional PDF. Graphs clear and well-placed. Easy to read.</td>
+                        <td><strong>(1 pts)</strong> Formatting issues. Hard to follow.</td>
+                        <td><strong>(0.5 pts)</strong> Major formatting errors.</td>
+                        <td><strong>(0 pts)</strong> Unreadable / Wrong format.</td>
                     </tr>
                 </tbody>
             </table>
@@ -452,44 +490,58 @@
         <!-- Phase 4 Rubric -->
         <div class="rubric-table-wrapper">
             <table class="rubric-table">
-                <caption>Phase 4 Grading Rubric (20 Points)</caption>
+                <caption>Phase 4 Grading Rubric (25 Points)</caption>
                 <thead>
                     <tr>
                         <th scope="col">Criteria</th>
-                        <th scope="col">Excellent (5 pts)</th>
-                        <th scope="col">Proficient (4 pts)</th>
-                        <th scope="col">Developing (2-3 pts)</th>
-                        <th scope="col">Beginning (0-1 pts)</th>
+                        <th scope="col">Excellent</th>
+                        <th scope="col">Proficient</th>
+                        <th scope="col">Developing</th>
+                        <th scope="col">Beginning/Missing</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row">Hypothesis Testing<br><span style="font-weight:normal; font-size:0.85em;">(CLO 4)</span></th>
-                        <td>Hypotheses correct (<span class="math-symbol" aria-label="H-naught colon mean equals 8">H<sub>0</sub>: &mu; = 8</span>). Conclusion links P-value to <span class="math-symbol" aria-label="alpha">&alpha;</span> correctly in context.</td>
-                        <td>Calculation correct, conclusion binary ("Reject") without context.</td>
-                        <td>Fails to reject when P-value is low. Hypotheses reversed.</td>
-                        <td>Test not performed.</td>
+                        <td><strong>(5 pts)</strong> Hypotheses correct (<span class="math-symbol" aria-label="H-naught colon mean equals 8">H<sub>0</sub>: &mu; = 8</span>). Conclusion links P-value to <span class="math-symbol" aria-label="alpha">&alpha;</span> correctly in context.</td>
+                        <td><strong>(4 pts)</strong> Calculation correct, conclusion binary ("Reject") without context.</td>
+                        <td><strong>(2-3 pts)</strong> Fails to reject when P-value is low. Hypotheses reversed.</td>
+                        <td><strong>(0-1 pts)</strong> Test not performed.</td>
                     </tr>
                     <tr>
                         <th scope="row">Chi-Square GOF<br><span style="font-weight:normal; font-size:0.85em;">(CLO 4)</span></th>
-                        <td>Expected counts (<span class="math-symbol" aria-label="n over 12">n/12</span>) & Statistic correct. Degrees of Freedom correct.</td>
-                        <td>Calculation error in Expected counts. Confuses GOF with Independence.</td>
-                        <td>Uses raw counts instead of Observed vs Expected.</td>
-                        <td>Test not performed.</td>
+                        <td><strong>(5 pts)</strong> Expected counts (<span class="math-symbol" aria-label="n over 12">n/12</span>) & Statistic correct. Degrees of Freedom correct.</td>
+                        <td><strong>(4 pts)</strong> Calculation error in Expected counts. Confuses GOF with Independence.</td>
+                        <td><strong>(2-3 pts)</strong> Uses raw counts instead of Observed vs Expected.</td>
+                        <td><strong>(0-1 pts)</strong> Test not performed.</td>
                     </tr>
                     <tr>
                         <th scope="row">Personal Connection<br><span style="font-weight:normal; font-size:0.85em;">(CLO 5)</span></th>
-                        <td>Identifies personal contribution to <span class="math-symbol" aria-label="Chi-squared">&chi;<sup>2</sup></span> using <span class="math-symbol" aria-label="Observed minus Expected squared divided by Expected">(O-E)<sup>2</sup>/E</span>.</td>
-                        <td>States month was high/low but no calculation.</td>
-                        <td>No personal connection made.</td>
-                        <td>Question ignored.</td>
+                        <td><strong>(5 pts)</strong> Identifies personal contribution to <span class="math-symbol" aria-label="Chi-squared">&chi;<sup>2</sup></span> using <span class="math-symbol" aria-label="Observed minus Expected squared divided by Expected">(O-E)<sup>2</sup>/E</span>.</td>
+                        <td><strong>(4 pts)</strong> States month was high/low but no calculation.</td>
+                        <td><strong>(2-3 pts)</strong> No personal connection made.</td>
+                        <td><strong>(0-1 pts)</strong> Question ignored.</td>
                     </tr>
                     <tr>
                         <th scope="row">Executive Summary<br><span style="font-weight:normal; font-size:0.85em;">(CLO 5)</span></th>
-                        <td>Narrative flows logically. Uses required headers. <strong>Cites specific stats</strong> from earlier phases.</td>
-                        <td>Follows structure but lacks statistical citation (qualitative only).</td>
-                        <td>Bulleted list or opinion-based.</td>
-                        <td>Summary not written.</td>
+                        <td><strong>(5 pts)</strong> Narrative flows logically. Uses required headers. <strong>Cites specific stats</strong> from earlier phases.</td>
+                        <td><strong>(4 pts)</strong> Follows structure but lacks statistical citation (qualitative only).</td>
+                        <td><strong>(2-3 pts)</strong> Bulleted list or opinion-based.</td>
+                        <td><strong>(0-1 pts)</strong> Summary not written.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Methods Section</th>
+                        <td><strong>(3 pts)</strong> Clear explanation of tests selected and tools used.</td>
+                        <td><strong>(2 pts)</strong> Tools mentioned but vague.</td>
+                        <td><strong>(1 pts)</strong> Very brief or unclear.</td>
+                        <td><strong>(0 pts)</strong> Section missing.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Neatness & Formatting</th>
+                        <td><strong>(2 pts)</strong> Professional PDF. Headers clear. Easy to read.</td>
+                        <td><strong>(1 pts)</strong> Formatting issues. Hard to follow.</td>
+                        <td><strong>(0.5 pts)</strong> Major formatting errors.</td>
+                        <td><strong>(0 pts)</strong> Unreadable / Wrong format.</td>
                     </tr>
                 </tbody>
             </table>
