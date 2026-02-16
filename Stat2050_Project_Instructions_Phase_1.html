@@ -4,13 +4,17 @@
 <meta charset="UTF-8">
 <title>Stat 2050 Project Instructions</title>
 <style>
-    /* Embedded CSS for Canvas Compliance and Visuals */
+    /* WCAG 2.1 AA Compliant Stylesheet
+       - High contrast text colors
+       - Readable font stack
+       - Responsive tables
+    */
     .stat-project-container {
         font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         max-width: 950px;
         margin: 0 auto;
         line-height: 1.6;
-        color: #2D3B45;
+        color: #2D3B45; /* High contrast dark grey */
         background-color: #ffffff;
     }
     
@@ -21,7 +25,7 @@
     }
 
     .stat-project-title {
-        color: #0056b3;
+        color: #0056b3; /* Accessible blue */
         font-size: 2.2em;
         margin-bottom: 10px;
         font-weight: 700;
@@ -60,13 +64,24 @@
         font-size: 1.3em;
     }
 
+    /* Alert Boxes - Colors verified for contrast */
     .stat-alert {
         background-color: #fff3cd;
         border: 1px solid #ffeeba;
-        color: #856404;
+        color: #856404; /* Contrast 4.7:1 */
         padding: 15px;
         margin-bottom: 20px;
         border-radius: 4px;
+    }
+
+    .integrity-alert {
+        background-color: #ffeef0;
+        border: 1px solid #f5c6cb;
+        color: #721c24; /* Contrast 7.2:1 */
+        padding: 15px;
+        margin-top: 15px;
+        border-radius: 4px;
+        font-weight: bold;
     }
 
     /* Math specific styling */
@@ -74,6 +89,7 @@
         font-family: 'Times New Roman', serif;
         font-style: italic;
         padding: 0 2px;
+        white-space: nowrap; /* Prevents line breaks inside formulas */
     }
 
     /* Table Styles for Accessibility */
@@ -97,6 +113,7 @@
         font-size: 1.2em;
         background-color: #f8f9fa;
         border-bottom: 2px solid #ddd;
+        color: #2D3B45;
     }
 
     .rubric-table th, .rubric-table td {
@@ -114,7 +131,7 @@
     .rubric-table th[scope="row"] {
         background-color: #f8f9fa;
         font-weight: bold;
-        width: 20%;
+        width: 25%; /* Increased width for headers */
     }
 
     /* List Styles */
@@ -129,7 +146,7 @@
 </head>
 <body>
 
-<div class="stat-project-container">
+<main class="stat-project-container">
 
     <!-- Header -->
     <header class="stat-project-header">
@@ -139,23 +156,28 @@
         <div class="stat-project-box">
             <h2 style="font-size: 1.3em; margin-top: 0; color: #004494;">Project Overview</h2>
             <ul class="stat-list">
-                <li><strong>Data Source:</strong> The <code>Stat2050_Survey_Results.csv</code> file (available in Canvas Modules).</li>
-                <li><strong>Submission Format:</strong> (<code>.pdf</code>).</li>
-                <li><strong>Formatting:</strong> Use a readable sans-serif font (e.g., Arial, Calibri) at size 11 or 12.</li>
-                <li><strong>Visuals:</strong> Embed all graphs directly into your document.</li>
+                <li><strong>Data Source:</strong> The <code>Stat2050_Survey_ResultsSP2026.csv</code> file (available in Canvas Modules).</li>
+                <li><strong>Submission Format:</strong> Submit your work as a <strong>PDF Document</strong> (e.g., <code>Lastname_Phase1.pdf</code>). Export your Word/Google Doc to PDF to ensure formatting is preserved.</li>
+                <li><strong>Methods Section:</strong> For each phase, you must include a brief "Methods" paragraph explaining <em>how</em> you created your statistical summaries (e.g., "I used the 1-Var Stats function on my TI-84," or "I used Excel formulas to sort the data").</li>
             </ul>
+            
+            <div class="integrity-alert" role="alert">
+                Academic Integrity & AI Policy: <br>
+                <span style="font-weight: normal;">This project must be your own original work. The use of Artificial Intelligence (AI) tools (such as ChatGPT, Gemini, etc.) to generate text, analysis, or calculations is <strong>strictly prohibited</strong> and will be treated as academic dishonesty. <br><br>
+                <em>Exception:</em> You may use tools like <strong>Grammarly</strong> or other software solely for spell-checking and sentence structure improvements. However, all <strong>Data Analysis</strong> must be your own work.</span>
+            </div>
         </div>
     </header>
 
     <!-- Phase 1 -->
     <section class="stat-phase-section" aria-labelledby="phase1-heading">
         <h2 id="phase1-heading" class="stat-phase-header">Phase 1: Data Cleaning & Descriptive Statistics</h2>
-        <p><strong>Focus:</strong> Data integrity, visualization, and measures of center. | <strong>Due Date:</strong> After Chapter 3</p>
+        <p><strong>Focus:</strong> Data integrity, visualization, and measures of center.</p>
 
         <h3 class="stat-sub-header">Student Instructions</h3>
 
         <h4>Step 1: Data Cleaning</h4>
-        <p>Open the class data file in StatCrunch, Excel, or Google Sheets. Correct the following before analysis:</p>
+        <p>Open the class data file in <strong>Excel, Google Sheets, or StatCrunch</strong>. Correct the following before analysis:</p>
         <ol class="stat-list">
             <li><strong>Height Variable:</strong> Convert all heights to <strong>total inches</strong> (e.g., 5'7" becomes 67).</li>
             <li><strong>Pulse Variable:</strong> Remove any text (like "bpm") so the column contains <strong>only numbers</strong>.</li>
@@ -164,7 +186,9 @@
 
         <h4>Step 2: Organizing the Data</h4>
         <ul class="stat-list">
-            <li>Create a <strong>Frequency Distribution</strong> and <strong>Relative Frequency Distribution</strong> table for the <code>Height_Inches</code> variable. Choose 5 to 7 classes (bins).</li>
+            <li>Create distribution tables for the <code>Height_Inches</code> variable.</li>
+            <li><strong>Requirement:</strong> The tables must include both <strong>Frequency</strong> and <strong>Relative Frequency</strong>.</li>
+            <li><strong>Grouping:</strong> You must group this data by <strong>Gender</strong> (e.g., separate columns or sections for Men and Women) to facilitate comparison.</li>
         </ul>
 
         <h4>Step 3: Visualizing the Data</h4>
@@ -178,19 +202,23 @@
         <h4>Step 4: Numerical Summaries</h4>
         <p>Calculate the following statistics for the full class <code>Height_Inches</code>:</p>
         <ul class="stat-list">
-            <li><strong>Mean</strong> (<span class="math-symbol" aria-label="x-bar">x&#772;</span>)</li>
-            <li><strong>Median</strong> (<span class="math-symbol">M</span>)</li>
-            <li><strong>Mode</strong> </li>
-            <li><strong>Range</strong> </li>
-            <li><strong>Standard Deviation</strong> (<span class="math-symbol">s</span>)</li>
+            <li><strong>Mean</strong> (<span class="math-symbol" aria-label="sample mean x-bar">x&#772;</span>)</li>
+            <li><strong>Median</strong> (<span class="math-symbol" aria-label="Median">M</span>)</li>
+            <li><strong>Mode</strong></li>
+            <li><strong>Range</strong></li>
+            <li><strong>Standard Deviation</strong> (<span class="math-symbol" aria-label="standard deviation s">s</span>)</li>
             <li><strong>Five-Number Summary:</strong> Min, Q1, Median, Q3, Max.</li>
         </ul>
 
         <h4>Step 5: The Personal Connection</h4>
         <ul class="stat-list">
             <li><strong>Calculate:</strong> Find the <strong>z-score</strong> for <em>your own</em> height using the class mean and standard deviation.</li>
+            <li><strong>Requirement:</strong> You must include the <strong>z-score calculation</strong> (show the formula with your numbers plugged in) as well as the final result.</li>
             <li><strong>Interpret:</strong> Explain what this z-score tells you. Are you considered "unusual" (more than 2 standard deviations away from the mean)?</li>
         </ul>
+        
+        <h4>Step 6: Methods Section</h4>
+        <p>Write a brief paragraph explaining the tools and steps you used to calculate the statistics above. <strong>Crucially, you must also comment on any data cleanup challenges you encountered (e.g., dealing with inconsistent units, removing text from numerical columns, or handling missing data).</strong></p>
 
         <!-- Phase 1 Rubric -->
         <div class="rubric-table-wrapper">
@@ -208,8 +236,8 @@
                 <tbody>
                     <tr>
                         <th scope="row">Data Cleaning & Org<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1)</span></th>
-                        <td>All height data converted correctly. Categories consolidated. Frequency table has appropriate bins.</td>
-                        <td>Minor errors in conversion or bins. Categories slightly granular.</td>
+                        <td>All height data converted correctly. Frequency & Relative Frequency table included and correctly grouped by Gender.</td>
+                        <td>Minor errors in conversion. Table included but missing Relative Frequency or not grouped by Gender.</td>
                         <td>Significant mixed units (feet/inches). Text remains in numeric columns.</td>
                         <td>Raw data used. No frequency table.</td>
                     </tr>
@@ -222,15 +250,15 @@
                     </tr>
                     <tr>
                         <th scope="row">Numerical Summaries<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1)</span></th>
-                        <td>Mean, Median, Mode, Range, SD, and 5-number summary precise. Correct notation (<span class="math-symbol">x&#772;, s</span>).</td>
+                        <td>Mean, Median, Mode, Range, SD, and 5-number summary precise. Correct notation (<span class="math-symbol" aria-label="x-bar">x&#772;</span>, <span class="math-symbol" aria-label="s">s</span>).</td>
                         <td>Calculation errors minor. Notation missing/incorrect.</td>
                         <td>Major errors due to bad data.</td>
                         <td>Missing summary stats.</td>
                     </tr>
                     <tr>
                         <th scope="row">Statistical Argument<br><span style="font-weight:normal; font-size:0.85em;">(CLO 5)</span></th>
-                        <td>Z-score calculation shown. Interpretation explicitly mentions SDs and "unusual" status.</td>
-                        <td>Z-score correct, but interpretation is generic.</td>
+                        <td>Calculation shown and correct. Interpretation explicitly mentions SDs and "unusual" status.</td>
+                        <td>Z-score correct, but calculation not shown or interpretation is generic.</td>
                         <td>Formula applied incorrectly. Interpretation contradicts math.</td>
                         <td>Calculation missing.</td>
                     </tr>
