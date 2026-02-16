@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Stat 2050 Project Instructions</title>
+<style>
+    /* Embedded CSS for Canvas Compliance and Visuals */
+    .stat-project-container {
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        max-width: 950px;
+        margin: 0 auto;
+        line-height: 1.6;
+        color: #2D3B45;
+        background-color: #ffffff;
+    }
+    
+    .stat-project-header {
+        border-bottom: 3px solid #0056b3;
+        padding-bottom: 20px;
+        margin-bottom: 35px;
+    }
+
+    .stat-project-title {
+        color: #0056b3;
+        font-size: 2.2em;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    .stat-project-box {
+        background-color: #f0f7ff;
+        border-left: 5px solid #0056b3;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 0 4px 4px 0;
+    }
+
+    .stat-phase-section {
+        margin-bottom: 50px;
+        border: 1px solid #e0e0e0;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .stat-phase-header {
+        background-color: #2D3B45;
+        color: #ffffff;
+        padding: 12px 20px;
+        border-radius: 6px;
+        font-size: 1.5em;
+        margin-top: 0;
+    }
+
+    .stat-sub-header {
+        color: #0056b3;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 8px;
+        margin-top: 30px;
+        font-size: 1.3em;
+    }
+
+    .stat-alert {
+        background-color: #fff3cd;
+        border: 1px solid #ffeeba;
+        color: #856404;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+    }
+
+    /* Table Styles for Accessibility */
+    .rubric-table-wrapper {
+        overflow-x: auto;
+        margin-top: 20px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    .rubric-table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 600px; /* Ensures table doesn't squish on mobile */
+    }
+
+    .rubric-table caption {
+        text-align: left;
+        font-weight: bold;
+        padding: 10px;
+        font-size: 1.2em;
+        background-color: #f8f9fa;
+        border-bottom: 2px solid #ddd;
+    }
+
+    .rubric-table th, .rubric-table td {
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        vertical-align: top;
+        text-align: left;
+    }
+
+    .rubric-table thead tr {
+        background-color: #e9ecef;
+        color: #333;
+    }
+
+    .rubric-table th[scope="row"] {
+        background-color: #f8f9fa;
+        font-weight: bold;
+        width: 20%;
+    }
+
+    /* List Styles */
+    .stat-list {
+        margin-left: 20px;
+    }
+    
+    .stat-list li {
+        margin-bottom: 8px;
+    }
+
+    /* Accessibility Utilities */
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+</style>
+</head>
+<body>
+
+<div class="stat-project-container">
+
+    <!-- Header -->
+    <header class="stat-project-header">
+        <h1 class="stat-project-title">STAT 2050 Project: The Class Profile</h1>
+        <p><strong>Instructor & Student Guide</strong></p>
+        
+        <div class="stat-project-box">
+            <h2 style="font-size: 1.3em; margin-top: 0; color: #004494;">Project Overview</h2>
+            <ul class="stat-list">
+                <li><strong>Data Source:</strong> The <code>Stat2050_Survey_Results.csv</code> file (available in Files).</li>
+                <li><strong>Submission Format:</strong> Word Document (<code>.docx</code>) or Google Doc.</li>
+                <li><strong>Formatting:</strong> Use a readable sans-serif font (e.g., Arial, Calibri) at size 11 or 12.</li>
+                <li><strong>Visuals:</strong> Embed all graphs directly into your document.</li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Phase 1 -->
+    <section class="stat-phase-section" aria-labelledby="phase1-heading">
+        <h2 id="phase1-heading" class="stat-phase-header">Phase 1: Data Cleaning & Descriptive Statistics</h2>
+        <p><strong>Focus:</strong> Data integrity, visualization, and measures of center. | <strong>Due Date:</strong> Week 4</p>
+
+        <h3 class="stat-sub-header">Student Instructions</h3>
+
+        <h4>Step 1: Data Cleaning</h4>
+        <p>Open the class data file in Excel or Google Sheets. Correct the following before analysis:</p>
+        <ol class="stat-list">
+            <li><strong>Height Variable:</strong> Convert all heights to <strong>total inches</strong> (e.g., 5'7" becomes 67).</li>
+            <li><strong>Pulse Variable:</strong> Remove any text (like "bpm") so the column contains <strong>only numbers</strong>.</li>
+            <li><strong>Categorical Cleanup:</strong> Check "Eye Color." If a color has fewer than 2 entries, rename it to "Other."</li>
+        </ol>
+
+        <h4>Step 2: Organizing the Data</h4>
+        <ul class="stat-list">
+            <li>Create a <strong>Frequency Distribution</strong> table for the <code>Height_Inches</code> variable. Choose 5 to 7 classes (bins).</li>
+        </ul>
+
+        <h4>Step 3: Visualizing the Data</h4>
+        <p>Create the following graphs. Ensure every graph has a title and labeled axes.</p>
+        <ol class="stat-list">
+            <li><strong>Histogram:</strong> Use your frequency distribution to create a histogram for <code>Height_Inches</code>.</li>
+            <li><strong>Bar Graph or Pareto Chart:</strong> Create a bar graph for the <code>Math Anxiety Rating</code>. (Note: Pie charts are not accepted for this assignment).</li>
+            <li><strong>Comparative Boxplots:</strong> Create side-by-side boxplots for <code>Height_Inches</code> separated by <code>Gender</code>.</li>
+        </ol>
+
+        <h4>Step 4: Numerical Summaries</h4>
+        <p>Calculate the following statistics for the full class <code>Height_Inches</code>:</p>
+        <ul class="stat-list">
+            <li><strong>Mean</strong> (\(\bar{x}\))</li>
+            <li><strong>Median</strong> (\(M\))</li>
+            <li><strong>Standard Deviation</strong> (\(s\))</li>
+            <li><strong>Five-Number Summary:</strong> Min, Q1, Median, Q3, Max.</li>
+        </ul>
+
+        <h4>Step 5: The Personal Connection</h4>
+        <ul class="stat-list">
+            <li><strong>Calculate:</strong> Find the <strong>z-score</strong> for <em>your own</em> height using the class mean and standard deviation.</li>
+            <li><strong>Interpret:</strong> Explain what this z-score tells you. Are you considered "unusual" (more than 2 standard deviations away from the mean)?</li>
+        </ul>
+
+        <!-- Phase 1 Rubric -->
+        <div class="rubric-table-wrapper">
+            <table class="rubric-table">
+                <caption>Phase 1 Grading Rubric (20 Points)</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Criteria</th>
+                        <th scope="col">Excellent (5 pts)</th>
+                        <th scope="col">Proficient (4 pts)</th>
+                        <th scope="col">Developing (2-3 pts)</th>
+                        <th scope="col">Beginning (0-1 pts)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Data Cleaning & Org<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1)</span></th>
+                        <td>All height data converted correctly. Categories consolidated. Frequency table has appropriate bins.</td>
+                        <td>Minor errors in conversion or bins. Categories slightly granular.</td>
+                        <td>Significant mixed units (feet/inches). Text remains in numeric columns.</td>
+                        <td>Raw data used. No frequency table.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Visualization<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1)</span></th>
+                        <td>Histogram, Bar Graph, and Side-by-Side Boxplots present with correct titles, labels, and units.</td>
+                        <td>All graphs present but missing minor labels. Boxplots may not share scale.</td>
+                        <td>Incorrect graph types (e.g., Pie chart). Missing titles/units.</td>
+                        <td>Graphs missing or unreadable.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Numerical Summaries<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1)</span></th>
+                        <td>Mean, Median, SD, and 5-number summary precise. Correct notation (\(\bar{x}, s\)).</td>
+                        <td>Calculation errors minor. Notation missing/incorrect.</td>
+                        <td>Major errors due to bad data.</td>
+                        <td>Missing summary stats.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Statistical Argument<br><span style="font-weight:normal; font-size:0.85em;">(CLO 5)</span></th>
+                        <td>Z-score calculation shown. Interpretation explicitly mentions SDs and "unusual" status.</td>
+                        <td>Z-score correct, but interpretation is generic.</td>
+                        <td>Formula applied incorrectly. Interpretation contradicts math.</td>
+                        <td>Calculation missing.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Phase 2 -->
+    <section class="stat-phase-section" aria-labelledby="phase2-heading">
+        <h2 id="phase2-heading" class="stat-phase-header">Phase 2: Regression & Probability</h2>
+        <p><strong>Focus:</strong> Correlation, predictions, and probability rules. | <strong>Due Date:</strong> Week 8</p>
+
+        <h3 class="stat-sub-header">Student Instructions</h3>
+
+        <div class="stat-alert">
+            <strong>⚠️ Real Data Alert:</strong> Real data is messy. You may calculate a correlation coefficient ($r$) that is close to zero. This is not necessarily a mistake; it means there may be no strong linear relationship in our sample. Report the math accurately.
+        </div>
+
+        <h4>Step 1: Regression Analysis</h4>
+        <ol class="stat-list">
+            <li><strong>Variables:</strong> Use <code>Height_Inches</code> as the Explanatory Variable ($x$) and <code>Pulse</code> as the Response Variable ($y$).</li>
+            <li><strong>Calculations:</strong> Find $r$, $R^2$, and the regression equation \(\hat{y} = ax + b\).</li>
+            <li><strong>Standard Prediction:</strong> Use your equation to predict the pulse of a student who is <strong>68 inches</strong> tall.</li>
+            <li><strong>Personal Prediction:</strong> Use your equation to predict <em>your own</em> pulse based on your height. Calculate your <strong>Residual</strong> (\(\text{Actual} - \text{Predicted}\)).</li>
+        </ol>
+
+        <h4>Step 2: Probability</h4>
+        <p>Create a <strong>Two-Way Table</strong> for <strong>Gender</strong> (Rows) and <strong>Math Anxiety</strong> (Columns). Calculate:</p>
+        <ul class="stat-list">
+            <li><strong>P(High Anxiety):</strong> Probability a student has High Math Anxiety.</li>
+            <li><strong>P(Man AND Low Anxiety):</strong> Probability of the Intersection.</li>
+            <li><strong>P(Woman OR High Anxiety):</strong> Probability of the Union (Addition Rule).</li>
+            <li><strong>P(High Anxiety | Woman):</strong> Conditional Probability.</li>
+        </ul>
+
+        <!-- Phase 2 Rubric -->
+        <div class="rubric-table-wrapper">
+            <table class="rubric-table">
+                <caption>Phase 2 Grading Rubric (20 Points)</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Criteria</th>
+                        <th scope="col">Excellent (5 pts)</th>
+                        <th scope="col">Proficient (4 pts)</th>
+                        <th scope="col">Developing (2-3 pts)</th>
+                        <th scope="col">Beginning (0-1 pts)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Regression Analysis<br><span style="font-weight:normal; font-size:0.85em;">(CLO 3)</span></th>
+                        <td>Variables identified correctly. $r, R^2$ accurate. Equation written in context.</td>
+                        <td>Calculations correct, but equation uses generic variables. Interpretation weak.</td>
+                        <td>Scatter plot axes reversed. $r$ interpreted as slope.</td>
+                        <td>Missing analysis.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Predictions & Residuals<br><span style="font-weight:normal; font-size:0.85em;">(CLO 3, 5)</span></th>
+                        <td>Both predictions (68" & Personal) correct. Residual calculated and interpreted correctly.</td>
+                        <td>Predictions made, but residual calculation missing or sign flipped.</td>
+                        <td>Plugged values into wrong variables. No comparison made.</td>
+                        <td>Predictions not attempted.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Contingency Table<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1, 2)</span></th>
+                        <td>Table clearly labeled with Row/Column totals. Marginal distributions sum correctly.</td>
+                        <td>Table present but totals missing or inaccurate.</td>
+                        <td>Table constructed incorrectly.</td>
+                        <td>No table provided.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Probability Calculations<br><span style="font-weight:normal; font-size:0.85em;">(CLO 2)</span></th>
+                        <td>Correctly differentiates AND, OR, GIVEN. Work/Fractions shown.</td>
+                        <td>Answers correct, work hidden. Minor confusion on Union/Intersection.</td>
+                        <td>Denominators incorrect for Conditional Prob.</td>
+                        <td>Probabilities not calculated.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Phase 3 -->
+    <section class="stat-phase-section" aria-labelledby="phase3-heading">
+        <h2 id="phase3-heading" class="stat-phase-header">Phase 3: Simulation & Distributions</h2>
+        <p><strong>Focus:</strong> Randomness, Binomial models, and Confidence Intervals. | <strong>Due Date:</strong> Week 11</p>
+
+        <h3 class="stat-sub-header">Student Instructions</h3>
+
+        <h4>Step 1: Binomial Simulation</h4>
+        <p>Simulate a random selection of students using a coin toss.</p>
+        <ol class="stat-list">
+            <li>Assume P(Female) = 0.5. Flip a coin 30 times (Heads = Female). Record your number of Heads.</li>
+            <li>Calculate the <strong>Expected Number</strong> ($\mu = np$) and <strong>Standard Deviation</strong> ($\sigma = \sqrt{npq}$).</li>
+            <li>Is your coin flip result "unusual" (z-score > 2 or < -2)?</li>
+        </ol>
+
+        <h4>Step 2: Confidence Intervals</h4>
+        <ol class="stat-list">
+            <li><strong>Proportion:</strong> Construct a <strong>95% Confidence Interval</strong> for the proportion of students with <strong>Blue Eyes</strong>. Check conditions: is \(np(1-p) \ge 10\)?</li>
+            <li><strong>Mean:</strong> Construct a <strong>90% Confidence Interval</strong> for the mean <strong>Commute Time</strong>.</li>
+            <li><strong>Interpretation:</strong> Interpret both intervals in the context of the problem.</li>
+        </ol>
+
+        <!-- Phase 3 Rubric -->
+        <div class="rubric-table-wrapper">
+            <table class="rubric-table">
+                <caption>Phase 3 Grading Rubric (20 Points)</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Criteria</th>
+                        <th scope="col">Excellent (5 pts)</th>
+                        <th scope="col">Proficient (4 pts)</th>
+                        <th scope="col">Developing (2-3 pts)</th>
+                        <th scope="col">Beginning (0-1 pts)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Binomial Simulation<br><span style="font-weight:normal; font-size:0.85em;">(CLO 2)</span></th>
+                        <td>Data recorded. Expected value/SD correct. Z-score correctly assesses "unusual."</td>
+                        <td>Simulation done, calculations correct. Interpretation vague.</td>
+                        <td>Calculations use wrong formulas or fake data.</td>
+                        <td>Simulation not conducted.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CI (Proportion)<br><span style="font-weight:normal; font-size:0.85em;">(CLO 4)</span></th>
+                        <td>Conditions checked. Correct Critical Value ($z^*$). Interval accurate.</td>
+                        <td>Interval calculated correctly, conditions not checked.</td>
+                        <td>Used T instead of Z. Math errors.</td>
+                        <td>No interval.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">CI (Mean)<br><span style="font-weight:normal; font-size:0.85em;">(CLO 4)</span></th>
+                        <td>Correct Critical Value ($t^*$) based on degrees of freedom. Interval accurate.</td>
+                        <td>Used $z^*$ instead of $t^*$. Math otherwise correct.</td>
+                        <td>Major calculation errors.</td>
+                        <td>No interval.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Statistical Interpretation<br><span style="font-weight:normal; font-size:0.85em;">(CLO 5)</span></th>
+                        <td>States "We are XX% confident the <em>true population parameter</em> lies..."</td>
+                        <td>Interpretation sounds like probability ("95% chance").</td>
+                        <td>Interprets interval as capturing sample data.</td>
+                        <td>No interpretation.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Phase 4 -->
+    <section class="stat-phase-section" aria-labelledby="phase4-heading">
+        <h2 id="phase4-heading" class="stat-phase-header">Phase 4: Hypothesis Testing & Inference</h2>
+        <p><strong>Focus:</strong> Formal testing procedures and final synthesis. | <strong>Due Date:</strong> Week 15</p>
+
+        <h3 class="stat-sub-header">Student Instructions</h3>
+
+        <h4>Step 1: Hypothesis Test (One Sample Mean)</h4>
+        <p><strong>The Claim:</strong> Medical guidelines suggest young adults need 8 hours of sleep. Test the claim that Stat 2050 students get <strong>less than</strong> 8 hours of sleep on average.</p>
+        <ul class="stat-list">
+            <li>State $H_0$ and $H_1$. Calculate Test Statistic ($t$) and P-value. Conclusion at $\alpha = 0.05$.</li>
+        </ul>
+
+        <h4>Step 2: Chi-Squared Goodness of Fit</h4>
+        <p><strong>The Claim:</strong> Birthdays are evenly distributed throughout the year.</p>
+        <ul class="stat-list">
+            <li>Variable: <code>Birth Month</code>. Calculate Expected Count. Run Chi-Square GOF test.</li>
+            <li><strong>Personal Connection:</strong> Did your birth month contribute a large amount to the Chi-Square statistic?</li>
+        </ul>
+
+        <h4>Step 3: Executive Summary</h4>
+        <p>Write a 1-page summary titled <strong>"Profile of the Stat 2050 Student."</strong> Synthesize your findings. You must use these headers:</p>
+        <ul class="stat-list">
+            <li><strong>Physical Characteristics:</strong> Discuss height, pulse, and boxplot comparisons.</li>
+            <li><strong>Behavioral Traits:</strong> Discuss sleep patterns and anxiety.</li>
+            <li><strong>Statistical Validation:</strong> Cite your P-values and Confidence Intervals here.</li>
+            <li><strong>Conclusion:</strong> Summarize the "typical" student profile.</li>
+        </ul>
+
+        <!-- Phase 4 Rubric -->
+        <div class="rubric-table-wrapper">
+            <table class="rubric-table">
+                <caption>Phase 4 Grading Rubric (20 Points)</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Criteria</th>
+                        <th scope="col">Excellent (5 pts)</th>
+                        <th scope="col">Proficient (4 pts)</th>
+                        <th scope="col">Developing (2-3 pts)</th>
+                        <th scope="col">Beginning (0-1 pts)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Hypothesis Testing<br><span style="font-weight:normal; font-size:0.85em;">(CLO 4)</span></th>
+                        <td>Hypotheses correct ($H_0: \mu = 8$). Conclusion links P-value to $\alpha$ correctly in context.</td>
+                        <td>Calculation correct, conclusion binary ("Reject") without context.</td>
+                        <td>Fails to reject when P-value is low. Hypotheses reversed.</td>
+                        <td>Test not performed.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Chi-Square GOF<br><span style="font-weight:normal; font-size:0.85em;">(CLO 4)</span></th>
+                        <td>Expected counts ($n/12$) & Statistic correct. Degrees of Freedom correct.</td>
+                        <td>Calculation error in Expected counts. Confuses GOF with Independence.</td>
+                        <td>Uses raw counts instead of Observed vs Expected.</td>
+                        <td>Test not performed.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Personal Connection<br><span style="font-weight:normal; font-size:0.85em;">(CLO 5)</span></th>
+                        <td>Identifies personal contribution to $\chi^2$ using $(O-E)^2/E$.</td>
+                        <td>States month was high/low but no calculation.</td>
+                        <td>No personal connection made.</td>
+                        <td>Question ignored.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Executive Summary<br><span style="font-weight:normal; font-size:0.85em;">(CLO 5)</span></th>
+                        <td>Narrative flows logically. Uses required headers. <strong>Cites specific stats</strong> from earlier phases.</td>
+                        <td>Follows structure but lacks statistical citation (qualitative only).</td>
+                        <td>Bulleted list or opinion-based.</td>
+                        <td>Summary not written.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
