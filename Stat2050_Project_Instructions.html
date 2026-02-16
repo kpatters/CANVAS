@@ -69,6 +69,13 @@
         border-radius: 4px;
     }
 
+    /* Math specific styling */
+    .math-symbol {
+        font-family: 'Times New Roman', serif;
+        font-style: italic;
+        padding: 0 2px;
+    }
+
     /* Table Styles for Accessibility */
     .rubric-table-wrapper {
         overflow-x: auto;
@@ -118,19 +125,6 @@
     .stat-list li {
         margin-bottom: 8px;
     }
-
-    /* Accessibility Utilities */
-    .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border: 0;
-    }
 </style>
 </head>
 <body>
@@ -145,7 +139,7 @@
         <div class="stat-project-box">
             <h2 style="font-size: 1.3em; margin-top: 0; color: #004494;">Project Overview</h2>
             <ul class="stat-list">
-                <li><strong>Data Source:</strong> The <code>Stat2050_Survey_ResultsSP2026.csv</code> file (available in Canvas Modules).</li>
+                <li><strong>Data Source:</strong> The <code>Stat2050_Survey_Results.csv</code> file (available in Files).</li>
                 <li><strong>Submission Format:</strong> Word Document (<code>.docx</code>) or Google Doc.</li>
                 <li><strong>Formatting:</strong> Use a readable sans-serif font (e.g., Arial, Calibri) at size 11 or 12.</li>
                 <li><strong>Visuals:</strong> Embed all graphs directly into your document.</li>
@@ -156,12 +150,12 @@
     <!-- Phase 1 -->
     <section class="stat-phase-section" aria-labelledby="phase1-heading">
         <h2 id="phase1-heading" class="stat-phase-header">Phase 1: Data Cleaning & Descriptive Statistics</h2>
-        <p><strong>Focus:</strong> Data integrity, visualization, and measures of center. | <strong>Due Date:</strong> After Chapter 3</p>
+        <p><strong>Focus:</strong> Data integrity, visualization, and measures of center. | <strong>Due Date:</strong> Week 4</p>
 
         <h3 class="stat-sub-header">Student Instructions</h3>
 
         <h4>Step 1: Data Cleaning</h4>
-        <p>Open the class data file in StatCrunch, Excel, or Google Sheets. Correct the following before analysis:</p>
+        <p>Open the class data file in Excel or Google Sheets. Correct the following before analysis:</p>
         <ol class="stat-list">
             <li><strong>Height Variable:</strong> Convert all heights to <strong>total inches</strong> (e.g., 5'7" becomes 67).</li>
             <li><strong>Pulse Variable:</strong> Remove any text (like "bpm") so the column contains <strong>only numbers</strong>.</li>
@@ -170,7 +164,7 @@
 
         <h4>Step 2: Organizing the Data</h4>
         <ul class="stat-list">
-            <li>Create a <strong>Frequency Distribution</strong> and <strong>Relative Frequency Distribution</strong> grouped by Gender table for the <code>Height_Inches</code> variable. Choose 5 to 7 classes (bins).</li>
+            <li>Create a <strong>Frequency Distribution</strong> table for the <code>Height_Inches</code> variable. Choose 5 to 7 classes (bins).</li>
         </ul>
 
         <h4>Step 3: Visualizing the Data</h4>
@@ -184,9 +178,9 @@
         <h4>Step 4: Numerical Summaries</h4>
         <p>Calculate the following statistics for the full class <code>Height_Inches</code>:</p>
         <ul class="stat-list">
-            <li><strong>Mean</strong> (\(\bar{x}\))</li>
-            <li><strong>Median</strong> (\(M\))</li>
-            <li><strong>Standard Deviation</strong> (\(s\))</li>
+            <li><strong>Mean</strong> (<span class="math-symbol" aria-label="x-bar">x&#772;</span>)</li>
+            <li><strong>Median</strong> (<span class="math-symbol">M</span>)</li>
+            <li><strong>Standard Deviation</strong> (<span class="math-symbol">s</span>)</li>
             <li><strong>Five-Number Summary:</strong> Min, Q1, Median, Q3, Max.</li>
         </ul>
 
@@ -226,7 +220,7 @@
                     </tr>
                     <tr>
                         <th scope="row">Numerical Summaries<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1)</span></th>
-                        <td>Mean, Median, SD, and 5-number summary precise. Correct notation (\(\bar{x}, s\)).</td>
+                        <td>Mean, Median, SD, and 5-number summary precise. Correct notation (<span class="math-symbol">x&#772;, s</span>).</td>
                         <td>Calculation errors minor. Notation missing/incorrect.</td>
                         <td>Major errors due to bad data.</td>
                         <td>Missing summary stats.</td>
@@ -251,15 +245,15 @@
         <h3 class="stat-sub-header">Student Instructions</h3>
 
         <div class="stat-alert">
-            <strong>⚠️ Real Data Alert:</strong> Real data is messy. You may calculate a correlation coefficient ($r$) that is close to zero. This is not necessarily a mistake; it means there may be no strong linear relationship in our sample. Report the math accurately.
+            <strong>⚠️ Real Data Alert:</strong> Real data is messy. You may calculate a correlation coefficient (<span class="math-symbol">r</span>) that is close to zero. This is not necessarily a mistake; it means there may be no strong linear relationship in our sample. Report the math accurately.
         </div>
 
         <h4>Step 1: Regression Analysis</h4>
         <ol class="stat-list">
-            <li><strong>Variables:</strong> Use <code>Height_Inches</code> as the Explanatory Variable ($x$) and <code>Pulse</code> as the Response Variable ($y$).</li>
-            <li><strong>Calculations:</strong> Find $r$, $R^2$, and the regression equation \(\hat{y} = ax + b\).</li>
+            <li><strong>Variables:</strong> Use <code>Height_Inches</code> as the Explanatory Variable (<span class="math-symbol">x</span>) and <code>Pulse</code> as the Response Variable (<span class="math-symbol">y</span>).</li>
+            <li><strong>Calculations:</strong> Find <span class="math-symbol">r</span>, <span class="math-symbol">R<sup>2</sup></span>, and the regression equation <span class="math-symbol">y&#770; = ax + b</span>.</li>
             <li><strong>Standard Prediction:</strong> Use your equation to predict the pulse of a student who is <strong>68 inches</strong> tall.</li>
-            <li><strong>Personal Prediction:</strong> Use your equation to predict <em>your own</em> pulse based on your height. Calculate your <strong>Residual</strong> (\(\text{Actual} - \text{Predicted}\)).</li>
+            <li><strong>Personal Prediction:</strong> Use your equation to predict <em>your own</em> pulse based on your height. Calculate your <strong>Residual</strong> (<span class="math-symbol">Actual - Predicted</span>).</li>
         </ol>
 
         <h4>Step 2: Probability</h4>
@@ -287,9 +281,9 @@
                 <tbody>
                     <tr>
                         <th scope="row">Regression Analysis<br><span style="font-weight:normal; font-size:0.85em;">(CLO 3)</span></th>
-                        <td>Variables identified correctly. $r, R^2$ accurate. Equation written in context.</td>
+                        <td>Variables identified correctly. <span class="math-symbol">r, R<sup>2</sup></span> accurate. Equation written in context.</td>
                         <td>Calculations correct, but equation uses generic variables. Interpretation weak.</td>
-                        <td>Scatter plot axes reversed. $r$ interpreted as slope.</td>
+                        <td>Scatter plot axes reversed. <span class="math-symbol">r</span> interpreted as slope.</td>
                         <td>Missing analysis.</td>
                     </tr>
                     <tr>
@@ -329,13 +323,13 @@
         <p>Simulate a random selection of students using a coin toss.</p>
         <ol class="stat-list">
             <li>Assume P(Female) = 0.5. Flip a coin 30 times (Heads = Female). Record your number of Heads.</li>
-            <li>Calculate the <strong>Expected Number</strong> ($\mu = np$) and <strong>Standard Deviation</strong> ($\sigma = \sqrt{npq}$).</li>
+            <li>Calculate the <strong>Expected Number</strong> (<span class="math-symbol">&mu; = np</span>) and <strong>Standard Deviation</strong> (<span class="math-symbol" aria-label="sigma equals square root of n p q">&sigma; = &radic;(npq)</span>).</li>
             <li>Is your coin flip result "unusual" (z-score > 2 or < -2)?</li>
         </ol>
 
         <h4>Step 2: Confidence Intervals</h4>
         <ol class="stat-list">
-            <li><strong>Proportion:</strong> Construct a <strong>95% Confidence Interval</strong> for the proportion of students with <strong>Blue Eyes</strong>. Check conditions: is \(np(1-p) \ge 10\)?</li>
+            <li><strong>Proportion:</strong> Construct a <strong>95% Confidence Interval</strong> for the proportion of students with <strong>Blue Eyes</strong>. Check conditions: is <span class="math-symbol">np(1-p) &ge; 10</span>?</li>
             <li><strong>Mean:</strong> Construct a <strong>90% Confidence Interval</strong> for the mean <strong>Commute Time</strong>.</li>
             <li><strong>Interpretation:</strong> Interpret both intervals in the context of the problem.</li>
         </ol>
@@ -363,15 +357,15 @@
                     </tr>
                     <tr>
                         <th scope="row">CI (Proportion)<br><span style="font-weight:normal; font-size:0.85em;">(CLO 4)</span></th>
-                        <td>Conditions checked. Correct Critical Value ($z^*$). Interval accurate.</td>
+                        <td>Conditions checked. Correct Critical Value (<span class="math-symbol">z*</span>). Interval accurate.</td>
                         <td>Interval calculated correctly, conditions not checked.</td>
                         <td>Used T instead of Z. Math errors.</td>
                         <td>No interval.</td>
                     </tr>
                     <tr>
                         <th scope="row">CI (Mean)<br><span style="font-weight:normal; font-size:0.85em;">(CLO 4)</span></th>
-                        <td>Correct Critical Value ($t^*$) based on degrees of freedom. Interval accurate.</td>
-                        <td>Used $z^*$ instead of $t^*$. Math otherwise correct.</td>
+                        <td>Correct Critical Value (<span class="math-symbol">t*</span>) based on degrees of freedom. Interval accurate.</td>
+                        <td>Used <span class="math-symbol">z*</span> instead of <span class="math-symbol">t*</span>. Math otherwise correct.</td>
                         <td>Major calculation errors.</td>
                         <td>No interval.</td>
                     </tr>
@@ -397,14 +391,14 @@
         <h4>Step 1: Hypothesis Test (One Sample Mean)</h4>
         <p><strong>The Claim:</strong> Medical guidelines suggest young adults need 8 hours of sleep. Test the claim that Stat 2050 students get <strong>less than</strong> 8 hours of sleep on average.</p>
         <ul class="stat-list">
-            <li>State $H_0$ and $H_1$. Calculate Test Statistic ($t$) and P-value. Conclusion at $\alpha = 0.05$.</li>
+            <li>State <span class="math-symbol">H<sub>0</sub></span> and <span class="math-symbol">H<sub>1</sub></span>. Calculate Test Statistic (<span class="math-symbol">t</span>) and P-value. Conclusion at <span class="math-symbol">&alpha; = 0.05</span>.</li>
         </ul>
 
         <h4>Step 2: Chi-Squared Goodness of Fit</h4>
         <p><strong>The Claim:</strong> Birthdays are evenly distributed throughout the year.</p>
         <ul class="stat-list">
             <li>Variable: <code>Birth Month</code>. Calculate Expected Count. Run Chi-Square GOF test.</li>
-            <li><strong>Personal Connection:</strong> Did your birth month contribute a large amount to the Chi-Square statistic?</li>
+            <li><strong>Personal Connection:</strong> Did your birth month contribute a large amount to the Chi-Square statistic? <br><em>Formula:</em> <span class="math-symbol" aria-label="Chi-square contribution equals Observed minus Expected squared divided by Expected">(Observed - Expected)<sup>2</sup> / Expected</span></li>
         </ul>
 
         <h4>Step 3: Executive Summary</h4>
@@ -432,21 +426,21 @@
                 <tbody>
                     <tr>
                         <th scope="row">Hypothesis Testing<br><span style="font-weight:normal; font-size:0.85em;">(CLO 4)</span></th>
-                        <td>Hypotheses correct ($H_0: \mu = 8$). Conclusion links P-value to $\alpha$ correctly in context.</td>
+                        <td>Hypotheses correct (<span class="math-symbol">H<sub>0</sub>: &mu; = 8</span>). Conclusion links P-value to <span class="math-symbol">&alpha;</span> correctly in context.</td>
                         <td>Calculation correct, conclusion binary ("Reject") without context.</td>
                         <td>Fails to reject when P-value is low. Hypotheses reversed.</td>
                         <td>Test not performed.</td>
                     </tr>
                     <tr>
                         <th scope="row">Chi-Square GOF<br><span style="font-weight:normal; font-size:0.85em;">(CLO 4)</span></th>
-                        <td>Expected counts ($n/12$) & Statistic correct. Degrees of Freedom correct.</td>
+                        <td>Expected counts (<span class="math-symbol">n/12</span>) & Statistic correct. Degrees of Freedom correct.</td>
                         <td>Calculation error in Expected counts. Confuses GOF with Independence.</td>
                         <td>Uses raw counts instead of Observed vs Expected.</td>
                         <td>Test not performed.</td>
                     </tr>
                     <tr>
                         <th scope="row">Personal Connection<br><span style="font-weight:normal; font-size:0.85em;">(CLO 5)</span></th>
-                        <td>Identifies personal contribution to $\chi^2$ using $(O-E)^2/E$.</td>
+                        <td>Identifies personal contribution to <span class="math-symbol">&chi;<sup>2</sup></span> using <span class="math-symbol">(O-E)<sup>2</sup>/E</span>.</td>
                         <td>States month was high/low but no calculation.</td>
                         <td>No personal connection made.</td>
                         <td>Question ignored.</td>
