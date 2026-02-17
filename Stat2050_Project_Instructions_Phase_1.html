@@ -4,11 +4,7 @@
 <meta charset="UTF-8">
 <title>Stat 2050 Project Instructions</title>
 <style>
-    /* WCAG 2.1 AA Compliant Stylesheet
-       - High contrast text colors
-       - Readable font stack
-       - Responsive tables
-    */
+    /* WCAG 2.1 AA Compliant Stylesheet */
     .stat-project-container {
         font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         max-width: 950px;
@@ -64,7 +60,7 @@
         font-size: 1.3em;
     }
 
-    /* Alert Boxes - Colors verified for contrast */
+    /* Alert Boxes */
     .stat-alert {
         background-color: #fff3cd;
         border: 1px solid #ffeeba;
@@ -89,10 +85,10 @@
         font-family: 'Times New Roman', serif;
         font-style: italic;
         padding: 0 2px;
-        white-space: nowrap; /* Prevents line breaks inside formulas */
+        white-space: nowrap; 
     }
 
-    /* Table Styles for Accessibility */
+    /* Table Styles */
     .rubric-table-wrapper {
         overflow-x: auto;
         margin-top: 20px;
@@ -103,7 +99,7 @@
     .rubric-table {
         width: 100%;
         border-collapse: collapse;
-        min-width: 600px; /* Ensures table doesn't squish on mobile */
+        min-width: 600px;
     }
 
     .rubric-table caption {
@@ -131,7 +127,7 @@
     .rubric-table th[scope="row"] {
         background-color: #f8f9fa;
         font-weight: bold;
-        width: 25%; /* Increased width for headers */
+        width: 25%;
     }
 
     /* List Styles */
@@ -223,49 +219,64 @@
         <!-- Phase 1 Rubric -->
         <div class="rubric-table-wrapper">
             <table class="rubric-table">
-                <caption>Phase 1 Grading Rubric (20 Points)</caption>
+                <caption>Phase 1 Grading Rubric (25 Points)</caption>
                 <thead>
                     <tr>
                         <th scope="col">Criteria</th>
-                        <th scope="col">Excellent (5 pts)</th>
-                        <th scope="col">Proficient (4 pts)</th>
-                        <th scope="col">Developing (2-3 pts)</th>
-                        <th scope="col">Beginning (0-1 pts)</th>
+                        <th scope="col">Excellent</th>
+                        <th scope="col">Proficient</th>
+                        <th scope="col">Developing</th>
+                        <th scope="col">Beginning/Missing</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <th scope="row">Data Cleaning & Org<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1)</span></th>
-                        <td>All height data converted correctly. Frequency & Relative Frequency table included and correctly grouped by Gender.</td>
-                        <td>Minor errors in conversion. Table included but missing Relative Frequency or not grouped by Gender.</td>
-                        <td>Significant mixed units (feet/inches). Text remains in numeric columns.</td>
-                        <td>Raw data used. No frequency table.</td>
+                        <td><strong>(5 pts)</strong> All height data converted correctly. Freq/Rel Freq table included and correctly grouped by Gender.</td>
+                        <td><strong>(4 pts)</strong> Minor errors in conversion. Table included but missing Relative Frequency or not grouped by Gender.</td>
+                        <td><strong>(2-3 pts)</strong> Significant mixed units. Text remains in numeric columns.</td>
+                        <td><strong>(0-1 pts)</strong> Raw data used. No frequency table.</td>
                     </tr>
                     <tr>
                         <th scope="row">Visualization<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1)</span></th>
-                        <td>Histogram, Bar Graph, and Side-by-Side Boxplots present with correct titles, labels, and units.</td>
-                        <td>All graphs present but missing minor labels. Boxplots may not share scale.</td>
-                        <td>Incorrect graph types (e.g., Pie chart). Missing titles/units.</td>
-                        <td>Graphs missing or unreadable.</td>
+                        <td><strong>(5 pts)</strong> Histogram, Bar Graph, and Side-by-Side Boxplots present with correct titles, labels, and units.</td>
+                        <td><strong>(4 pts)</strong> All graphs present but missing minor labels. Boxplots may not share scale.</td>
+                        <td><strong>(2-3 pts)</strong> Incorrect graph types (e.g., Pie chart). Missing titles/units.</td>
+                        <td><strong>(0-1 pts)</strong> Graphs missing or unreadable.</td>
                     </tr>
                     <tr>
                         <th scope="row">Numerical Summaries<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1)</span></th>
-                        <td>Mean, Median, Mode, Range, SD, and 5-number summary precise. Correct notation (<span class="math-symbol" aria-label="x-bar">x&#772;</span>, <span class="math-symbol" aria-label="s">s</span>).</td>
-                        <td>Calculation errors minor. Notation missing/incorrect.</td>
-                        <td>Major errors due to bad data.</td>
-                        <td>Missing summary stats.</td>
+                        <td><strong>(5 pts)</strong> Mean, Median, Mode, Range, SD, and 5-number summary precise. Correct notation.</td>
+                        <td><strong>(4 pts)</strong> Calculation errors minor. Notation missing/incorrect.</td>
+                        <td><strong>(2-3 pts)</strong> Major errors due to bad data.</td>
+                        <td><strong>(0-1 pts)</strong> Missing summary stats.</td>
                     </tr>
                     <tr>
                         <th scope="row">Statistical Argument<br><span style="font-weight:normal; font-size:0.85em;">(CLO 5)</span></th>
-                        <td>Calculation shown and correct. Interpretation explicitly mentions SDs and "unusual" status.</td>
-                        <td>Z-score correct, but calculation not shown or interpretation is generic.</td>
-                        <td>Formula applied incorrectly. Interpretation contradicts math.</td>
-                        <td>Calculation missing.</td>
+                        <td><strong>(5 pts)</strong> Calculation shown and correct. Interpretation explicitly mentions SDs and "unusual" status.</td>
+                        <td><strong>(4 pts)</strong> Z-score correct, but calculation not shown or interpretation is generic.</td>
+                        <td><strong>(2-3 pts)</strong> Formula applied incorrectly. Interpretation contradicts math.</td>
+                        <td><strong>(0-1 pts)</strong> Calculation missing.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Methods Section</th>
+                        <td><strong>(3 pts)</strong> Clear explanation of tools used. Discusses data cleaning challenges specifically.</td>
+                        <td><strong>(2 pts)</strong> Tools mentioned but vague. No mention of cleanup.</td>
+                        <td><strong>(1 pts)</strong> Very brief or unclear.</td>
+                        <td><strong>(0 pts)</strong> Section missing.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Neatness & Formatting</th>
+                        <td><strong>(2 pts)</strong> Professional PDF. Graphs clear and well-placed. Easy to read.</td>
+                        <td><strong>(1 pts)</strong> Formatting issues. Hard to follow.</td>
+                        <td><strong>(0.5 pts)</strong> Major formatting errors.</td>
+                        <td><strong>(0 pts)</strong> Unreadable / Wrong format.</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </section>
+
 
 
 </div>
