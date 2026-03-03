@@ -1,1 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Stat 2050 Project Instructions</title>
+<style>
+    /* WCAG 2.1 AA Compliant Stylesheet */
+    .stat-project-container {
+        font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        max-width: 950px;
+        margin: 0 auto;
+        line-height: 1.6;
+        color: #2D3B45; /* High contrast dark grey */
+        background-color: #ffffff;
+    }
+    
+    .stat-project-header {
+        border-bottom: 3px solid #0056b3;
+        padding-bottom: 20px;
+        margin-bottom: 35px;
+    }
 
+    .stat-project-title {
+        color: #0056b3; /* Accessible blue */
+        font-size: 2.2em;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    .stat-project-box {
+        background-color: #f0f7ff;
+        border-left: 5px solid #0056b3;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 0 4px 4px 0;
+    }
+
+    .stat-phase-section {
+        margin-bottom: 50px;
+        border: 1px solid #e0e0e0;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .stat-phase-header {
+        background-color: #2D3B45;
+        color: #ffffff;
+        padding: 12px 20px;
+        border-radius: 6px;
+        font-size: 1.5em;
+        margin-top: 0;
+    }
+
+    .stat-sub-header {
+        color: #0056b3;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 8px;
+        margin-top: 30px;
+        font-size: 1.3em;
+    }
+
+    /* Alert Boxes */
+    .stat-alert {
+        background-color: #fff3cd;
+        border: 1px solid #ffeeba;
+        color: #856404; /* Contrast 4.7:1 */
+        padding: 15px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+    }
+
+    .integrity-alert {
+        background-color: #ffeef0;
+        border: 1px solid #f5c6cb;
+        color: #721c24; /* Contrast 7.2:1 */
+        padding: 15px;
+        margin-top: 15px;
+        border-radius: 4px;
+        font-weight: bold;
+    }
+
+    /* Math specific styling */
+    .math-symbol {
+        font-family: 'Times New Roman', serif;
+        font-style: italic;
+        padding: 0 2px;
+        white-space: nowrap; 
+    }
+
+    /* Table Styles */
+    .rubric-table-wrapper {
+        overflow-x: auto;
+        margin-top: 20px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    .rubric-table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 600px;
+    }
+
+    .rubric-table caption {
+        text-align: left;
+        font-weight: bold;
+        padding: 10px;
+        font-size: 1.2em;
+        background-color: #f8f9fa;
+        border-bottom: 2px solid #ddd;
+        color: #2D3B45;
+    }
+
+    .rubric-table th, .rubric-table td {
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        vertical-align: top;
+        text-align: left;
+    }
+
+    .rubric-table thead tr {
+        background-color: #e9ecef;
+        color: #333;
+    }
+
+    .rubric-table th[scope="row"] {
+        background-color: #f8f9fa;
+        font-weight: bold;
+        width: 25%;
+    }
+
+    /* List Styles */
+    .stat-list {
+        margin-left: 20px;
+    }
+    
+    .stat-list li {
+        margin-bottom: 8px;
+    }
+</style>
+</head>
+<body>
+
+<main class="stat-project-container">
+
+    <!-- Header -->
+    <header class="stat-project-header">
+        <h1 class="stat-project-title">STAT 2050 Project: The Class Profile</h1>
+        <p><strong>Instructor & Student Guide</strong></p>
+        
+        <div class="stat-project-box">
+            <h2 style="font-size: 1.3em; margin-top: 0; color: #004494;">Project Overview</h2>
+            <ul class="stat-list">
+                <li><strong>Data Source:</strong> The <code>Stat2050_Survey_ResultsSP2026.csv</code> file (available in Canvas Modules).</li>
+                <li><strong>Submission Format:</strong> Submit your work as a <strong>PDF Document</strong> (e.g., <code>Lastname_Phase1.pdf</code>). Export your Word/Google Doc to PDF to ensure formatting is preserved.</li>
+                <li><strong>Methods Section:</strong> For each phase, you must include a brief "Methods" paragraph explaining <em>how</em> you created your statistical summaries (e.g., "I used the 1-Var Stats function on my TI-84," or "I used Excel formulas to sort the data").</li>
+            </ul>
+            
+            <div class="integrity-alert" role="alert">
+                Academic Integrity & AI Policy: <br>
+                <span style="font-weight: normal;">This project must be your own original work. The use of Artificial Intelligence (AI) tools (such as ChatGPT, Gemini, etc.) to generate text, analysis, or calculations is <strong>strictly prohibited</strong> and will be treated as academic dishonesty. <br><br>
+                <em>Exception:</em> You may use tools like <strong>Grammarly</strong> or other software solely for spell-checking and sentence structure improvements. However, all <strong>Data Analysis</strong> must be your own work.</span>
+            </div>
+        </div>
+    </header>
+
+  <!-- Phase 2 Rubric -->
+        <div class="rubric-table-wrapper">
+            <table class="rubric-table">
+                <caption>Phase 2 Grading Rubric (25 Points)</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Criteria</th>
+                        <th scope="col">Excellent</th>
+                        <th scope="col">Proficient</th>
+                        <th scope="col">Developing</th>
+                        <th scope="col">Beginning/Missing</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Regression Analysis<br><span style="font-weight:normal; font-size:0.85em;">(CLO 3)</span></th>
+                        <td><strong>(5 pts)</strong> Variables identified correctly. <span class="math-symbol" aria-label="r">r</span>, <span class="math-symbol" aria-label="r-squared">R<sup>2</sup></span> accurate. Equation written in context.</td>
+                        <td><strong>(4 pts)</strong> Calculations correct, but equation uses generic variables. Interpretation weak.</td>
+                        <td><strong>(2-3 pts)</strong> Scatter plot axes reversed. <span class="math-symbol" aria-label="r">r</span> interpreted as slope.</td>
+                        <td><strong>(0-1 pts)</strong> Missing analysis.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Predictions & Residuals<br><span style="font-weight:normal; font-size:0.85em;">(CLO 3, 5)</span></th>
+                        <td><strong>(5 pts)</strong> Both predictions (68" & Personal) correct. Residual calculated and interpreted correctly.</td>
+                        <td><strong>(4 pts)</strong> Predictions made, but residual calculation missing or sign flipped.</td>
+                        <td><strong>(2-3 pts)</strong> Plugged values into wrong variables. No comparison made.</td>
+                        <td><strong>(0-1 pts)</strong> Predictions not attempted.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Contingency Table<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1, 2)</span></th>
+                        <td><strong>(5 pts)</strong> Table clearly labeled with Row/Column totals. Marginal distributions sum correctly.</td>
+                        <td><strong>(4 pts)</strong> Table present but totals missing or inaccurate.</td>
+                        <td><strong>(2-3 pts)</strong> Table constructed incorrectly.</td>
+                        <td><strong>(0-1 pts)</strong> No table provided.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Probability Calculations<br><span style="font-weight:normal; font-size:0.85em;">(CLO 2)</span></th>
+                        <td><strong>(5 pts)</strong> Correctly differentiates AND, OR, GIVEN. Work/Fractions shown.</td>
+                        <td><strong>(4 pts)</strong> Answers correct, work hidden. Minor confusion on Union/Intersection.</td>
+                        <td><strong>(2-3 pts)</strong> Denominators incorrect for Conditional Prob.</td>
+                        <td><strong>(0-1 pts)</strong> Probabilities not calculated.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Methods Section</th>
+                        <td><strong>(3 pts)</strong> Clear explanation of tools used for regression and tables.</td>
+                        <td><strong>(2 pts)</strong> Tools mentioned but vague.</td>
+                        <td><strong>(1 pts)</strong> Very brief or unclear.</td>
+                        <td><strong>(0 pts)</strong> Section missing.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Neatness & Formatting</th>
+                        <td><strong>(2 pts)</strong> Professional PDF. Graphs clear and well-placed. Easy to read.</td>
+                        <td><strong>(1 pts)</strong> Formatting issues. Hard to follow.</td>
+                        <td><strong>(0.5 pts)</strong> Major formatting errors.</td>
+                        <td><strong>(0 pts)</strong> Unreadable / Wrong format.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+</main>
+
+</body>
+</html>
