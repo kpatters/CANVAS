@@ -10,6 +10,7 @@
         max-width: 950px;
         margin: 0 auto;
         line-height: 1.6;
+        font-size: 1.1em; /* Increased base font size for better readability */
         color: #2D3B45; /* High contrast dark grey */
         background-color: #ffffff;
     }
@@ -69,6 +70,15 @@
         margin-bottom: 20px;
         border-radius: 4px;
     }
+    
+    .stat-tech-tip {
+        background-color: #e2e3e5;
+        border-left: 5px solid #6c757d;
+        color: #383d41; /* Contrast 7.5:1 */
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 0 4px 4px 0;
+    }
 
     .integrity-alert {
         background-color: #ffeef0;
@@ -78,6 +88,16 @@
         margin-top: 15px;
         border-radius: 4px;
         font-weight: bold;
+    }
+
+    /* Required Submissions Box */
+    .stat-submission-box {
+        background-color: #e8f5e9;
+        border: 1px solid #c8e6c9;
+        color: #1b5e20; /* Contrast 7.1:1 */
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 4px;
     }
 
     /* Math specific styling */
@@ -100,6 +120,7 @@
         width: 100%;
         border-collapse: collapse;
         min-width: 600px;
+        font-size: 0.95em; /* Slightly smaller than main text to fit tables */
     }
 
     .rubric-table caption {
@@ -153,7 +174,7 @@
             <h2 style="font-size: 1.3em; margin-top: 0; color: #004494;">Project Overview</h2>
             <ul class="stat-list">
                 <li><strong>Data Source:</strong> The <code>Stat2050_Survey_ResultsSP2026.csv</code> file (available in Canvas Modules).</li>
-                <li><strong>Submission Format:</strong> Submit your work as a <strong>PDF Document</strong> (e.g., <code>Lastname_Phase1.pdf</code>). Export your Word/Google Doc to PDF to ensure formatting is preserved.</li>
+                <li><strong>Submission Format:</strong> You may create your project however you like! Some suggestions include Microsoft products (Word, PowerPoint, Excel) or Google products (Docs, Slides, Sheets). The only restriction is that your final project <strong>must be exported and uploaded as a PDF document</strong> to ensure your formatting, graphs, and tables are preserved accurately for grading.</li>
                 <li><strong>Methods Section:</strong> For each phase, you must include a brief "Methods" paragraph explaining <em>how</em> you created your statistical summaries (e.g., "I used the 1-Var Stats function on my TI-84," or "I used Excel formulas to sort the data").</li>
             </ul>
             
@@ -192,11 +213,11 @@
         <ol class="stat-list">
             <li><strong>Histogram:</strong> Use your frequency distribution to create a histogram for <code>Height_Inches</code>.</li>
             <li><strong>Bar Graph or Pareto Chart:</strong> Create a bar graph for the <code>Math Anxiety Rating</code>. (Note: Pie charts are not accepted for this assignment).</li>
-            <li><strong>Comparative Boxplots:</strong> Create side-by-side boxplots for <code>Height_Inches</code> separated by <code>Gender</code>.</li>
+            <li><strong>Comparative Boxplots:</strong> Create side-by-side boxplots for <code>Height_Inches</code>. Specifically, you should create one boxplot for males vs. height and one boxplot for females vs. height.</li>
         </ol>
 
-        <h4>Step 4: Numerical Summaries</h4>
-        <p>Calculate the following statistics for the full class <code>Height_Inches</code>:</p>
+        <h4>Step 4: Numerical Summaries & Reflection</h4>
+        <p>Calculate the following statistics for <code>Height_Inches</code>. You must create <strong>three separate summary tables</strong>: one for the full class, one specifically for males, and one specifically for females.</p>
         <ul class="stat-list">
             <li><strong>Mean</strong> (<span class="math-symbol" aria-label="sample mean x-bar">x&#772;</span>)</li>
             <li><strong>Median</strong> (<span class="math-symbol" aria-label="Median">M</span>)</li>
@@ -205,6 +226,7 @@
             <li><strong>Standard Deviation</strong> (<span class="math-symbol" aria-label="standard deviation s">s</span>)</li>
             <li><strong>Five-Number Summary:</strong> Min, Q1, Median, Q3, Max.</li>
         </ul>
+        <p><strong>Reflection:</strong> After calculating these statistics, write a brief reflection discussing the differences you observe between the male and female summary statistics.</p>
 
         <h4>Step 5: The Personal Connection</h4>
         <ul class="stat-list">
@@ -234,29 +256,29 @@
                         <th scope="row">Data Cleaning & Org<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1)</span></th>
                         <td><strong>(5 pts)</strong> All height data converted correctly. Freq/Rel Freq table included and correctly grouped by Gender.</td>
                         <td><strong>(4 pts)</strong> Minor errors in conversion. Table included but missing Relative Frequency or not grouped by Gender.</td>
-                        <td><strong>(2-3 pts)</strong> Significant mixed units. Text remains in numeric columns.</td>
-                        <td><strong>(0-1 pts)</strong> Raw data used. No frequency table.</td>
+                        <td><strong>(2 pts)</strong> Significant mixed units. Text remains in numeric columns.</td>
+                        <td><strong>(0 pts)</strong> Raw data used. No frequency table.</td>
                     </tr>
                     <tr>
                         <th scope="row">Visualization<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1)</span></th>
                         <td><strong>(5 pts)</strong> Histogram, Bar Graph, and Side-by-Side Boxplots present with correct titles, labels, and units.</td>
                         <td><strong>(4 pts)</strong> All graphs present but missing minor labels. Boxplots may not share scale.</td>
-                        <td><strong>(2-3 pts)</strong> Incorrect graph types (e.g., Pie chart). Missing titles/units.</td>
-                        <td><strong>(0-1 pts)</strong> Graphs missing or unreadable.</td>
+                        <td><strong>(2 pts)</strong> Incorrect graph types (e.g., Pie chart). Missing titles/units.</td>
+                        <td><strong>(0 pts)</strong> Graphs missing or unreadable.</td>
                     </tr>
                     <tr>
-                        <th scope="row">Numerical Summaries<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1)</span></th>
-                        <td><strong>(5 pts)</strong> Mean, Median, Mode, Range, SD, and 5-number summary precise. Correct notation.</td>
-                        <td><strong>(4 pts)</strong> Calculation errors minor. Notation missing/incorrect.</td>
-                        <td><strong>(2-3 pts)</strong> Major errors due to bad data.</td>
-                        <td><strong>(0-1 pts)</strong> Missing summary stats.</td>
+                        <th scope="row">Numerical Summaries & Reflection<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1)</span></th>
+                        <td><strong>(5 pts)</strong> All three summary tables included with correct notation. Reflection insightfully discusses differences between male and female stats.</td>
+                        <td><strong>(4 pts)</strong> Tables included but calculation errors are present, or reflection is very brief/vague.</td>
+                        <td><strong>(2 pts)</strong> Missing tables for separate genders or major errors due to bad data. Reflection missing.</td>
+                        <td><strong>(0 pts)</strong> Missing summary stats and reflection.</td>
                     </tr>
                     <tr>
                         <th scope="row">Statistical Argument<br><span style="font-weight:normal; font-size:0.85em;">(CLO 5)</span></th>
                         <td><strong>(5 pts)</strong> Calculation shown and correct. Interpretation explicitly mentions SDs and "unusual" status.</td>
                         <td><strong>(4 pts)</strong> Z-score correct, but calculation not shown or interpretation is generic.</td>
-                        <td><strong>(2-3 pts)</strong> Formula applied incorrectly. Interpretation contradicts math.</td>
-                        <td><strong>(0-1 pts)</strong> Calculation missing.</td>
+                        <td><strong>(2 pts)</strong> Formula applied incorrectly. Interpretation contradicts math.</td>
+                        <td><strong>(0 pts)</strong> Calculation missing.</td>
                     </tr>
                     <tr>
                         <th scope="row">Methods Section</th>
@@ -279,34 +301,80 @@
 
     <!-- Phase 2 -->
     <section class="stat-phase-section" aria-labelledby="phase2-heading">
-        <h2 id="phase2-heading" class="stat-phase-header">Phase 2: Regression & Probability</h2>
-        <p><strong>Focus:</strong> Correlation, predictions, and probability rules.</p>
+        <h2 id="phase2-heading" class="stat-phase-header">Phase 2: Regression, Leverage, & Probability</h2>
+        <p><strong>Focus:</strong> Correlation, outlier analysis, model refinement, and probability rules.</p>
 
         <h3 class="stat-sub-header">Student Instructions</h3>
 
         <div class="stat-alert" role="note">
-            <strong>⚠️ Real Data Alert:</strong> Real data is messy. You may calculate a correlation coefficient (<span class="math-symbol" aria-label="r">r</span>) that is close to zero. This is not necessarily a mistake; it means there may be no strong linear relationship in our sample. Report the math accurately.
+            <strong>⚠️ Real Data Alert:</strong> Real data is messy. You may calculate an initial correlation coefficient (<span class="math-symbol" aria-label="r">r</span>) that is close to zero. This is a normal part of the data analysis process before exploring outliers.
         </div>
 
-        <h4>Step 1: Regression Analysis</h4>
+        <h4>Step 1: Initial Scatterplot & Analysis</h4>
         <ol class="stat-list">
-            <li><strong>Variables:</strong> Use <code>Height_Inches</code> as the Explanatory Variable (<span class="math-symbol" aria-label="x">x</span>) and <code>Pulse</code> as the Response Variable (<span class="math-symbol" aria-label="y">y</span>).</li>
-            <li><strong>Calculations:</strong> Find <span class="math-symbol" aria-label="r">r</span>, <span class="math-symbol" aria-label="r-squared">R<sup>2</sup></span>, and the regression equation <span class="math-symbol" aria-label="predicted y equals a x plus b">y&#770; = ax + b</span>.</li>
-            <li><strong>Standard Prediction:</strong> Use your equation to predict the pulse of a student who is <strong>68 inches</strong> tall.</li>
-            <li><strong>Personal Prediction:</strong> Use your equation to predict <em>your own</em> pulse based on your height. Calculate your <strong>Residual</strong> (<span class="math-symbol" aria-label="Residual equals Actual minus Predicted">Actual - Predicted</span>).</li>
+            <li><strong>Variables:</strong> For this phase, use <code>Pulse</code> as the Explanatory Variable (<span class="math-symbol" aria-label="x">x</span>) and <code>Height_Inches</code> as the Response Variable (<span class="math-symbol" aria-label="y">y</span>).</li>
+            <li><strong>Visualize:</strong> Generate a scatterplot that includes the line of best fit. <em>(Your plot must include a title and labeled axes).</em></li>
+            <li><strong>Calculate:</strong> Find the correlation coefficient (<span class="math-symbol" aria-label="r">r</span>), the coefficient of determination (<span class="math-symbol" aria-label="r-squared">R<sup>2</sup></span>), and the regression equation (<span class="math-symbol" aria-label="predicted y equals a x plus b">y&#770; = ax + b</span>). Record these values in your report near your scatterplot (StatCrunch generally does not allow you to place these directly on the graph).</li>
+            <li><strong>Analyze:</strong> Based on the visual scatterplot and your <span class="math-symbol" aria-label="r">r</span> value, briefly explain whether a linear model appears appropriate for this raw data.</li>
         </ol>
 
-        <h4>Step 2: Probability</h4>
-        <p>Create a <strong>Two-Way Table</strong> for <strong>Gender</strong> (Rows) and <strong>Math Anxiety</strong> (Columns). Calculate:</p>
+        <h4>Step 2: Identifying & Analyzing Outliers</h4>
+        <p>Look closely at your scatterplot (or refer to boxplots from Phase 1) to identify any unusual data points.</p>
+        <ol class="stat-list">
+            <li><strong>List the Outliers:</strong> Create a list of the suspected outliers written as <strong>ordered pairs (Pulse, Height)</strong>.</li>
+            <li><strong>Evaluate:</strong> For <em>each</em> outlier in your list, state whether it has <strong>high or low leverage</strong> (extreme in the x-direction) and whether it has a <strong>large or small residual</strong> (extreme in the y-direction).</li>
+            <li><strong>Conclude:</strong> Using these two pieces of information, determine if the point is an <strong>influential point</strong> (i.e., is it pulling the regression line significantly toward itself?).</li>
+        </ol>
+
+        <div class="stat-tech-tip" role="note">
+            <strong>💻 Tech Tip: Removing Outliers without Deleting Data</strong><br>
+            If you need to remove an outlier to see how the model improves, you don't have to delete the entire row! Find the outlier in your dataset and simply add a letter to the numerical value (e.g., change a pulse of <code>200</code> to <code>x200</code>). Statistical software will ignore the text entry, dropping it from the scatterplot calculations while keeping your dataset intact.
+        </div>
+
+        <h4>Step 3: Model Refinement</h4>
+        <ol class="stat-list">
+            <li><strong>Refine:</strong> Remove the highly influential outlier(s) using the tip above. <em>Note: Once extreme outliers are removed, other hidden outliers may suddenly become apparent. Repeat the removal process until you feel the model is as good as is reasonable.</em></li>
+            <li><strong>The Final Model:</strong> Generate a <strong>new scatterplot</strong> without the outliers. Include the new line of best fit, title, and axis labels. Recalculate <span class="math-symbol" aria-label="r">r</span>, <span class="math-symbol" aria-label="r-squared">R<sup>2</sup></span>, and the regression equation for this new data set.</li>
+        </ol>
+
+        <div class="stat-submission-box" role="note">
+            <strong>📋 What to Include in Your Report for Steps 1-3:</strong>
+            <ul class="stat-list">
+                <li>Your <strong>Original Scatterplot</strong> and your <strong>Refined Scatterplot</strong> (both with line of best fit, titles, and labeled axes).</li>
+                <li>The regression equation, <span class="math-symbol" aria-label="r">r</span>, and <span class="math-symbol" aria-label="r-squared">R<sup>2</sup></span> listed clearly next to <em>each</em> corresponding scatterplot.</li>
+                <li>Your written Outlier Analysis (list of ordered pairs, leverage, residuals, and influence determination).</li>
+                <li>Your written analysis of whether the original model appeared appropriate, <strong>as well as an analysis of whether the linear model seems appropriate for the dataset <em>without</em> the outliers</strong>.</li>
+            </ul>
+        </div>
+
+        <h4>Step 4: Interpretation & Predictions (Using the Refined Model)</h4>
+        
+        <div class="stat-alert" role="note" style="background-color: #e2e3e5; border-color: #d6d8db; color: #383d41;">
+            <strong>Note:</strong> Proceed with using your refined model to complete the following interpretations and predictions, even if a linear model ultimately may not seem like the best fit for these two variables.
+        </div>
+
+        <ol class="stat-list">
+            <li><strong>Analyze <span class="math-symbol" aria-label="r-squared">R<sup>2</sup></span>:</strong> Write a sentence explaining exactly what your new <span class="math-symbol" aria-label="r-squared">R<sup>2</sup></span> value tells you about how well the Explanatory variable accounts for the variability in the Response variable.</li>
+            <li><strong>Contextualize:</strong> Interpret the <strong>slope</strong> and the <strong>y-intercept</strong> of your refined equation in the context of Pulse and Height. Does the intercept make logical sense?</li>
+            <li><strong>Standard Prediction:</strong> Use your refined equation to predict the height of a student who has a resting pulse of <strong>75 bpm</strong>.</li>
+            <li><strong>Personal Prediction & Residual:</strong> Use the equation to predict <em>your own</em> height based on your resting pulse. Calculate your <strong>Residual</strong> (<span class="math-symbol" aria-label="Residual equals Actual minus Predicted">Actual - Predicted</span>). Finally, interpret your residual in context (e.g., <em>"My residual is negative, so my actual height is lower than the model predicted based on my pulse."</em>)</li>
+        </ol>
+
+        <h4>Step 5: Probability</h4>
+        <p>Create a <strong>Two-Way Table (Contingency Table)</strong> summarizing the class data using the variable for <strong>Vigorous Exercise</strong> (Rows) and <strong>Math Anxiety</strong> (Columns). <br>
+        <em>Reminder: On the Math Anxiety scale, 1 = No Math Anxiety and 4 = High Math Anxiety.</em></p>
+        
+        <p><strong>You must include this contingency table in your report.</strong> Then, calculate the following probabilities based on your table:</p>
         <ul class="stat-list">
-            <li><strong>P(High Anxiety):</strong> Probability a student has High Math Anxiety.</li>
-            <li><strong>P(Man AND Low Anxiety):</strong> Probability of the Intersection.</li>
-            <li><strong>P(Woman OR High Anxiety):</strong> Probability of the Union (Addition Rule).</li>
-            <li><strong>P(High Anxiety | Woman):</strong> Conditional Probability.</li>
+            <li><strong>P(High Anxiety):</strong> The probability a randomly selected student has High Math Anxiety (rating of 4).</li>
+            <li><strong>P(Exercises Vigorously AND Low Anxiety):</strong> Probability of the Intersection (using anxiety rating of 1).</li>
+            <li><strong>P(Does Not Exercise Vigorously OR High Anxiety):</strong> Probability of the Union (Addition Rule).</li>
+            <li><strong>P(High Anxiety | Exercises Vigorously):</strong> The conditional probability that a student has high anxiety, <em>given</em> that they exercise vigorously.</li>
+            <li><strong>P(Exercises Vigorously | High Anxiety):</strong> The conditional probability that a student exercises vigorously, <em>given</em> that they have high math anxiety.</li>
         </ul>
         
-        <h4>Step 3: Methods Section</h4>
-        <p>Briefly describe the methods/software (Excel, StatCrunch, etc.) used to generate the regression model and probability tables.</p>
+        <h4>Step 6: Methods Section</h4>
+        <p>Briefly describe the methods/software used to generate the scatterplots, determine leverage/residuals, and build the probability tables.</p>
 
         <!-- Phase 2 Rubric -->
         <div class="rubric-table-wrapper">
@@ -323,36 +391,36 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row">Regression Analysis<br><span style="font-weight:normal; font-size:0.85em;">(CLO 3)</span></th>
-                        <td><strong>(5 pts)</strong> Variables identified correctly. <span class="math-symbol" aria-label="r">r</span>, <span class="math-symbol" aria-label="r-squared">R<sup>2</sup></span> accurate. Equation written in context.</td>
-                        <td><strong>(4 pts)</strong> Calculations correct, but equation uses generic variables. Interpretation weak.</td>
-                        <td><strong>(2-3 pts)</strong> Scatter plot axes reversed. <span class="math-symbol" aria-label="r">r</span> interpreted as slope.</td>
-                        <td><strong>(0-1 pts)</strong> Missing analysis.</td>
+                        <th scope="row">Scatterplots & Model Refinement<br><span style="font-weight:normal; font-size:0.85em;">(CLO 3)</span></th>
+                        <td><strong>(5 pts)</strong> Both original and refined scatterplots included. Axes correct (Pulse=x, Height=y). Titles, labels, <span class="math-symbol" aria-label="r">r</span>, <span class="math-symbol" aria-label="r-squared">R<sup>2</sup></span>, and equations correctly displayed/listed for both. Analysis of original and refined model's appropriateness included.</td>
+                        <td><strong>(4 pts)</strong> Missing one element (e.g., missing equation on one plot, or axes are reversed). Analysis of appropriateness is vague or only addresses one model.</td>
+                        <td><strong>(2 pts)</strong> Only one scatterplot included. Missing multiple visual/mathematical elements.</td>
+                        <td><strong>(0 pts)</strong> Scatterplots missing entirely or illegible.</td>
                     </tr>
                     <tr>
-                        <th scope="row">Predictions & Residuals<br><span style="font-weight:normal; font-size:0.85em;">(CLO 3, 5)</span></th>
-                        <td><strong>(5 pts)</strong> Both predictions (68" & Personal) correct. Residual calculated and interpreted correctly.</td>
-                        <td><strong>(4 pts)</strong> Predictions made, but residual calculation missing or sign flipped.</td>
-                        <td><strong>(2-3 pts)</strong> Plugged values into wrong variables. No comparison made.</td>
-                        <td><strong>(0-1 pts)</strong> Predictions not attempted.</td>
+                        <th scope="row">Outlier & Leverage Analysis<br><span style="font-weight:normal; font-size:0.85em;">(CLO 3)</span></th>
+                        <td><strong>(5 pts)</strong> Outliers listed as ordered pairs. Correctly assesses leverage (x-axis) and residual (y-axis) for each. Accurately determines influence.</td>
+                        <td><strong>(4 pts)</strong> Points listed, but confuses leverage and residuals, or fails to explicitly state if point is influential.</td>
+                        <td><strong>(2 pts)</strong> Mentions outliers generally but provides no pairs or structural analysis.</td>
+                        <td><strong>(0 pts)</strong> Outlier analysis missing.</td>
                     </tr>
                     <tr>
-                        <th scope="row">Contingency Table<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1, 2)</span></th>
-                        <td><strong>(5 pts)</strong> Table clearly labeled with Row/Column totals. Marginal distributions sum correctly.</td>
-                        <td><strong>(4 pts)</strong> Table present but totals missing or inaccurate.</td>
-                        <td><strong>(2-3 pts)</strong> Table constructed incorrectly.</td>
-                        <td><strong>(0-1 pts)</strong> No table provided.</td>
+                        <th scope="row">Model Interpretation & Predictions<br><span style="font-weight:normal; font-size:0.85em;">(CLO 3, 5)</span></th>
+                        <td><strong>(5 pts)</strong> Slope, intercept, and <span class="math-symbol" aria-label="r-squared">R<sup>2</sup></span> perfectly interpreted in context. Both predictions correct. Personal residual calculated and correctly interpreted in context.</td>
+                        <td><strong>(4 pts)</strong> Calculations correct, but interpretations are generic (e.g., interpreting <span class="math-symbol" aria-label="r-squared">R<sup>2</sup></span> as a probability instead of explained variance).</td>
+                        <td><strong>(2 pts)</strong> Used the wrong equation (unrefined) for predictions. Interpretations mathematically flawed.</td>
+                        <td><strong>(0 pts)</strong> Predictions/Interpretations not attempted.</td>
                     </tr>
                     <tr>
-                        <th scope="row">Probability Calculations<br><span style="font-weight:normal; font-size:0.85em;">(CLO 2)</span></th>
-                        <td><strong>(5 pts)</strong> Correctly differentiates AND, OR, GIVEN. Work/Fractions shown.</td>
-                        <td><strong>(4 pts)</strong> Answers correct, work hidden. Minor confusion on Union/Intersection.</td>
-                        <td><strong>(2-3 pts)</strong> Denominators incorrect for Conditional Prob.</td>
-                        <td><strong>(0-1 pts)</strong> Probabilities not calculated.</td>
+                        <th scope="row">Probability Calculations & Tables<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1, 2)</span></th>
+                        <td><strong>(5 pts)</strong> Exercise vs. Anxiety contingency table included and clearly labeled. AND, OR, and BOTH GIVEN probabilities calculated accurately with work/fractions shown.</td>
+                        <td><strong>(4 pts)</strong> Table present but minor total errors. Minor confusion on Union/Intersection formulas or conditional directions.</td>
+                        <td><strong>(2 pts)</strong> Table constructed incorrectly. Denominators incorrect for Conditional Probabilities.</td>
+                        <td><strong>(0 pts)</strong> Table or probabilities missing.</td>
                     </tr>
                     <tr>
                         <th scope="row">Methods Section</th>
-                        <td><strong>(3 pts)</strong> Clear explanation of tools used for regression and tables.</td>
+                        <td><strong>(3 pts)</strong> Clear explanation of software used for regression, outlier removal, and tables.</td>
                         <td><strong>(2 pts)</strong> Tools mentioned but vague.</td>
                         <td><strong>(1 pts)</strong> Very brief or unclear.</td>
                         <td><strong>(0 pts)</strong> Section missing.</td>
@@ -412,29 +480,29 @@
                         <th scope="row">Binomial Simulation<br><span style="font-weight:normal; font-size:0.85em;">(CLO 2)</span></th>
                         <td><strong>(5 pts)</strong> Data recorded. Expected value/SD correct. Z-score correctly assesses "unusual."</td>
                         <td><strong>(4 pts)</strong> Simulation done, calculations correct. Interpretation vague.</td>
-                        <td><strong>(2-3 pts)</strong> Calculations use wrong formulas or fake data.</td>
-                        <td><strong>(0-1 pts)</strong> Simulation not conducted.</td>
+                        <td><strong>(2 pts)</strong> Calculations use wrong formulas or fake data.</td>
+                        <td><strong>(0 pts)</strong> Simulation not conducted.</td>
                     </tr>
                     <tr>
                         <th scope="row">CI (Proportion)<br><span style="font-weight:normal; font-size:0.85em;">(CLO 4)</span></th>
                         <td><strong>(5 pts)</strong> Conditions checked. Correct Critical Value (<span class="math-symbol" aria-label="z-star">z*</span>). Interval accurate.</td>
                         <td><strong>(4 pts)</strong> Interval calculated correctly, conditions not checked.</td>
-                        <td><strong>(2-3 pts)</strong> Used T instead of Z. Math errors.</td>
-                        <td><strong>(0-1 pts)</strong> No interval.</td>
+                        <td><strong>(2 pts)</strong> Used T instead of Z. Math errors.</td>
+                        <td><strong>(0 pts)</strong> No interval.</td>
                     </tr>
                     <tr>
                         <th scope="row">CI (Mean)<br><span style="font-weight:normal; font-size:0.85em;">(CLO 4)</span></th>
                         <td><strong>(5 pts)</strong> Correct Critical Value (<span class="math-symbol" aria-label="t-star">t*</span>) based on degrees of freedom. Interval accurate.</td>
                         <td><strong>(4 pts)</strong> Used <span class="math-symbol" aria-label="z-star">z*</span> instead of <span class="math-symbol" aria-label="t-star">t*</span>. Math otherwise correct.</td>
-                        <td><strong>(2-3 pts)</strong> Major calculation errors.</td>
-                        <td><strong>(0-1 pts)</strong> No interval.</td>
+                        <td><strong>(2 pts)</strong> Major calculation errors.</td>
+                        <td><strong>(0 pts)</strong> No interval.</td>
                     </tr>
                     <tr>
                         <th scope="row">Statistical Interpretation<br><span style="font-weight:normal; font-size:0.85em;">(CLO 5)</span></th>
                         <td><strong>(5 pts)</strong> States "We are XX% confident the <em>true population parameter</em> lies..."</td>
                         <td><strong>(4 pts)</strong> Interpretation sounds like probability ("95% chance").</td>
-                        <td><strong>(2-3 pts)</strong> Interprets interval as capturing sample data.</td>
-                        <td><strong>(0-1 pts)</strong> No interpretation.</td>
+                        <td><strong>(2 pts)</strong> Interprets interval as capturing sample data.</td>
+                        <td><strong>(0 pts)</strong> No interpretation.</td>
                     </tr>
                     <tr>
                         <th scope="row">Methods Section</th>
@@ -505,29 +573,29 @@
                         <th scope="row">Hypothesis Testing<br><span style="font-weight:normal; font-size:0.85em;">(CLO 4)</span></th>
                         <td><strong>(5 pts)</strong> Hypotheses correct (<span class="math-symbol" aria-label="H-naught colon mean equals 8">H<sub>0</sub>: &mu; = 8</span>). Conclusion links P-value to <span class="math-symbol" aria-label="alpha">&alpha;</span> correctly in context.</td>
                         <td><strong>(4 pts)</strong> Calculation correct, conclusion binary ("Reject") without context.</td>
-                        <td><strong>(2-3 pts)</strong> Fails to reject when P-value is low. Hypotheses reversed.</td>
-                        <td><strong>(0-1 pts)</strong> Test not performed.</td>
+                        <td><strong>(2 pts)</strong> Fails to reject when P-value is low. Hypotheses reversed.</td>
+                        <td><strong>(0 pts)</strong> Test not performed.</td>
                     </tr>
                     <tr>
                         <th scope="row">Chi-Square GOF<br><span style="font-weight:normal; font-size:0.85em;">(CLO 4)</span></th>
                         <td><strong>(5 pts)</strong> Expected counts (<span class="math-symbol" aria-label="n over 12">n/12</span>) & Statistic correct. Degrees of Freedom correct.</td>
                         <td><strong>(4 pts)</strong> Calculation error in Expected counts. Confuses GOF with Independence.</td>
-                        <td><strong>(2-3 pts)</strong> Uses raw counts instead of Observed vs Expected.</td>
-                        <td><strong>(0-1 pts)</strong> Test not performed.</td>
+                        <td><strong>(2 pts)</strong> Uses raw counts instead of Observed vs Expected.</td>
+                        <td><strong>(0 pts)</strong> Test not performed.</td>
                     </tr>
                     <tr>
                         <th scope="row">Personal Connection<br><span style="font-weight:normal; font-size:0.85em;">(CLO 5)</span></th>
                         <td><strong>(5 pts)</strong> Identifies personal contribution to <span class="math-symbol" aria-label="Chi-squared">&chi;<sup>2</sup></span> using <span class="math-symbol" aria-label="Observed minus Expected squared divided by Expected">(O-E)<sup>2</sup>/E</span>.</td>
                         <td><strong>(4 pts)</strong> States month was high/low but no calculation.</td>
-                        <td><strong>(2-3 pts)</strong> No personal connection made.</td>
-                        <td><strong>(0-1 pts)</strong> Question ignored.</td>
+                        <td><strong>(2 pts)</strong> No personal connection made.</td>
+                        <td><strong>(0 pts)</strong> Question ignored.</td>
                     </tr>
                     <tr>
                         <th scope="row">Executive Summary<br><span style="font-weight:normal; font-size:0.85em;">(CLO 5)</span></th>
                         <td><strong>(5 pts)</strong> Narrative flows logically. Uses required headers. <strong>Cites specific stats</strong> from earlier phases.</td>
                         <td><strong>(4 pts)</strong> Follows structure but lacks statistical citation (qualitative only).</td>
-                        <td><strong>(2-3 pts)</strong> Bulleted list or opinion-based.</td>
-                        <td><strong>(0-1 pts)</strong> Summary not written.</td>
+                        <td><strong>(2 pts)</strong> Bulleted list or opinion-based.</td>
+                        <td><strong>(0 pts)</strong> Summary not written.</td>
                     </tr>
                     <tr>
                         <th scope="row">Methods Section</th>
