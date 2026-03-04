@@ -10,6 +10,7 @@
         max-width: 950px;
         margin: 0 auto;
         line-height: 1.6;
+        font-size: 1.1em; /* Increased base font size for better readability */
         color: #2D3B45; /* High contrast dark grey */
         background-color: #ffffff;
     }
@@ -69,6 +70,15 @@
         margin-bottom: 20px;
         border-radius: 4px;
     }
+    
+    .stat-tech-tip {
+        background-color: #e2e3e5;
+        border-left: 5px solid #6c757d;
+        color: #383d41; /* Contrast 7.5:1 */
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 0 4px 4px 0;
+    }
 
     .integrity-alert {
         background-color: #ffeef0;
@@ -78,6 +88,16 @@
         margin-top: 15px;
         border-radius: 4px;
         font-weight: bold;
+    }
+
+    /* Required Submissions Box */
+    .stat-submission-box {
+        background-color: #e8f5e9;
+        border: 1px solid #c8e6c9;
+        color: #1b5e20; /* Contrast 7.1:1 */
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 4px;
     }
 
     /* Math specific styling */
@@ -100,6 +120,7 @@
         width: 100%;
         border-collapse: collapse;
         min-width: 600px;
+        font-size: 0.95em; /* Slightly smaller than main text to fit tables */
     }
 
     .rubric-table caption {
@@ -153,7 +174,7 @@
             <h2 style="font-size: 1.3em; margin-top: 0; color: #004494;">Project Overview</h2>
             <ul class="stat-list">
                 <li><strong>Data Source:</strong> The <code>Stat2050_Survey_ResultsSP2026.csv</code> file (available in Canvas Modules).</li>
-                <li><strong>Submission Format:</strong> For each phase, submit your work as a <strong>PDF Document</strong>. Export your Word/Google Doc to PDF to ensure formatting is preserved.</li>
+                <li><strong>Submission Format:</strong> You may create your project however you like! Some suggestions include Microsoft products (Word, PowerPoint, Excel) or Google products (Docs, Slides, Sheets). The only restriction is that your final project <strong>must be exported and uploaded as a PDF document</strong> to ensure your formatting, graphs, and tables are preserved accurately for grading.</li>
                 <li><strong>Methods Section:</strong> For each phase, you must include a brief "Methods" paragraph explaining <em>how</em> you created your statistical summaries (e.g., "I used the 1-Var Stats function on my TI-84," or "I used Excel formulas to sort the data").</li>
             </ul>
             
@@ -192,11 +213,11 @@
         <ol class="stat-list">
             <li><strong>Histogram:</strong> Use your frequency distribution to create a histogram for <code>Height_Inches</code>.</li>
             <li><strong>Bar Graph or Pareto Chart:</strong> Create a bar graph for the <code>Math Anxiety Rating</code>. (Note: Pie charts are not accepted for this assignment).</li>
-            <li><strong>Comparative Boxplots:</strong> Create side-by-side boxplots for <code>Height_Inches</code> separated by <code>Gender</code>.</li>
+            <li><strong>Comparative Boxplots:</strong> Create side-by-side boxplots for <code>Height_Inches</code>. Specifically, you should create one boxplot for males vs. height and one boxplot for females vs. height.</li>
         </ol>
 
-        <h4>Step 4: Numerical Summaries</h4>
-        <p>Calculate the following statistics for the full class <code>Height_Inches</code>:</p>
+        <h4>Step 4: Numerical Summaries & Reflection</h4>
+        <p>Calculate the following statistics for <code>Height_Inches</code>. You must create <strong>three separate summary tables</strong>: one for the full class, one specifically for males, and one specifically for females.</p>
         <ul class="stat-list">
             <li><strong>Mean</strong> (<span class="math-symbol" aria-label="sample mean x-bar">x&#772;</span>)</li>
             <li><strong>Median</strong> (<span class="math-symbol" aria-label="Median">M</span>)</li>
@@ -205,6 +226,7 @@
             <li><strong>Standard Deviation</strong> (<span class="math-symbol" aria-label="standard deviation s">s</span>)</li>
             <li><strong>Five-Number Summary:</strong> Min, Q1, Median, Q3, Max.</li>
         </ul>
+        <p><strong>Reflection:</strong> After calculating these statistics, write a brief reflection discussing the differences you observe between the male and female summary statistics.</p>
 
         <h4>Step 5: The Personal Connection</h4>
         <ul class="stat-list">
@@ -214,7 +236,7 @@
         </ul>
         
         <h4>Step 6: Methods Section</h4>
-        <p>Write a brief paragraph explaining the tools and steps you used to calculate the statistics above. <strong>Crucially, you must also comment on any data cleanup challenges you encountered (e.g., dealing with inconsistent units, removing text from numerical columns, or handling incorrect or missing data).</strong></p>
+        <p>Write a brief paragraph explaining the tools and steps you used to calculate the statistics above. <strong>Crucially, you must also comment on any data cleanup challenges you encountered (e.g., dealing with inconsistent units, removing text from numerical columns, or handling missing data).</strong></p>
 
         <!-- Phase 1 Rubric -->
         <div class="rubric-table-wrapper">
@@ -234,29 +256,29 @@
                         <th scope="row">Data Cleaning & Org<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1)</span></th>
                         <td><strong>(5 pts)</strong> All height data converted correctly. Freq/Rel Freq table included and correctly grouped by Gender.</td>
                         <td><strong>(4 pts)</strong> Minor errors in conversion. Table included but missing Relative Frequency or not grouped by Gender.</td>
-                        <td><strong>(2-3 pts)</strong> Significant mixed units. Text remains in numeric columns.</td>
-                        <td><strong>(0-1 pts)</strong> Raw data used. No frequency table.</td>
+                        <td><strong>(2 pts)</strong> Significant mixed units. Text remains in numeric columns.</td>
+                        <td><strong>(0 pts)</strong> Raw data used. No frequency table.</td>
                     </tr>
                     <tr>
                         <th scope="row">Visualization<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1)</span></th>
                         <td><strong>(5 pts)</strong> Histogram, Bar Graph, and Side-by-Side Boxplots present with correct titles, labels, and units.</td>
                         <td><strong>(4 pts)</strong> All graphs present but missing minor labels. Boxplots may not share scale.</td>
-                        <td><strong>(2-3 pts)</strong> Incorrect graph types (e.g., Pie chart). Missing titles/units.</td>
-                        <td><strong>(0-1 pts)</strong> Graphs missing or unreadable.</td>
+                        <td><strong>(2 pts)</strong> Incorrect graph types (e.g., Pie chart). Missing titles/units.</td>
+                        <td><strong>(0 pts)</strong> Graphs missing or unreadable.</td>
                     </tr>
                     <tr>
-                        <th scope="row">Numerical Summaries<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1)</span></th>
-                        <td><strong>(5 pts)</strong> Mean, Median, Mode, Range, SD, and 5-number summary precise. Correct notation.</td>
-                        <td><strong>(4 pts)</strong> Calculation errors minor. Notation missing/incorrect.</td>
-                        <td><strong>(2-3 pts)</strong> Major errors due to bad data.</td>
-                        <td><strong>(0-1 pts)</strong> Missing summary stats.</td>
+                        <th scope="row">Numerical Summaries & Reflection<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1)</span></th>
+                        <td><strong>(5 pts)</strong> All three summary tables included with correct notation. Reflection insightfully discusses differences between male and female stats.</td>
+                        <td><strong>(4 pts)</strong> Tables included but calculation errors are present, or reflection is very brief/vague.</td>
+                        <td><strong>(2 pts)</strong> Missing tables for separate genders or major errors due to bad data. Reflection missing.</td>
+                        <td><strong>(0 pts)</strong> Missing summary stats and reflection.</td>
                     </tr>
                     <tr>
                         <th scope="row">Statistical Argument<br><span style="font-weight:normal; font-size:0.85em;">(CLO 5)</span></th>
                         <td><strong>(5 pts)</strong> Calculation shown and correct. Interpretation explicitly mentions SDs and "unusual" status.</td>
                         <td><strong>(4 pts)</strong> Z-score correct, but calculation not shown or interpretation is generic.</td>
-                        <td><strong>(2-3 pts)</strong> Formula applied incorrectly. Interpretation contradicts math.</td>
-                        <td><strong>(0-1 pts)</strong> Calculation missing.</td>
+                        <td><strong>(2 pts)</strong> Formula applied incorrectly. Interpretation contradicts math.</td>
+                        <td><strong>(0 pts)</strong> Calculation missing.</td>
                     </tr>
                     <tr>
                         <th scope="row">Methods Section</th>
@@ -276,6 +298,7 @@
             </table>
         </div>
     </section>
+
 
 
 
