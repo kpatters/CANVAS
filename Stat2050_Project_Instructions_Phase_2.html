@@ -185,6 +185,16 @@
     .stat-list li {
         margin-bottom: 8px;
     }
+    
+    .rounding-rule {
+        background-color: #eef2f5;
+        border: 1px solid #c4d1db;
+        padding: 8px 12px;
+        border-radius: 4px;
+        display: inline-block;
+        margin-top: 8px;
+        font-size: 0.95em;
+    }
 </style>
 </head>
 <body>
@@ -229,7 +239,13 @@
         <ol class="stat-list">
             <li><strong>Variables:</strong> Use <code>Pulse</code> as the Explanatory Variable (<span class="math-visual" aria-hidden="true">x</span><span class="sr-only">x</span>) and <code>Height_Inches</code> as the Response Variable (<span class="math-visual" aria-hidden="true">y</span><span class="sr-only">y</span>).</li>
             <li><strong>Visualize:</strong> Generate a scatterplot that includes the line of best fit. <em>(Your plot must include a title and labeled axes).</em></li>
-            <li><strong>Calculate:</strong> Find the correlation coefficient (<span class="math-visual" aria-hidden="true">r</span><span class="sr-only">r</span>), the coefficient of determination (<span class="math-visual" aria-hidden="true">R<sup>2</sup></span><span class="sr-only">R-squared</span>), and the regression equation (<span class="math-visual" aria-hidden="true">y&#770; = ax + b</span><span class="sr-only">y-hat equals a times x plus b</span>). Record these values in your report near your scatterplot.</li>
+            <li>
+                <strong>Calculate:</strong> Find the correlation coefficient (<span class="math-visual" aria-hidden="true">r</span><span class="sr-only">r</span>), the coefficient of determination (<span class="math-visual" aria-hidden="true">R<sup>2</sup></span><span class="sr-only">R-squared</span>), and the regression equation (<span class="math-visual" aria-hidden="true">y&#770; = ax + b</span><span class="sr-only">y-hat equals a times x plus b</span>). Record these values in your report near your scatterplot.<br>
+                <div class="rounding-rule">
+                    <strong>📐 Rounding Rules:</strong> 
+                    You must report <span class="math-visual" aria-hidden="true">r</span><span class="sr-only">r</span>, the <strong>slope</strong>, and the <strong>y-intercept</strong> to three decimal places (the thousandths place). You must report <span class="math-visual" aria-hidden="true">R<sup>2</sup></span><span class="sr-only">R-squared</span> to four decimal places.
+                </div>
+            </li>
             <li><strong>Analyze:</strong> Based on the visual scatterplot and your <span class="math-visual" aria-hidden="true">r</span><span class="sr-only">r</span> value, briefly explain whether a linear model appears appropriate for this raw data.</li>
         </ol>
 
@@ -249,7 +265,7 @@
         <h4>Step 3: Model Refinement & Testing Influence</h4>
         <ol class="stat-list">
             <li><strong>Refine:</strong> Remove the suspected outlier(s) using the tip above. <em>Note: Once extreme outliers are removed, other hidden outliers may suddenly become apparent. Repeat the removal process until you feel the model is as clean as is reasonable.</em></li>
-            <li><strong>The Final Model:</strong> Generate a <strong>new scatterplot</strong> without the outliers. Include the new line of best fit, title, and axis labels. Recalculate <span class="math-visual" aria-hidden="true">r</span><span class="sr-only">r</span>, <span class="math-visual" aria-hidden="true">R<sup>2</sup></span><span class="sr-only">R-squared</span>, and the regression equation for this new data set.</li>
+            <li><strong>The Final Model:</strong> Generate a <strong>new scatterplot</strong> without the outliers. Include the new line of best fit, title, and axis labels. Recalculate <span class="math-visual" aria-hidden="true">r</span><span class="sr-only">r</span>, <span class="math-visual" aria-hidden="true">R<sup>2</sup></span><span class="sr-only">R-squared</span>, and the regression equation for this new data set. <em>(Remember to follow the rounding rules from Step 1).</em></li>
             <li><strong>Confirm Influence:</strong> Compare your new regression equation to your original one. Did the slope or intercept change drastically? Based on this, were the points you removed truly <strong>influential points</strong>?</li>
         </ol>
 
@@ -289,7 +305,7 @@
             <strong>📋 Phase 2 Submission Checklist:</strong>
             <ul class="stat-list">
                 <li>Your <strong>Original</strong> and <strong>Refined Scatterplots</strong> (both with best-fit lines, titles, labels).</li>
-                <li>The equation, <span class="math-visual" aria-hidden="true">r</span><span class="sr-only">r</span>, and <span class="math-visual" aria-hidden="true">R<sup>2</sup></span><span class="sr-only">R-squared</span> listed clearly next to <em>each</em> scatterplot.</li>
+                <li>The equation, <span class="math-visual" aria-hidden="true">r</span><span class="sr-only">r</span>, and <span class="math-visual" aria-hidden="true">R<sup>2</sup></span><span class="sr-only">R-squared</span> listed clearly next to <em>each</em> scatterplot. <em>(Ensure correct rounding: 3 decimal places for equation/r, 4 decimal places for R<sup>2</sup>).</em></li>
                 <li>Written Analysis: Model appropriateness (before & after refinement) and causality reflection.</li>
                 <li>Outlier Analysis: Ordered pairs, leverage/residual assessment, and proof of influence.</li>
                 <li>Predictions: <span class="math-visual" aria-hidden="true">R<sup>2</sup></span><span class="sr-only">R-squared</span> & intercept interpretation, 75 bpm prediction, and your personal residual.</li>
@@ -314,8 +330,8 @@
                 <tbody>
                     <tr>
                         <th scope="row">Scatterplots & Model Refinement<br><span class="sr-only">Course Learning Objective 3</span><span aria-hidden="true" style="font-weight:normal; font-size:0.85em;">(CLO 3)</span></th>
-                        <td><strong>(5 pts)</strong> Both scatterplots included. Axes correct (Pulse=x). Titles, labels, <span class="math-visual" aria-hidden="true">r</span><span class="sr-only">r</span>, <span class="math-visual" aria-hidden="true">R<sup>2</sup></span><span class="sr-only">R-squared</span>, and equations correctly displayed. Analysis of original and refined model appropriateness included.</td>
-                        <td><strong>(4 pts)</strong> Missing one element (e.g., missing equation on one plot). Analysis of appropriateness is vague or only addresses one model.</td>
+                        <td><strong>(5 pts)</strong> Both scatterplots included. Axes correct (Pulse=x). Titles, labels, <span class="math-visual" aria-hidden="true">r</span><span class="sr-only">r</span>, <span class="math-visual" aria-hidden="true">R<sup>2</sup></span><span class="sr-only">R-squared</span>, and equations correctly displayed and <strong>rounded properly</strong>. Analysis of original and refined model appropriateness included.</td>
+                        <td><strong>(4 pts)</strong> Missing one element (e.g., missing equation on one plot) or rounding rules ignored. Analysis of appropriateness is vague or only addresses one model.</td>
                         <td><strong>(2 pts)</strong> Only one scatterplot included. Missing multiple visual/mathematical elements.</td>
                         <td><strong>(0 pts)</strong> Scatterplots missing entirely or illegible.</td>
                     </tr>
@@ -358,7 +374,6 @@
             </table>
         </div>
     </section>
-
 
 </main>
 
