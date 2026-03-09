@@ -3,72 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instructor Key: Chapter 5 Probability</title>
+    <title>Instructor Key: Chapter 5 Probability Rules</title>
     
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
+        /* CSS RESET & BOX MODEL */
+        * {
+            box-sizing: border-box;
+        }
+
         :root {
             --primary-color: #2c3e50;
             --accent-color: #c0392b; /* Red for the Key */
             --text-color: #333;
-            --bg-color: #ffffff;
+            --border-color: #fab1a0;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: #f4f4f9;
+            font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #fdf2f2; /* Light red tint for key */
+            color: var(--text-color);
         }
 
         .container {
-            max-width: 850px;
+            max-width: 750px;
             margin: 20px auto;
-            background: var(--bg-color);
-            padding: 40px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background: #fff;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
 
         header {
             border-bottom: 3px solid var(--accent-color);
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .key-text {
+        .key-badge {
             color: var(--accent-color);
             font-weight: bold;
+            text-transform: uppercase;
+            border: 2px solid var(--accent-color);
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .formula-section {
+            margin-bottom: 20px;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-left: 5px solid var(--accent-color);
+            background: #fffafa;
         }
 
         .solution-box {
-            background-color: #fff5f5;
-            border: 1px solid #fab1a0;
+            margin-bottom: 15px;
             padding: 15px;
-            margin: 10px 0 30px 0;
-            border-radius: 4px;
+            background: #fff9f9;
+            border: 1px solid #fab1a0;
+        }
+
+        .answer-text {
+            color: #c0392b;
+            font-weight: bold;
+            text-decoration: underline;
         }
 
         .print-btn {
             background-color: var(--primary-color);
             color: white;
-            padding: 10px 20px;
+            padding: 10px 18px;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
-            font-size: 16px;
+            font-weight: bold;
         }
 
         @media print {
-            .print-btn { display: none; }
+            @page { size: letter; margin: 0.5in; }
             body { background: white; }
-            .container { box-shadow: none; width: 100%; margin: 0; }
-            .solution-box { background-color: white; border: 1px solid #333; }
+            .container { width: 100% !important; max-width: 100% !important; margin: 0 !important; padding: 0 !important; box-shadow: none; }
+            .print-btn { display: none; }
+            .solution-box { background: white; border: 1px solid #333; }
         }
     </style>
 </head>
@@ -77,53 +100,65 @@
 <main class="container">
     <header>
         <div>
-            <h1>Chapter 5: <span class="key-text">ANSWER KEY</span></h1>
-            <p>Introductory Statistics | Instructor Version</p>
+            <h1>Chapter 5: <span class="key-badge">Answer Key</span></h1>
+            <p>Instructor Version | Probability Rules</p>
         </div>
         <button class="print-btn" onclick="window.print()">Print Key</button>
     </header>
 
     <section>
         <h2>I. Note-Taking Fill-Ins</h2>
-        <ul>
-            <li><strong>Empirical Probability:</strong> Based on <u>observed data / relative frequency</u>.</li>
-            <li><strong>Classical Probability:</strong> Based on <u>theoretical outcomes / sample space</u>.</li>
-            <li><strong>General Addition Rule:</strong> If events are disjoint, \( P(E \text{ and } F) \) is <u>zero (0)</u>.</li>
-            <li><strong>Complement Rule:</strong> Use when you see <u>"not" or "at least one"</u>.</li>
-            <li><strong>Conditional Probability:</strong> The symbol "|" means <u>"given that"</u>.</li>
-        </ul>
+        <div class="formula-section">
+            <p>1. Empirical: Based on <span class="answer-text">observed data / relative frequency</span>.</p>
+            <p>2. Classical: Based on <span class="answer-text">theoretical outcomes / sample space</span>.</p>
+            <p>3. Disjoint Note: \( P(E \text{ and } F) \) is <span class="answer-text">zero (0)</span>.</p>
+            <p>4. Complement Phrases: <span class="answer-text">"not" or "at least one"</span>.</p>
+            <p>5. Symbol "|": Means <span class="answer-text">"given that"</span>.</p>
+        </div>
     </section>
 
     <section>
         <h2>II. Problem Set Solutions</h2>
 
         <div class="solution-box">
-            <p><strong>Solution 1 (General Addition Rule):</strong></p>
-            <p>\( P(S \text{ or } B) = P(S) + P(B) - P(S \text{ and } B) \)</p>
-            <p>\( P(S \text{ or } B) = \frac{18}{30} + \frac{12}{30} - \frac{5}{30} = \frac{25}{30} \)</p>
-            <p><strong>Answer: \( \frac{5}{6} \) or \( \approx 0.833 \)</strong></p>
+            <p><strong>Prob 1 (Soccer/Basketball):</strong> \( \frac{18}{30} + \frac{12}{30} - \frac{5}{30} = \frac{25}{30} \)</p>
+            <p><strong>Answer: \( \frac{5}{6} \approx 0.833 \)</strong></p>
         </div>
 
         <div class="solution-box">
-            <p><strong>Solution 2 (Independence):</strong></p>
-            <p>\( P(4 \text{ and } T) = P(4) \cdot P(T) \)</p>
-            <p>\( P(4 \text{ and } T) = \frac{1}{6} \cdot \frac{1}{2} \)</p>
-            <p><strong>Answer: \( \frac{1}{12} \) or \( \approx 0.083 \)</strong></p>
+            <p><strong>Prob 2 (Die/Coin):</strong> \( \frac{1}{6} \cdot \frac{1}{2} = \frac{1}{12} \)</p>
+            <p><strong>Answer: \( \approx 0.083 \)</strong></p>
         </div>
 
         <div class="solution-box">
-            <p><strong>Solution 3 (Conditional):</strong></p>
-            <p>\( P(F|D) = \frac{P(D \text{ and } F)}{P(D)} \)</p>
-            <p>\( P(F|D) = \frac{0.30}{0.45} = \frac{2}{3} \)</p>
+            <p><strong>Prob 3 (Dog/Fence):</strong> \( \frac{0.30}{0.45} = \frac{2}{3} \)</p>
             <p><strong>Answer: \( \approx 0.667 \)</strong></p>
         </div>
 
         <div class="solution-box">
-            <p><strong>Solution 4 (General Multiplication):</strong></p>
-            <p><em>Note: Without replacement changes the denominator.</em></p>
-            <p>\( P(B_1 \text{ and } R_2) = P(B_1) \cdot P(R_2|B_1) \)</p>
-            <p>\( P(B_1 \text{ and } R_2) = \frac{7}{10} \cdot \frac{3}{9} = \frac{21}{90} \)</p>
-            <p><strong>Answer: \( \frac{7}{30} \) or \( \approx 0.233 \)</strong></p>
+            <p><strong>Prob 4 (Pens):</strong> \( \frac{7}{10} \cdot \frac{3}{9} = \frac{21}{90} \)</p>
+            <p><strong>Answer: \( \frac{7}{30} \approx 0.233 \)</strong></p>
+        </div>
+
+        <div class="solution-box">
+            <p><strong>Prob 5 (King/Heart):</strong> \( \frac{4}{52} + \frac{13}{52} - \frac{1}{52} = \frac{16}{52} \)</p>
+            <p><strong>Answer: \( \frac{4}{13} \approx 0.308 \)</strong></p>
+        </div>
+
+        <div class="solution-box">
+            <p><strong>Prob 6 (Red/Blue):</strong> \( \frac{3}{10} \cdot \frac{7}{9} = \frac{21}{90} \)</p>
+            <p><strong>Answer: \( \frac{7}{30} \approx 0.233 \)</strong></p>
+        </div>
+
+        <div class="solution-box">
+            <p><strong>Prob 8 (Complement):</strong> \( 1 - 0.04 = 0.96 \)</p>
+            <p><strong>Answer: 96%</strong></p>
+        </div>
+
+        <div class="solution-box">
+            <p><strong>Prob 9 (At Least One):</strong> \( 1 - (0.10)^3 = 1 - 0.001 = 0.999 \)</p>
+            <p><strong>Answer: 99.9% probability</strong></p>
+            
         </div>
     </section>
 </main>
