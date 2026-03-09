@@ -110,4 +110,76 @@
             h3 { font-size: 14pt; }
             p, li { font-size: 11pt; }
 
-            .formula-section { border:
+            .formula-section { border: 1px solid #333; border-left: 8px solid #000; }
+            .work-space { border: 1px solid #000; }
+        }
+    </style>
+</head>
+<body>
+
+<main class="container">
+    <header>
+        <div>
+            <h1>Chapter 5: Probability Rules</h1>
+            <p><strong>Name:</strong> _________________________ <strong>Date:</strong> ________</p>
+        </div>
+        <button class="print-btn" onclick="window.print()">Print Handout</button>
+    </header>
+
+    <section>
+        <h2>I. Foundational Formulas</h2>
+
+        <article class="formula-section">
+            <h3>1. Classical vs. Empirical</h3>
+            <p><strong>Classical:</strong> \( P(E) = \frac{N(E)}{N(S)} \)</p>
+            <p><strong>Empirical:</strong> \( P(E) \approx \frac{f}{n} \)</p>
+            <p><em>Notes:</em> Classical probability assumes all outcomes are <span class="fill-in-box"></span></p>
+        </article>
+
+        <article class="formula-section">
+            <h3>2. General Addition Rule</h3>
+            <p>\( P(E \text{ or } F) = P(E) + P(F) - P(E \text{ and } F) \)</p>
+            <p>We subtract the intersection because <span class="fill-in-box"></span></p>
+            
+        </article>
+
+        <article class="formula-section">
+            <h3>3. Complement Rule</h3>
+            <p>\( P(E^c) = 1 - P(E) \)</p>
+            <p>This rule is most useful when solving for "<span class="fill-in-box"></span>" problems.</p>
+        </article>
+
+        <article class="formula-section">
+            <h3>4. Conditional & General Multiplication</h3>
+            <p><strong>Conditional:</strong> \( P(F|E) = \frac{P(E \text{ and } F)}{P(E)} \)</p>
+            <p><strong>Multiplication:</strong> \( P(E \text{ and } F) = P(E) \cdot P(F|E) \)</p>
+            <p><em>Hint:</em> Use a <span class="fill-in-box"></span> diagram for sequential events.</p>
+            
+
+[Image of Probability Tree Diagram]
+
+        </article>
+    </section>
+
+    <section>
+        <h2>II. Class Practice</h2>
+        
+        <div class="problem-card">
+            <p><strong>Ex 1 (The "OR" Rule):</strong> A card is drawn from a deck. Find the probability it is a King OR a Heart.</p>
+            <div class="work-space"></div>
+        </div>
+
+        <div class="problem-card">
+            <p><strong>Ex 2 (The "AND" Rule):</strong> Two balls are drawn from a bag (3 Red, 7 Blue) <em>without replacement</em>. Find \( P(\text{Red then Blue}) \).</p>
+            <div class="work-space"></div>
+        </div>
+
+        <div class="problem-card">
+            <p><strong>Ex 3 (Conditional):</strong> 60% of students pass the midterm. 40% pass the midterm and the final. If a student passed the midterm, what is the probability they pass the final?</p>
+            <div class="work-space"></div>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>
