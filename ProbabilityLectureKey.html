@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor Key: Chapter 5 Probability</title>
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #c0392b; /* Red for the Key */
+            --text-color: #333;
+            --bg-color: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 20px auto;
+            background: var(--bg-color);
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        header {
+            border-bottom: 3px solid var(--accent-color);
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .key-text {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .solution-box {
+            background-color: #fff5f5;
+            border: 1px solid #fab1a0;
+            padding: 15px;
+            margin: 10px 0 30px 0;
+            border-radius: 4px;
+        }
+
+        .print-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        @media print {
+            .print-btn { display: none; }
+            body { background: white; }
+            .container { box-shadow: none; width: 100%; margin: 0; }
+            .solution-box { background-color: white; border: 1px solid #333; }
+        }
+    </style>
+</head>
+<body>
+
+<main class="container">
+    <header>
+        <div>
+            <h1>Chapter 5: <span class="key-text">ANSWER KEY</span></h1>
+            <p>Introductory Statistics | Instructor Version</p>
+        </div>
+        <button class="print-btn" onclick="window.print()">Print Key</button>
+    </header>
+
+    <section>
+        <h2>I. Note-Taking Fill-Ins</h2>
+        <ul>
+            <li><strong>Empirical Probability:</strong> Based on <u>observed data / relative frequency</u>.</li>
+            <li><strong>Classical Probability:</strong> Based on <u>theoretical outcomes / sample space</u>.</li>
+            <li><strong>General Addition Rule:</strong> If events are disjoint, \( P(E \text{ and } F) \) is <u>zero (0)</u>.</li>
+            <li><strong>Complement Rule:</strong> Use when you see <u>"not" or "at least one"</u>.</li>
+            <li><strong>Conditional Probability:</strong> The symbol "|" means <u>"given that"</u>.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>II. Problem Set Solutions</h2>
+
+        <div class="solution-box">
+            <p><strong>Solution 1 (General Addition Rule):</strong></p>
+            <p>\( P(S \text{ or } B) = P(S) + P(B) - P(S \text{ and } B) \)</p>
+            <p>\( P(S \text{ or } B) = \frac{18}{30} + \frac{12}{30} - \frac{5}{30} = \frac{25}{30} \)</p>
+            <p><strong>Answer: \( \frac{5}{6} \) or \( \approx 0.833 \)</strong></p>
+        </div>
+
+        <div class="solution-box">
+            <p><strong>Solution 2 (Independence):</strong></p>
+            <p>\( P(4 \text{ and } T) = P(4) \cdot P(T) \)</p>
+            <p>\( P(4 \text{ and } T) = \frac{1}{6} \cdot \frac{1}{2} \)</p>
+            <p><strong>Answer: \( \frac{1}{12} \) or \( \approx 0.083 \)</strong></p>
+        </div>
+
+        <div class="solution-box">
+            <p><strong>Solution 3 (Conditional):</strong></p>
+            <p>\( P(F|D) = \frac{P(D \text{ and } F)}{P(D)} \)</p>
+            <p>\( P(F|D) = \frac{0.30}{0.45} = \frac{2}{3} \)</p>
+            <p><strong>Answer: \( \approx 0.667 \)</strong></p>
+        </div>
+
+        <div class="solution-box">
+            <p><strong>Solution 4 (General Multiplication):</strong></p>
+            <p><em>Note: Without replacement changes the denominator.</em></p>
+            <p>\( P(B_1 \text{ and } R_2) = P(B_1) \cdot P(R_2|B_1) \)</p>
+            <p>\( P(B_1 \text{ and } R_2) = \frac{7}{10} \cdot \frac{3}{9} = \frac{21}{90} \)</p>
+            <p><strong>Answer: \( \frac{7}{30} \) or \( \approx 0.233 \)</strong></p>
+        </div>
+    </section>
+</main>
+
+</body>
+</html>
