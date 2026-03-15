@@ -511,18 +511,24 @@
         <div class="stat-topic-divider">Part I: Probability Models</div>
 
         <h4>Step 1: The Normal Model</h4>
-        <p>Assume that the female heights in our dataset follow an approximately normal distribution. Use the mean and standard deviation for <strong>Female Heights</strong> that you calculated in Phase 1 to define the parameters of your normal model, <span class="math-visual" aria-hidden="true">N(&mu;, &sigma;)</span><span class="sr-only">Normal model with parameters mu and sigma</span>.</p>
+        <p>Assume that the female heights in our dataset follow an approximately normal distribution. Before running calculations, establish your parameters and visualize the distribution:</p>
+        <ul class="stat-list">
+            <li><strong>Calculate Parameters:</strong> Calculate and report the mean and standard deviation specifically for <strong>Female Heights</strong> (you can refer back to your Phase 1 summary tables).</li>
+            <li><strong>Visualize:</strong> Create a histogram of the female heights with a <strong>normal curve overlaid atop the histogram</strong>. <em>(Hint: This can be easily done in StatCrunch).</em> Include this labeled graph in your report.</li>
+        </ul>
+        <p>Use these calculated values as your population parameters (<span class="math-visual" aria-hidden="true">&mu;</span><span class="sr-only">population mean, mu</span> and <span class="math-visual" aria-hidden="true">&sigma;</span><span class="sr-only">population standard deviation, sigma</span>) to complete the following:</p>
         <ol class="stat-list">
-            <li><strong>Probability Calculation:</strong> Calculate the probability that a randomly selected female student from our class profile is <strong>taller than 68 inches</strong>. <em>Show your work (z-score formula and the normalcdf or table values).</em></li>
+            <li><strong>Probability Calculation:</strong> Calculate the probability that a randomly selected female student from our class profile is <strong>taller than 68 inches</strong>. <em>Show your work (z-score formula and the normalcdf, or screenshot from StatCrunch).</em></li>
             <li><strong>Percentile Calculation:</strong> What height represents the <strong>90th percentile</strong> for women in our class? <em>Show your work (invNorm or working backwards from the z-table).</em></li>
         </ol>
 
         <h4>Step 2: The Binomial Model</h4>
-        <p>Return to your Phase 2 Two-Way table to find the probability of a "Success." Let "Success" be a student who answered <strong>Yes</strong> to "Exercises Vigorously." Calculate the overall proportion of the class that exercises vigorously. We will call this probability <span class="math-visual" aria-hidden="true">p</span><span class="sr-only">p</span>.</p>
-        <p>Imagine you randomly select <strong>12 students</strong> from the population, replacing them each time (so trials remain independent).</p>
+        <p>Return to your Phase 2 Two-Way table to determine probabilities for a Binomial model. Let a "Success" be a student who answered <strong>Yes</strong> to "Exercises Vigorously." Imagine you randomly select <strong>12 students</strong> from the population, replacing them each time (so trials remain independent).</p>
         <ol class="stat-list">
+            <li><strong>Proportions (Success & Failure):</strong> Calculate and explicitly report the overall proportion of the class that exercises vigorously. We will call this probability of success <span class="math-visual" aria-hidden="true">p</span><span class="sr-only">p</span>. Also, calculate and report the probability of a student who does <em>not</em> exercise vigorously (<span class="math-visual" aria-hidden="true">q = 1 - p</span><span class="sr-only">q equals 1 minus p</span>).</li>
             <li><strong>Exact Probability:</strong> What is the probability that <em>exactly</em> 5 of the 12 students exercise vigorously? Calculate <span class="math-visual" aria-hidden="true">P(X = 5)</span><span class="sr-only">Probability X equals 5</span>.</li>
             <li><strong>Cumulative Probability:</strong> What is the probability that <em>at least</em> 2 of the students exercise vigorously? Calculate <span class="math-visual" aria-hidden="true">P(X &ge; 2)</span><span class="sr-only">Probability X is greater than or equal to 2</span>.</li>
+            <li><strong>Expected Value:</strong> Calculate the expected number of students who exercise vigorously in this sample of size 12 (<span class="math-visual" aria-hidden="true">&mu; = n &times; p</span><span class="sr-only">mu equals n times p</span>). Write a brief sentence interpreting what this expected value means in context.</li>
         </ol>
 
         <div class="stat-topic-divider">Part II: Confidence Intervals</div>
@@ -530,7 +536,7 @@
         <h4>Step 3: Estimating the True Proportion</h4>
         <p>Use our sample data to estimate a population parameter. Let's look at <strong>Math Anxiety</strong>.</p>
         <ol class="stat-list">
-            <li><strong>Calculate <span class="math-visual" aria-hidden="true">p&#770;</span><span class="sr-only">p-hat</span>:</strong> Determine the sample proportion (<span class="math-visual" aria-hidden="true">p&#770;</span><span class="sr-only">p-hat</span>) of students who reported having <strong>High Math Anxiety (Rating 4)</strong>.</li>
+            <li><strong>Report Sample Stats:</strong> State the sample size (<span class="math-visual" aria-hidden="true">n</span><span class="sr-only">sample size, n</span>) and calculate the sample proportion (<span class="math-visual" aria-hidden="true">p&#770;</span><span class="sr-only">p-hat</span>) of students who reported having <strong>High Math Anxiety (Rating 4)</strong>.</li>
             <li><strong>Construct a 95% Confidence Interval:</strong> Calculate the 95% confidence interval for the true population proportion of students with high math anxiety. Show your margin of error calculation.</li>
             <li><strong>Interpret:</strong> Write a standard sentence interpreting your interval in context (e.g., "We are 95% confident that the true proportion of...").</li>
         </ol>
@@ -538,6 +544,7 @@
         <h4>Step 4: Estimating the True Mean</h4>
         <p>Now, let's look at the continuous numerical variable, <strong>Pulse</strong> (use your cleaned Phase 1 data).</p>
         <ol class="stat-list">
+            <li><strong>Report Sample Stats:</strong> State the sample size (<span class="math-visual" aria-hidden="true">n</span><span class="sr-only">sample size, n</span>) and the sample mean (<span class="math-visual" aria-hidden="true">x&#772;</span><span class="sr-only">sample mean, x-bar</span>) for the resting pulse data.</li>
             <li><strong>Construct a 99% Confidence Interval:</strong> Calculate a 99% confidence interval for the true mean resting pulse of the student population. (Note: use a t-distribution since the population standard deviation <span class="math-visual" aria-hidden="true">&sigma;</span><span class="sr-only">sigma</span> is unknown).</li>
             <li><strong>Interpret:</strong> Write a standard sentence interpreting your interval in context.</li>
         </ol>
@@ -548,20 +555,74 @@
         <div class="stat-submission-box" role="complementary" aria-label="Phase 3 Submission Checklist">
             <strong>📋 Phase 3 Submission Checklist:</strong>
             <ul class="stat-list">
+                <li>Reported mean and standard deviation parameters for female heights.</li>
+                <li>Histogram of female heights with overlaid normal curve.</li>
                 <li>Normal probability and 90th percentile calculations (with work shown).</li>
-                <li>Binomial probability calculations for exactly 5 and at least 2 (with work shown).</li>
-                <li>95% Confidence Interval for Proportion (with <span class="math-visual" aria-hidden="true">p&#770;</span><span class="sr-only">p-hat</span> calculation and interpretation).</li>
-                <li>99% Confidence Interval for Mean Pulse (with interpretation).</li>
+                <li>Binomial Model elements: Reported probabilities for success (<span class="math-visual" aria-hidden="true">p</span><span class="sr-only">p</span>) and failure (<span class="math-visual" aria-hidden="true">q</span><span class="sr-only">q</span>), exact and cumulative probability calculations (with work shown), and expected value calculation with interpretation.</li>
+                <li>95% Confidence Interval for Proportion (must explicitly report <span class="math-visual" aria-hidden="true">n</span><span class="sr-only">sample size, n</span>, <span class="math-visual" aria-hidden="true">p&#770;</span><span class="sr-only">p-hat</span>, margin of error, and interpretation).</li>
+                <li>99% Confidence Interval for Mean Pulse (must explicitly report <span class="math-visual" aria-hidden="true">n</span><span class="sr-only">sample size, n</span>, <span class="math-visual" aria-hidden="true">x&#772;</span><span class="sr-only">sample mean, x-bar</span>, and interpretation).</li>
                 <li>Your Methods section paragraph.</li>
             </ul>
         </div>
 
+        <!-- Phase 3 Rubric -->
+        <div class="rubric-table-wrapper">
+            <table class="rubric-table">
+                <caption>Phase 3 Grading Rubric (25 Points)</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Criteria</th>
+                        <th scope="col">Excellent</th>
+                        <th scope="col">Proficient</th>
+                        <th scope="col">Developing</th>
+                        <th scope="col">Beginning/Missing</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Normal Model & Parameters</th>
+                        <td><strong>(6 pts)</strong> Mean and SD reported correctly. Histogram with normal curve is accurate and labeled. Probability and percentile calculations are correct with work shown.</td>
+                        <td><strong>(4.5 pts)</strong> Minor calculation errors or rounding mistakes. Graph may be missing a title or axis labels, but methodology is sound.</td>
+                        <td><strong>(3 pts)</strong> Significant errors in methodology (e.g., forgot to use the female subset parameters) or the histogram is missing.</td>
+                        <td><strong>(0 pts)</strong> Missing entirely.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Binomial Model</th>
+                        <td><strong>(6 pts)</strong> All probabilities (p, q, exact, and cumulative) and expected value are calculated accurately. Work or clear calculator syntax is shown. Expected value is correctly interpreted in context.</td>
+                        <td><strong>(4.5 pts)</strong> Minor calculation errors, missing the interpretation for expected value, or confusion between &gt; and &ge; affecting the cumulative probability.</td>
+                        <td><strong>(3 pts)</strong> Used the wrong distribution (e.g., normal instead of binomial), calculated "success" p-value incorrectly, or missing multiple parts of the section.</td>
+                        <td><strong>(0 pts)</strong> Missing entirely.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Confidence Intervals</th>
+                        <td><strong>(8 pts)</strong> Both intervals (Proportion and Mean) calculated correctly. Sample sizes (<span class="math-visual" aria-hidden="true">n</span><span class="sr-only">sample size, n</span>) and sample statistics (<span class="math-visual" aria-hidden="true">x&#772;</span><span class="sr-only">sample mean, x-bar</span> or <span class="math-visual" aria-hidden="true">p&#770;</span><span class="sr-only">p-hat</span>) are explicitly reported. Interpretations are contextually accurate and use correct terminology ("We are X% confident...").</td>
+                        <td><strong>(6 pts)</strong> Intervals correct, but missing explicit reporting of sample size/statistics, or interpretations are generic/flawed (e.g., saying "95% probability" instead of "95% confident").</td>
+                        <td><strong>(4 pts)</strong> Used the wrong formula entirely (e.g., Z-interval instead of T-interval for means) or margins of error are widely incorrect.</td>
+                        <td><strong>(0 pts)</strong> Missing entirely.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Methods Section</th>
+                        <td><strong>(3 pts)</strong> Professional formatting, easy to read. Methods clearly define calculator/software functions used for tests and intervals.</td>
+                        <td><strong>(2 pts)</strong> Methods are mentioned but vague (e.g., "I used a calculator").</td>
+                        <td><strong>(1 pts)</strong> Hard to follow, disjointed. Methods unclear.</td>
+                        <td><strong>(0 pts)</strong> Section missing.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Neatness & Formatting</th>
+                        <td><strong>(2 pts)</strong> Professional PDF. Graphs clear and well-placed. Easy to read.</td>
+                        <td><strong>(1.5 pts)</strong> Formatting issues. Hard to follow or graph is cut off.</td>
+                        <td><strong>(1 pts)</strong> Major formatting errors.</td>
+                        <td><strong>(0 pts)</strong> Unreadable / Wrong format.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </section>
 
     <!-- Phase 4 -->
     <section class="stat-phase-section" aria-labelledby="phase4-heading">
         <h2 id="phase4-heading" class="stat-phase-header">Phase 4: Hypothesis Testing & Inference</h2>
-        <p><strong>Focus:</strong> Formal testing procedures and final synthesis.</p>
+        <p><strong>Focus:</strong> formal testing procedures and final synthesis.</p>
 
         <h3 class="stat-sub-header">Student Instructions</h3>
 
@@ -610,10 +671,10 @@
             </ul>
         </div>
         
-        <!-- Phases 3 & 4 Rubric -->
+        <!-- Phase 4 Rubric -->
         <div class="rubric-table-wrapper">
             <table class="rubric-table">
-                <caption>Phases 3 & 4 Grading Rubric (30 Points)</caption>
+                <caption>Phase 4 Grading Rubric (25 Points)</caption>
                 <thead>
                     <tr>
                         <th scope="col">Criteria</th>
@@ -625,38 +686,38 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row">Probability Models (Normal & Binomial)</th>
-                        <td><strong>(6 pts)</strong> All calculations for Normal and Binomial probabilities are correct. Work (z-scores, parameters, equations) is clearly shown.</td>
-                        <td><strong>(4 pts)</strong> Minor calculation errors or rounding mistakes, but the correct methodologies were applied.</td>
-                        <td><strong>(2 pts)</strong> Significant errors in methodology (e.g., using normalcdf instead of binomcdf where appropriate).</td>
+                        <th scope="row">One-Sample T-Test</th>
+                        <td><strong>(8 pts)</strong> All 5 steps (Hypotheses, Conditions, Test Stat, P-value, Conclusion) are present, accurate, and correct notation is used. Conclusion matches the p-value.</td>
+                        <td><strong>(6 pts)</strong> Minor errors in notation or calculation. Fails to check conditions, but conclusion logically follows the p-value.</td>
+                        <td><strong>(4 pts)</strong> Major structural issues. Wrong test performed or decision (Reject/Fail to Reject) contradicts the p-value entirely.</td>
                         <td><strong>(0 pts)</strong> Missing entirely.</td>
                     </tr>
                     <tr>
-                        <th scope="row">Confidence Intervals</th>
-                        <td><strong>(6 pts)</strong> Both intervals (Proportion and Mean) calculated correctly. Interpretations are contextually accurate and use correct terminology.</td>
-                        <td><strong>(4 pts)</strong> Intervals correct, but interpretations are generic or slightly flawed (e.g., "95% probability" instead of "95% confident").</td>
-                        <td><strong>(2 pts)</strong> Wrong formulas used (e.g., Z instead of T for means).</td>
-                        <td><strong>(0 pts)</strong> Missing entirely.</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Hypothesis Testing (1-Sample & 2-Sample)</th>
-                        <td><strong>(10 pts)</strong> All steps (Hypotheses, Conditions, Test Stat, P-value, Conclusion) present and correct for both tests. Conclusions strictly match p-value vs alpha.</td>
-                        <td><strong>(7 pts)</strong> Minor errors in notation or calculation. Fails to check conditions, but conclusions are logically sound based on the p-value.</td>
-                        <td><strong>(4 pts)</strong> Major structural issues. Wrong tests performed or conclusions contradict the p-values.</td>
+                        <th scope="row">Two-Sample T-Test</th>
+                        <td><strong>(8 pts)</strong> Hypotheses, Test Stat, P-value, and Conclusion are present and calculated accurately for independent samples. Conclusion matches the p-value.</td>
+                        <td><strong>(6 pts)</strong> Minor errors in notation or calculation. Conclusion is vague but follows the p-value.</td>
+                        <td><strong>(4 pts)</strong> Major errors (e.g., running a paired t-test instead of independent) or missing multiple steps.</td>
                         <td><strong>(0 pts)</strong> Missing entirely.</td>
                     </tr>
                     <tr>
                         <th scope="row">Executive Summary & Reflection</th>
-                        <td><strong>(5 pts)</strong> Thoughtful synthesis. Addresses all prompt questions thoroughly and reflects meaningfully on the data process.</td>
-                        <td><strong>(3 pts)</strong> Summarizes the project but lacks deep reflection on outliers or assumptions.</td>
-                        <td><strong>(1 pts)</strong> Very brief, vague summary lacking statistical context.</td>
+                        <td><strong>(4 pts)</strong> Thoughtful synthesis. Addresses all prompt questions thoroughly and reflects meaningfully on the data and outliers.</td>
+                        <td><strong>(3 pts)</strong> Summarizes the project but lacks deep reflection on outliers or previous assumptions.</td>
+                        <td><strong>(1.5 pts)</strong> Very brief, vague summary lacking statistical context or references to the findings.</td>
                         <td><strong>(0 pts)</strong> Missing entirely.</td>
                     </tr>
                     <tr>
-                        <th scope="row">Methods Section & Formatting</th>
-                        <td><strong>(3 pts)</strong> Professional formatting, easy to read. Methods clearly define calculator/software inputs for tests and intervals.</td>
-                        <td><strong>(2 pts)</strong> Acceptable formatting. Methods are mentioned but vague.</td>
-                        <td><strong>(1 pts)</strong> Hard to follow, disjointed. Methods missing or unclear.</td>
+                        <th scope="row">Methods Section</th>
+                        <td><strong>(3 pts)</strong> Clear explanation of software/calculator tests used (e.g., T-Test, 2-SampTTest).</td>
+                        <td><strong>(2 pts)</strong> Tests mentioned but vague.</td>
+                        <td><strong>(1 pts)</strong> Very brief or unclear.</td>
+                        <td><strong>(0 pts)</strong> Section missing.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Neatness & Formatting</th>
+                        <td><strong>(2 pts)</strong> Professional PDF format. Highly organized. Document is easy to read.</td>
+                        <td><strong>(1.5 pts)</strong> Acceptable formatting but some minor layout issues.</td>
+                        <td><strong>(1 pts)</strong> Major formatting errors or not submitted as PDF.</td>
                         <td><strong>(0 pts)</strong> Unreadable.</td>
                     </tr>
                 </tbody>
@@ -664,7 +725,8 @@
         </div>
     </section>
 
-</main>
+</main>    
+
 
 </body>
 </html>
