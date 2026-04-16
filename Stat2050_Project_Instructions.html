@@ -498,7 +498,7 @@
             </table>
         </div>
     </section>
-  <!-- Phase 3 -->
+<!-- Phase 3 -->
     <section class="stat-phase-section" aria-labelledby="phase3-heading">
         <h2 id="phase3-heading" class="stat-phase-header">Phase 3: Simulation & Distributions</h2>
         <p><strong>Focus:</strong> Normal models, Binomial models, and Confidence Intervals.</p>
@@ -508,14 +508,14 @@
         <div class="stat-topic-divider">Part I: Probability Models</div>
 
         <div class="stat-alert" role="status" style="background-color: #e2e3e5; border-color: #d6d8db; color: #2b2f32;">
-            <strong>Note on Formatting:</strong> Ensure that <em>all</em> figures (plots, graphs, etc.) submitted in this phase include clear, descriptive titles.
+            <strong>Note on Formatting:</strong> Ensure that <em>all</em> figures (plots, graphs, etc.) submitted in this phase include titles and appropriate labels.
         </div>
 
         <h4>Step 1: The Normal Model</h4>
         <p>Access the dataset titled <strong>"Simulated Women's Heights based on Spring 2026 data"</strong> in our StatCrunch Group. Assume this data follows an approximately normal distribution. Before running calculations, establish your parameters and visualize the distribution:</p>
         <ul class="stat-list">
             <li><strong>Calculate Parameters:</strong> Calculate and report the mean and standard deviation for this simulated dataset.</li>
-            <li><strong>Visualize:</strong> Create a histogram of the female heights with a <strong>normal curve overlaid atop the histogram</strong>. Include this labeled graph in your report.</li>
+            <li><strong>Visualize:</strong> Create a histogram of the female heights with a <strong>normal curve overlaid atop the histogram</strong>. Include this graph in your report.</li>
         </ul>
         <p>Use these calculated values as your population parameters (<span class="math-visual" aria-hidden="true">&mu;</span><span class="sr-only">population mean, mu</span> and <span class="math-visual" aria-hidden="true">&sigma;</span><span class="sr-only">population standard deviation, sigma</span>) to complete the following:</p>
         <ol class="stat-list">
@@ -524,10 +524,57 @@
             <li><strong>Personal Percentile:</strong> State your <em>actual</em> height in inches (even if you are male). Using this normal model, determine what percentile your height represents. <em>If you use StatCrunch for these calculations, include supporting images of your calculation outputs.</em></li>
         </ol>
 
-        <h4>Step 2: The Binomial Model</h4>
-        <p>Return to your Phase 2 Two-Way table to determine probabilities for a Binomial model. Let a "Success" be a student who answered <strong>Yes</strong> to "Exercises Vigorously." Imagine you randomly select <strong>12 students</strong> from the population, replacing them each time (so trials remain independent).</p>
+<h4>Step 2: The Binomial Model</h4>
+        <p>Use the Two-Way table provided below (which summarizes Math Anxiety Rating vs. Vigorous Exercise) to determine probabilities for a Binomial model. Let a "Success" be a student who answered <strong>Yes</strong> to "Exercises Vigorously." Imagine you randomly select <strong>12 students</strong> from this population, replacing them each time (so trials remain independent). <em>If you use StatCrunch for these calculations, include supporting images of your calculation outputs.</em></p>
+        
+        <div class="rubric-table-wrapper" style="margin-bottom: 20px;">
+            <table class="rubric-table">
+                <caption class="sr-only">Two-Way Table: Math Anxiety Rating by Vigorous Exercise</caption>
+                <thead>
+                    <tr>
+                        <th scope="col" style="background-color: #f8f9fa; border-bottom: none;"></th>
+                        <th scope="col" colspan="5" style="text-align: center; background-color: #e9ecef; border-bottom: 2px solid #ccc;">Math Anxiety Rating</th>
+                    </tr>
+                    <tr>
+                        <th scope="col" style="width: 20%;">Vigorous Exercise</th>
+                        <th scope="col" style="text-align: center; width: 16%;">1</th>
+                        <th scope="col" style="text-align: center; width: 16%;">2</th>
+                        <th scope="col" style="text-align: center; width: 16%;">3</th>
+                        <th scope="col" style="text-align: center; width: 16%;">4</th>
+                        <th scope="col" style="text-align: center; width: 16%;">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">No</th>
+                        <td style="text-align: center;">0</td>
+                        <td style="text-align: center;">5</td>
+                        <td style="text-align: center;">3</td>
+                        <td style="text-align: center;">6</td>
+                        <td style="text-align: center; font-weight: bold;">14</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Yes</th>
+                        <td style="text-align: center;">5</td>
+                        <td style="text-align: center;">20</td>
+                        <td style="text-align: center;">9</td>
+                        <td style="text-align: center;">16</td>
+                        <td style="text-align: center; font-weight: bold;">50</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Total</th>
+                        <td style="text-align: center; font-weight: bold;">5</td>
+                        <td style="text-align: center; font-weight: bold;">25</td>
+                        <td style="text-align: center; font-weight: bold;">12</td>
+                        <td style="text-align: center; font-weight: bold;">22</td>
+                        <td style="text-align: center; font-weight: bold;">64</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
         <ol class="stat-list">
-            <li><strong>Proportions (Success & Failure):</strong> Calculate and explicitly report the overall proportion of the class that exercises vigorously. We will call this probability of success <span class="math-visual" aria-hidden="true">p</span><span class="sr-only">p</span>. Also, calculate and report the probability of a student who does <em>not</em> exercise vigorously (<span class="math-visual" aria-hidden="true">q = 1 - p</span><span class="sr-only">q equals 1 minus p</span>).</li>
+            <li><strong>Proportions (Success & Failure):</strong> Calculate and explicitly report the overall proportion of the class that exercises vigorously based on the table above. We will call this probability of success <span class="math-visual" aria-hidden="true">p</span><span class="sr-only">p</span>. Also, calculate and report the probability of a student who does <em>not</em> exercise vigorously (<span class="math-visual" aria-hidden="true">q = 1 - p</span><span class="sr-only">q equals 1 minus p</span>).</li>
             <li><strong>Exact Probability:</strong> What is the probability that <em>exactly</em> 5 of the 12 students exercise vigorously? Calculate <span class="math-visual" aria-hidden="true">P(X = 5)</span><span class="sr-only">Probability X equals 5</span>.</li>
             <li><strong>Cumulative Probability:</strong> What is the probability that <em>at least</em> 2 of the students exercise vigorously? Calculate <span class="math-visual" aria-hidden="true">P(X &ge; 2)</span><span class="sr-only">Probability X is greater than or equal to 2</span>.</li>
             <li><strong>Expected Value:</strong> Calculate the expected number of students who exercise vigorously in this sample of size 12 (<span class="math-visual" aria-hidden="true">&mu; = n &times; p</span><span class="sr-only">mu equals n times p</span>). Write a brief sentence interpreting what this expected value means in context.</li>
@@ -540,7 +587,7 @@
         <ol class="stat-list">
             <li><strong>Report Sample Stats:</strong> State the sample size (<span class="math-visual" aria-hidden="true">n</span><span class="sr-only">sample size, n</span>) and calculate the sample proportion (<span class="math-visual" aria-hidden="true">p&#770;</span><span class="sr-only">p-hat</span>) of students who reported having <strong>High Math Anxiety (Rating 4)</strong>.</li>
             <li><strong>Construct a 95% Confidence Interval:</strong> Calculate the 95% confidence interval for the true population proportion of students with high math anxiety. Show your margin of error calculation.</li>
-            <li><strong>Interpret:</strong> Write a standard sentence interpreting your interval in context (e.g., "We are 95% confident that the true proportion of...").</li>
+            <li><strong>Interpret:</strong> Write a sentence interpreting your interval in context (e.g., "We are 95% confident that the true proportion of...").</li>
         </ol>
 
         <h4>Step 4: Estimating the True Mean</h4>
