@@ -78,7 +78,7 @@
     .stat-alert {
         background-color: #fff3cd;
         border: 1px solid #ffeeba;
-        color: #5c4603; /* Contrast > 7:1 for AAA */
+        color: #5c4603;
         padding: 15px;
         margin-bottom: 20px;
         border-radius: 4px;
@@ -87,7 +87,7 @@
     .stat-tech-tip {
         background-color: #e2e3e5;
         border-left: 5px solid #6c757d;
-        color: #2b2f32; /* Contrast > 7:1 */
+        color: #2b2f32;
         padding: 15px;
         margin: 15px 0;
         border-radius: 0 4px 4px 0;
@@ -96,7 +96,7 @@
     .integrity-alert {
         background-color: #ffeef0;
         border: 1px solid #f5c6cb;
-        color: #63141d; /* Contrast > 7:1 */
+        color: #63141d;
         padding: 15px;
         margin-top: 15px;
         border-radius: 4px;
@@ -107,7 +107,7 @@
     .stat-submission-box {
         background-color: #e8f5e9;
         border: 1px solid #c8e6c9;
-        color: #154a19; /* Contrast > 7:1 */
+        color: #154a19;
         padding: 15px;
         margin: 20px 0;
         border-radius: 4px;
@@ -689,8 +689,18 @@
             <li><strong>P-Value:</strong> Report the calculated p-value.</li>
             <li><strong>Conclusion:</strong> State your decision and write a concluding sentence comparing male and female pulse rates based on your findings.</li>
         </ol>
+
+        <h4>Step 3: One-Sample Proportion Z-Test</h4>
+        <p>According to the CDC, roughly 50% of U.S. adults meet the guidelines for aerobic physical activity. Let's test if the proportion of our Stat 2050 class that exercises vigorously is significantly different from this 50% national benchmark. Use a significance level of <strong><span class="math-visual" aria-hidden="true">&alpha; = 0.05</span><span class="sr-only">alpha equals 0.05</span></strong>.</p>
+        <ol class="stat-list">
+            <li><strong>Hypotheses:</strong> State the null (<span class="math-visual" aria-hidden="true">H<sub>0</sub></span><span class="sr-only">H naught</span>) and alternative (<span class="math-visual" aria-hidden="true">H<sub>A</sub></span><span class="sr-only">H A</span>) hypotheses using correct proportion notation (<span class="math-visual" aria-hidden="true">p</span><span class="sr-only">p</span>).</li>
+            <li><strong>Conditions:</strong> Verify the success/failure conditions (<span class="math-visual" aria-hidden="true">np &ge; 10</span><span class="sr-only">n times p is greater than or equal to 10</span> and <span class="math-visual" aria-hidden="true">n(1-p) &ge; 10</span><span class="sr-only">n times 1 minus p is greater than or equal to 10</span>) to ensure a normal model is appropriate.</li>
+            <li><strong>Test Statistic:</strong> Calculate and report the 1-proportion z-test statistic.</li>
+            <li><strong>P-Value:</strong> Report the calculated p-value.</li>
+            <li><strong>Conclusion:</strong> State your decision and write a concluding sentence in the context of the problem.</li>
+        </ol>
         
-        <h4>Step 3: Chi-Square Goodness of Fit Test</h4>
+        <h4>Step 4: Chi-Square Goodness of Fit Test</h4>
         <p>The American Academy of Ophthalmology estimates that the United States distribution of eye color is approximately: <strong>45% Brown, 27% Blue, 18% Hazel, and 10% Green/Other</strong>. Let's run a Goodness of Fit test to determine if our Stat 2050 class follows this national distribution. Use a significance level of <strong><span class="math-visual" aria-hidden="true">&alpha; = 0.05</span><span class="sr-only">alpha equals 0.05</span></strong>.</p>
         <ol class="stat-list">
             <li><strong>Hypotheses:</strong> State the null (<span class="math-visual" aria-hidden="true">H<sub>0</sub></span><span class="sr-only">H naught</span>) and alternative (<span class="math-visual" aria-hidden="true">H<sub>A</sub></span><span class="sr-only">H A</span>) hypotheses in words.</li>
@@ -703,7 +713,7 @@
 
         <div class="stat-topic-divider">Part II: Final Synthesis</div>
 
-        <h4>Step 4: Executive Summary & Reflection</h4>
+        <h4>Step 5: Executive Summary & Reflection</h4>
         <p>Write a 1-2 paragraph "Executive Summary" synthesizing what you have learned about the "Class Profile" throughout all four phases of this project. Address at least three of the following questions in your reflection:</p>
         <ul class="stat-list">
             <li>What was the most surprising statistical finding about our class profile?</li>
@@ -712,14 +722,15 @@
             <li>What was the most challenging part of analyzing a real, unpolished dataset compared to standard textbook problems?</li>
         </ul>
 
-        <h4>Step 5: Methods Section</h4>
-        <p>Briefly describe the software or calculator functions you used to run your Hypothesis Tests (e.g., T-Test, 2-SampTTest, Chi-Square GOF, or StatCrunch Hypothesis tools).</p>
+        <h4>Step 6: Methods Section</h4>
+        <p>Briefly describe the software or calculator functions you used to run your Hypothesis Tests (e.g., T-Test, 2-SampTTest, 1-PropZTest, Chi-Square GOF, or StatCrunch Hypothesis tools).</p>
 
         <div class="stat-submission-box" role="complementary" aria-label="Phase 4 Submission Checklist">
             <strong>📋 Phase 4 Submission Checklist:</strong>
             <ul class="stat-list">
                 <li>One-Sample T-Test (all 5 steps explicitly shown).</li>
                 <li>Two-Sample Independent T-Test (Hypotheses, Test Statistic, P-Value, and Conclusion).</li>
+                <li>One-Sample Proportion Z-Test (Hypotheses, Conditions Check, Test Statistic, P-Value, and Conclusion).</li>
                 <li>Chi-Square Goodness of Fit Test (Hypotheses, <strong>Table of Observed/Expected Counts</strong>, Test Statistic, P-Value, Conclusion, and Personal Contribution).</li>
                 <li>Executive Summary / Final Reflection paragraph(s).</li>
                 <li>Your Methods section paragraph.</li>
@@ -740,38 +751,45 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row">One-Sample T-Test (6 pts)<span class="clo-tag">(CLO 4, CLO 5)</span></th>
-                        <td><strong>(6 pts)</strong> All 5 steps shown perfectly. Correct notation used. Conclusion logically matches the p-value and context.</td>
-                        <td><strong>(4.5 pts)</strong> Minor errors in notation/calculation. Fails to explicitly check conditions, but conclusion matches p-value.</td>
-                        <td><strong>(3 pts)</strong> Major structural issues. Wrong test performed or decision contradicts the p-value entirely.</td>
+                        <th scope="row">One-Sample T-Test (5 pts)<span class="clo-tag">(CLO 4, CLO 5)</span></th>
+                        <td><strong>(5 pts)</strong> All 5 steps shown perfectly. Correct notation used. Conclusion logically matches the p-value and context.</td>
+                        <td><strong>(4 pts)</strong> Minor errors in notation/calculation. Fails to explicitly check conditions, but conclusion matches p-value.</td>
+                        <td><strong>(2 pts)</strong> Major structural issues. Wrong test performed or decision contradicts the p-value entirely.</td>
                         <td><strong>(0 pts)</strong> Missing entirely.</td>
                     </tr>
                     <tr>
-                        <th scope="row">Two-Sample T-Test (6 pts)<span class="clo-tag">(CLO 4, CLO 5)</span></th>
-                        <td><strong>(6 pts)</strong> Hypotheses, Test Stat, p-value, and Conclusion calculated accurately for independent samples. Conclusion matches p-value.</td>
-                        <td><strong>(4.5 pts)</strong> Minor errors in notation or calculation. Conclusion is vague but follows the p-value.</td>
-                        <td><strong>(3 pts)</strong> Major errors (e.g., running a paired t-test instead of independent) or missing multiple steps.</td>
+                        <th scope="row">Two-Sample T-Test (5 pts)<span class="clo-tag">(CLO 4, CLO 5)</span></th>
+                        <td><strong>(5 pts)</strong> Hypotheses, Test Stat, p-value, and Conclusion calculated accurately for independent samples. Conclusion matches p-value.</td>
+                        <td><strong>(4 pts)</strong> Minor errors in notation or calculation. Conclusion is vague but follows the p-value.</td>
+                        <td><strong>(2 pts)</strong> Major errors (e.g., running a paired t-test instead of independent) or missing multiple steps.</td>
                         <td><strong>(0 pts)</strong> Missing entirely.</td>
                     </tr>
                     <tr>
-                        <th scope="row">Chi-Square GOF Test &amp; Personal Connection (6 pts)<span class="clo-tag">(CLO 4, CLO 5)</span></th>
-                        <td><strong>(6 pts)</strong> Hypotheses correctly stated. <strong>Table of Observed and Expected counts included and calculated properly.</strong> Test stat, p-value, and conclusion align. Personal contribution calculated accurately with a logical interpretation.</td>
-                        <td><strong>(4.5 pts)</strong> Expected counts slightly off, or table is missing. Minor calculation errors. Missing or flawed personal contribution interpretation.</td>
-                        <td><strong>(3 pts)</strong> Calculated percentages instead of expected counts. Major errors in the test. Personal connection missing.</td>
+                        <th scope="row">One-Sample Proportion Z-Test (5 pts)<span class="clo-tag">(CLO 4, CLO 5)</span></th>
+                        <td><strong>(5 pts)</strong> Hypotheses correctly state p vs. <span class="math-visual" aria-hidden="true">p&#770;</span><span class="sr-only">p-hat</span>. Success/failure conditions mathematically checked. Test stat, p-value, and conclusion are accurate.</td>
+                        <td><strong>(4 pts)</strong> Minor calculation errors or fails to explicitly show the math for the condition checks.</td>
+                        <td><strong>(2 pts)</strong> Used means instead of proportions, or decision contradicts the p-value.</td>
                         <td><strong>(0 pts)</strong> Missing entirely.</td>
                     </tr>
                     <tr>
-                        <th scope="row">Executive Summary (4 pts)<span class="clo-tag">(CLO 5)</span></th>
-                        <td><strong>(4 pts)</strong> Thoughtful synthesis. Constructs a clear, data-driven argument reflecting on findings, the reality of real-world data, and/or personal representation.</td>
-                        <td><strong>(3 pts)</strong> Summarizes the project but lacks deep statistical arguments regarding the data's reality or previous assumptions.</td>
-                        <td><strong>(2 pts)</strong> Very brief, vague summary lacking data-driven references to the findings.</td>
+                        <th scope="row">Chi-Square GOF Test &amp; Personal Connection (5 pts)<span class="clo-tag">(CLO 4, CLO 5)</span></th>
+                        <td><strong>(5 pts)</strong> Hypotheses correctly stated. <strong>Table of Observed and Expected counts included and calculated properly.</strong> Test stat, p-value, and conclusion align. Personal contribution calculated accurately with a logical interpretation.</td>
+                        <td><strong>(4 pts)</strong> Expected counts slightly off, or table is missing. Minor calculation errors. Missing or flawed personal contribution interpretation.</td>
+                        <td><strong>(2 pts)</strong> Calculated percentages instead of expected counts. Major errors in the test. Personal connection missing.</td>
                         <td><strong>(0 pts)</strong> Missing entirely.</td>
                     </tr>
                     <tr>
-                        <th scope="row">Methods &amp; Communication (3 pts)<span class="clo-tag">(CLO 5)</span></th>
-                        <td><strong>(3 pts)</strong> Clear explanation of testing software. Professional PDF formatting. Highly organized and easy to read.</td>
-                        <td><strong>(2 pts)</strong> Tests mentioned but vague. Acceptable formatting but some minor layout issues.</td>
-                        <td><strong>(1 pts)</strong> Very brief or unclear methods. Major formatting errors.</td>
+                        <th scope="row">Executive Summary (3 pts)<span class="clo-tag">(CLO 5)</span></th>
+                        <td><strong>(3 pts)</strong> Thoughtful synthesis. Constructs a clear, data-driven argument reflecting on findings, the reality of real-world data, and/or personal representation.</td>
+                        <td><strong>(2 pts)</strong> Summarizes the project but lacks deep statistical arguments regarding the data's reality or previous assumptions.</td>
+                        <td><strong>(1 pts)</strong> Very brief, vague summary lacking data-driven references to the findings.</td>
+                        <td><strong>(0 pts)</strong> Missing entirely.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Methods &amp; Communication (2 pts)<span class="clo-tag">(CLO 5)</span></th>
+                        <td><strong>(2 pts)</strong> Clear explanation of testing software. Professional PDF formatting. Highly organized and easy to read.</td>
+                        <td><strong>(1 pts)</strong> Tests mentioned but vague. Acceptable formatting but some minor layout issues.</td>
+                        <td><strong>(0.5 pts)</strong> Very brief or unclear methods. Major formatting errors.</td>
                         <td><strong>(0 pts)</strong> Missing methods or completely unreadable.</td>
                     </tr>
                 </tbody>
