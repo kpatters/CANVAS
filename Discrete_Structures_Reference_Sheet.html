@@ -175,6 +175,7 @@ window.Quarto = {
 
 </header>
 
+
 <button onclick="window.print()" class="print-button no-print">
 <span aria-hidden="true">🖨️</span> Print to PDF
 </button>
@@ -609,6 +610,47 @@ window.Quarto = {
 </div>
 <div class="theorem-box">
 <p><strong>Thm 9.3.3 Inclusion/Exclusion for Two or Three Sets:</strong> If <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>, and <span class="math inline">\(C\)</span> are any finite sets, then <span class="math inline">\(N(A \cup B) = N(A) + N(B) - N(A \cap B)\)</span> and <span class="math inline">\(N(A \cup B \cup C) = N(A) + N(B) + N(C) - N(A \cap B) - N(A \cap C) - N(B \cap C) + N(A \cap B \cap C).\)</span></p>
+</div>
+<h2 id="graphs-and-trees">Graphs and Trees</h2>
+<div class="theorem-box">
+<p><strong>Lemma 10.1.1</strong> Let <span class="math inline">\(G\)</span> be a graph. a. If <span class="math inline">\(G\)</span> is connected, then any two distinct vertices of <span class="math inline">\(G\)</span> can be connected by a path. b. If vertices <span class="math inline">\(v\)</span> and <span class="math inline">\(w\)</span> are part of a circuit in <span class="math inline">\(G\)</span> and one edge is removed from the circuit, then there still exists a trail from <span class="math inline">\(v\)</span> to <span class="math inline">\(w\)</span> in <span class="math inline">\(G\)</span>. c. If <span class="math inline">\(G\)</span> is connected and <span class="math inline">\(G\)</span> contains a circuit, then an edge of the circuit can be removed without disconnecting <span class="math inline">\(G\)</span>.</p>
+</div>
+<div class="theorem-box">
+<p><strong>Theorem 10.1.2</strong> If a graph has an Euler circuit, then every vertex of the graph has positive even degree.</p>
+<p><em>Contrapositive:</em> If a graph has any vertex of odd degree, then it does not have an Euler circuit.</p>
+</div>
+<div class="theorem-box">
+<p><strong>Theorem 10.1.3</strong> If a graph <span class="math inline">\(G\)</span> is connected and the degree of every vertex of <span class="math inline">\(G\)</span> is a positive even integer, then <span class="math inline">\(G\)</span> has an Euler circuit.</p>
+</div>
+<div class="theorem-box">
+<p><strong>Theorem 10.1.4</strong> A graph <span class="math inline">\(G\)</span> has an Euler circuit if, and only if, <span class="math inline">\(G\)</span> is connected and every vertex of <span class="math inline">\(G\)</span> has positive even degree.</p>
+</div>
+<div class="theorem-box">
+<p><strong>Corollary 10.1.5</strong> Let <span class="math inline">\(G\)</span> be a graph, and let <span class="math inline">\(v\)</span> and <span class="math inline">\(w\)</span> be two distinct vertices of <span class="math inline">\(G\)</span>. There is an Euler trail from <span class="math inline">\(v\)</span> to <span class="math inline">\(w\)</span> if, and only if, <span class="math inline">\(G\)</span> is connected, <span class="math inline">\(v\)</span> and <span class="math inline">\(w\)</span> have odd degree, and all other vertices of <span class="math inline">\(G\)</span> have positive even degree.</p>
+</div>
+<div class="theorem-box">
+<p><strong>Proposition 10.1.6: Hamiltonian Circuits</strong> If a graph <span class="math inline">\(G\)</span> has a Hamiltonian circuit, then <span class="math inline">\(G\)</span> has a subgraph <span class="math inline">\(H\)</span> with the following properties:</p>
+<ol type="1">
+<li><span class="math inline">\(H\)</span> contains every vertex of <span class="math inline">\(G\)</span>.</li>
+<li><span class="math inline">\(H\)</span> is connected.</li>
+<li><span class="math inline">\(H\)</span> has the same number of edges as vertices.</li>
+<li>Every vertex of <span class="math inline">\(H\)</span> has degree <span class="math inline">\(2\)</span>.</li>
+</ol>
+</div>
+<div class="theorem-box">
+<p><strong>Lemma 10.4.1</strong> Any tree that has more than one vertex has at least one vertex of degree <span class="math inline">\(1\)</span>.</p>
+</div>
+<div class="theorem-box">
+<p><strong>Theorem 10.4.2</strong> For any positive integer <span class="math inline">\(n\)</span>, any tree with <span class="math inline">\(n\)</span> vertices has <span class="math inline">\(n-1\)</span> edges.</p>
+</div>
+<div class="theorem-box">
+<p><strong>Lemma 10.4.3</strong> If <span class="math inline">\(G\)</span> is any connected graph, <span class="math inline">\(C\)</span> is any circuit in <span class="math inline">\(G\)</span>, and any one of the edges of <span class="math inline">\(C\)</span> is removed from <span class="math inline">\(G\)</span>, then the graph that remains is connected.</p>
+</div>
+<div class="theorem-box">
+<p><strong>Theorem 10.4.4</strong> For any positive integer <span class="math inline">\(n\)</span>, if <span class="math inline">\(G\)</span> is a connected graph with <span class="math inline">\(n\)</span> vertices and <span class="math inline">\(n-1\)</span> edges, then <span class="math inline">\(G\)</span> is a tree.</p>
+</div>
+<div class="theorem-box">
+<p><strong>Corollary 10.4.5</strong> If <span class="math inline">\(G\)</span> is any graph with <span class="math inline">\(n\)</span> vertices and <span class="math inline">\(m\)</span> edges, where <span class="math inline">\(m\)</span> and <span class="math inline">\(n\)</span> are positive integers and <span class="math inline">\(m \le n\)</span>, then <span class="math inline">\(G\)</span> has a circuit.</p>
 </div>
 </div>
 
