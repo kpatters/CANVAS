@@ -78,7 +78,7 @@
     .stat-alert {
         background-color: #fff3cd;
         border: 1px solid #ffeeba;
-        color: #5c4603; /* Contrast > 7:1 for AAA */
+        color: #5c4603;
         padding: 15px;
         margin-bottom: 20px;
         border-radius: 4px;
@@ -87,7 +87,7 @@
     .stat-tech-tip {
         background-color: #e2e3e5;
         border-left: 5px solid #6c757d;
-        color: #2b2f32; /* Contrast > 7:1 */
+        color: #2b2f32;
         padding: 15px;
         margin: 15px 0;
         border-radius: 0 4px 4px 0;
@@ -96,7 +96,7 @@
     .integrity-alert {
         background-color: #ffeef0;
         border: 1px solid #f5c6cb;
-        color: #63141d; /* Contrast > 7:1 */
+        color: #63141d;
         padding: 15px;
         margin-top: 15px;
         border-radius: 4px;
@@ -107,7 +107,7 @@
     .stat-submission-box {
         background-color: #e8f5e9;
         border: 1px solid #c8e6c9;
-        color: #154a19; /* Contrast > 7:1 */
+        color: #154a19;
         padding: 15px;
         margin: 20px 0;
         border-radius: 4px;
@@ -185,33 +185,60 @@
     .stat-list li {
         margin-bottom: 8px;
     }
+    
+    .rounding-rule {
+        background-color: #eef2f5;
+        border: 1px solid #c4d1db;
+        padding: 8px 12px;
+        border-radius: 4px;
+        display: inline-block;
+        margin-top: 8px;
+        font-size: 0.95em;
+    }
+    
+    .clo-tag {
+        font-size: 0.85em;
+        color: #0056b3;
+        font-weight: normal;
+        display: block;
+        margin-top: 4px;
+    }
 </style>
 </head>
 <body>
 
 <main class="stat-project-container">
 
-    <!-- Header -->
     <header class="stat-project-header">
         <h1 class="stat-project-title">STAT 2050 Project: The Class Profile</h1>
         <p><strong>Instructor & Student Guide</strong></p>
         
         <div class="stat-project-box">
-            <h2 style="font-size: 1.3em; margin-top: 0; color: #004494;">Project Overview</h2>
+            <h2 style="font-size: 1.3em; margin-top: 0; color: #004494;">Project Overview & Learning Outcomes</h2>
+            <p><strong>Course Learning Outcomes (CLOs) Assessed:</strong></p>
+            <ul class="stat-list" style="font-size: 0.95em;">
+                <li><strong>CLO 1:</strong> Analyze data with descriptive and numerical statistics (visualizations, measures of central tendency, and variance).</li>
+                <li><strong>CLO 2:</strong> Calculate probabilities for discrete and continuous distributions with an understanding of probability concepts and randomness.</li>
+                <li><strong>CLO 3:</strong> Analyze data using regression and correlation techniques.</li>
+                <li><strong>CLO 4:</strong> Construct hypothesis tests and confidence intervals for population parameters.</li>
+                <li><strong>CLO 5:</strong> Construct clear, data-driven statistical arguments from results.</li>
+            </ul>
+            
+            <p style="margin-top: 20px;"><strong>General Instructions:</strong></p>
             <ul class="stat-list">
                 <li><strong>Data Source:</strong> The <code>Stat2050_Survey_ResultsSP2026.csv</code> file (available in Canvas Modules).</li>
-                <li><strong>Submission Format:</strong> You may create your project however you like! Some suggestions include Microsoft products (Word, PowerPoint, Excel) or Google products (Docs, Slides, Sheets). The only restriction is that your final project <strong>must be exported and uploaded as a PDF document</strong> to ensure your formatting, graphs, and tables are preserved accurately for grading.</li>
-                <li><strong>Methods Section:</strong> For each phase, you must include a brief "Methods" paragraph explaining <em>how</em> you created your statistical summaries (e.g., "I used the 1-Var Stats function on my TI-84," or "I used Excel formulas to sort the data").</li>
+                <li><strong>Submission Format:</strong> You may create your project however you like (Word, Google Docs, etc.). The final project <strong>must be exported and uploaded as a PDF document</strong> to ensure formatting is preserved.</li>
+                <li><strong>Mathematical Notation:</strong> If you struggle to type mathematical symbols or formulas digitally, you may neatly hand-write your equations, take a clear photo, and insert the image directly into your final document.</li>
+                <li><strong>Methods Section:</strong> For each phase, include a brief "Methods" paragraph explaining <em>how</em> you created your statistical summaries.</li>
             </ul>
             
             <div class="integrity-alert" role="alert">
                 Academic Integrity & AI Policy: <br>
                 <span style="font-weight: normal;">This project must be your own original work. The use of Artificial Intelligence (AI) tools (such as ChatGPT, Gemini, etc.) to generate text, analysis, or calculations is <strong>strictly prohibited</strong> and will be treated as academic dishonesty. <br><br>
-                <em>Exception:</em> You may use tools like <strong>Grammarly</strong> or other software solely for spell-checking and sentence structure improvements. However, all <strong>Data Analysis</strong> must be your own work.</span>
+                <em>Exception:</em> You may use tools like <strong>Grammarly</strong> solely for spell-checking and sentence structure improvements. <strong>You are also permitted to use AI exclusively for the designated Phase 1 Career Exploration prompt.</strong> All <strong>Data Analysis</strong> must be your own work.</span>
             </div>
         </div>
     </header>
-
   
     <!-- Phase 1 -->
     <section class="stat-phase-section" aria-labelledby="phase1-heading">
