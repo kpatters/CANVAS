@@ -74,7 +74,7 @@
         border-left: 4px solid #6c757d;
     }
 
-    /* Alert Boxes - Adjusted for AAA Contrast */
+    /* Alert Boxes */
     .stat-alert {
         background-color: #fff3cd;
         border: 1px solid #ffeeba;
@@ -126,7 +126,7 @@
         border-width: 0;
     }
 
-    /* Math specific styling for sighted users */
+    /* Math specific styling */
     .math-visual {
         font-family: 'Times New Roman', serif;
         font-style: italic;
@@ -186,16 +186,6 @@
         margin-bottom: 8px;
     }
     
-    .rounding-rule {
-        background-color: #eef2f5;
-        border: 1px solid #c4d1db;
-        padding: 8px 12px;
-        border-radius: 4px;
-        display: inline-block;
-        margin-top: 8px;
-        font-size: 0.95em;
-    }
-    
     .clo-tag {
         font-size: 0.85em;
         color: #0056b3;
@@ -226,10 +216,9 @@
             
             <p style="margin-top: 20px;"><strong>General Instructions:</strong></p>
             <ul class="stat-list">
-                <li><strong>Data Source:</strong> The <code>Stat2050_Survey_ResultsSP2026.csv</code> file (available in Canvas Modules).</li>
-                <li><strong>Submission Format:</strong> You may create your project however you like (Word, Google Docs, etc.). The final project <strong>must be exported and uploaded as a PDF document</strong> to ensure formatting is preserved.</li>
+                <li><strong>Data Source:</strong> See individual phase instructions for which dataset file to use.</li>
+                <li><strong>Submission Format:</strong> For written components, you may create your project however you like (Word, Google Docs, etc.), but the final document <strong>must be exported and uploaded as a PDF</strong> to ensure formatting is preserved. Phase 1 requires two separate submissions: a Google Sheets link and a PDF document.</li>
                 <li><strong>Mathematical Notation:</strong> If you struggle to type mathematical symbols or formulas digitally, you may neatly hand-write your equations, take a clear photo, and insert the image directly into your final document.</li>
-                <li><strong>Methods Section:</strong> For each phase, include a brief "Methods" paragraph explaining <em>how</em> you created your statistical summaries.</li>
             </ul>
             
             <div class="integrity-alert" role="alert">
@@ -239,37 +228,130 @@
             </div>
         </div>
     </header>
-
+  
     <section class="stat-phase-section" aria-labelledby="phase1-heading">
-        <h2 id="phase1-heading" class="stat-phase-header">Phase 1: Data Cleaning & Descriptive Statistics</h2>
-        <p><strong>Focus:</strong> Data integrity, visualization, and measures of center.</p>
+        <h2 id="phase1-heading" class="stat-phase-header">Phase 1: Variable Identification, Data Cleaning & AI Exploration</h2>
+        <p><strong>Focus:</strong> Classifying data types, ensuring data integrity, and exploring the real-world utility of statistics.</p>
 
         <h3 class="stat-sub-header">Student Instructions</h3>
 
-        <h4>Step 1: Data Cleaning</h4>
-        <p>Open the class data file in <strong>Excel, Google Sheets, or StatCrunch</strong>. Correct the following before analysis:</p>
+        <h4>Step 1: Setup and Scenario</h4>
+        <p><strong>The Scenario:</strong> Your boss has given you this raw class survey data to clean up before the rest of the team can analyze it. You need to review the variables, determine what reasonable values are, and define if the variables are qualitative or quantitative.</p>
+        <p>Open a blank <strong>Google Sheet</strong>. You will need to set up three separate tabs (sheets) at the bottom of the document to present your work to your boss:</p>
         <ol class="stat-list">
-            <li><strong>Height Variable:</strong> Convert all heights to <strong>total inches</strong> (e.g., 5'7" becomes 67).</li>
-            <li><strong>Pulse Variable:</strong> Remove any text (like "bpm") so the column contains <strong>only numbers</strong>.</li>
-            <li><strong>Categorical Cleanup:</strong> Check "Eye Color." If a color has fewer than 2 entries, rename it to "Other."</li>
+            <li><strong>Variable Analysis</strong></li>
+            <li><strong>Documented Changes</strong></li>
+            <li><strong>Cleaned Data</strong></li>
         </ol>
+        <p><em>(You can view an example of how your final spreadsheet should be organized here: <a href="https://docs.google.com/spreadsheets/d/1Oabmx-FOJ96tNI8Tr2C5xfUkvCeQZZsHD3s74H5LyfI/edit?gid=43116206#gid=43116206" target="_blank">Example Phase 1 Spreadsheet</a>).</em></p>
 
-        <h4>Step 2: Organizing the Data</h4>
+        <h4>Step 2: Variable Analysis (Tab 1)</h4>
+        <p>Review the questions asked in the raw class survey. In your <strong>Variable Analysis</strong> tab, create a table listing <strong>each variable</strong> collected (e.g., Height, Pulse, Eye Color, Math Anxiety, etc.), and provide the following classifications for each:</p>
         <ul class="stat-list">
-            <li>Create distribution tables for the <code>Height_Inches</code> variable.</li>
-            <li><strong>Requirement:</strong> The tables must include both <strong>Frequency</strong> and <strong>Relative Frequency</strong>.</li>
-            <li><strong>Grouping:</strong> You must group this data by <strong>Gender</strong> (e.g., separate columns or sections for Men and Women) to facilitate comparison.</li>
+            <li>Is the variable <strong>Qualitative (Categorical)</strong> or <strong>Quantitative (Numerical)</strong>?</li>
+            <li>What is the level of measurement: <strong>Nominal, Ordinal, Interval, or Ratio (NOIR)</strong>?</li>
         </ul>
 
-        <h4>Step 3: Visualizing the Data</h4>
-        <p>Create the following graphs. Ensure every graph has a title and labeled axes.</p>
+        <h4>Step 3: Data Cleaning & Documentation (Tabs 2 & 3)</h4>
+        <p>Real-world data is rarely perfect! Paste the raw class survey data into your <strong>Cleaned Data</strong> tab. Review the data carefully and clean it up based on the following guidelines:</p>
+        <ul class="stat-list">
+            <li><strong>Quantitative Variables:</strong> Any quantitative variables should have numeric values of the same units. For example, if you find something is "6ft2in", and it is in a variable that should be quantitative with a unit of inches, you will need to convert it to inches and remove the label.</li>
+            <li><strong>Categorical Variables:</strong> If you have a categorical variable, but the values are not entered consistently (like "blue" and "Blue", or "green" and "Green"), you will want to choose a particular capitalization and make the data consistent.</li>
+        </ul>
+        <p><strong>Crucial Requirement:</strong> Since this is for your boss, any change you make needs to be documented in your <strong>Documented Changes</strong> tab so you can later explain how you approached the project, and why you made the changes you made. Keep a clear log of the variable, the original issue, and how you fixed it.</p>
+        <p><em>Submission Note: You will submit the URL to this Google Sheet to the Phase 1 Data Assignment link. Ensure the link permissions are set to "Anyone with the link can view".</em></p>
+
+        <h4>Step 4: AI Career Exploration</h4>
+        <p>For this specific step, you are encouraged to use an AI assistant (like ChatGPT, Gemini, or Claude) to explore how statistics applies to your specific field of study, your personal life, and the world at large. </p>
+        
+        <p>Think about a few hobbies, sports, health interests, or passions you have outside of school. Then, copy and paste the following prompt into the AI tool, making sure to fill in the bracketed information with your own details:</p>
+
+        <blockquote style="background-color: #f8f9fa; border-left: 4px solid #6c757d; padding: 10px 15px; font-style: italic;">
+            "I am a [Insert Your Major] major. I also enjoy [Insert 2-3 personal interests, e.g., rock climbing, playing video games, and budgeting my finances]. Explain why my degree program requires a statistics course, and explain where I might see statistics and probability in my daily life. Next, explain how AI (like yourself) uses probability to generate responses, and how the medical field uses inferential statistics to determine the effectiveness and side effects of new drugs. Finally, provide two real-world examples of how professionals in my field use inferential statistics to make decisions, and two examples of how I might use statistics or probability to better understand or improve my personal interests."
+        </blockquote>
+        
+        <p><strong>Reflection & Transparency Requirement:</strong> Read the AI's response carefully. Open a new document (Word, Google Docs, etc.) and complete the following:</p>
+        <ul class="stat-list">
+            <li><strong>Your Summary:</strong> Write a brief summary (4-5 sentences) <em>in your own words</em> explaining what you learned. Did anything surprise you about how statistics connects to your major, your hobbies, or broader topics like AI and medicine? <strong>This portion must not be generated by AI.</strong></li>
+            <li><strong>AI Tool Used:</strong> Below your summary, explicitly state which AI assistant you used (e.g., "AI Tool Used: ChatGPT").</li>
+            <li><strong>Chat Transcript:</strong> Paste the <em>entire</em> chat transcript below your summary, including your initial customized prompt and the AI's complete response.</li>
+        </ul>
+        <p><strong>Export this final document as a PDF to submit.</strong></p>
+
+
+        <div class="stat-submission-box" role="complementary" aria-label="Phase 1 Submission Checklist">
+            <strong>📋 Phase 1 Submission Checklist:</strong>
+            <ul class="stat-list">
+                <li><strong>Submission Link 1 (Google Sheets URL):</strong> A single Google Sheet containing your "Variable Analysis" tab, your "Documented Changes" log, and your "Cleaned Data" tab.</li>
+                <li><strong>Submission Link 2 (PDF Document):</strong> A separate PDF document containing your summary (in your own words), the name of the AI tool used, and the full pasted chat transcript (Step 4).</li>
+            </ul>
+        </div>
+
+        <div class="rubric-table-wrapper">
+            <table class="rubric-table">
+                <caption>Phase 1 Grading Rubric (25 Points)</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Criteria</th>
+                        <th scope="col">Excellent</th>
+                        <th scope="col">Proficient</th>
+                        <th scope="col">Developing</th>
+                        <th scope="col">Beginning/Missing</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Variable Classification (8 pts)</th>
+                        <td><strong>(8 pts)</strong> All variables are correctly identified as qualitative/quantitative and correctly classified by level of measurement (NOIR) on the Variable Analysis tab.</td>
+                        <td><strong>(6 pts)</strong> 1-2 minor classification errors.</td>
+                        <td><strong>(3 - 4 pts)</strong> Several classification errors or missing variables.</td>
+                        <td><strong>(0 - 2 pts)</strong> Mostly incorrect or missing entirely.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Data Cleaning & Documentation - Google Sheets (10 pts)</th>
+                        <td><strong>(10 pts)</strong> Data is thoroughly cleaned on the Cleaned Data tab (consistent units, proper capitalization). The Documented Changes tab clearly logs and justifies all modifications made. Link is accessible and uses the 3-tab format.</td>
+                        <td><strong>(7.5 pts)</strong> Mostly clean, but missed minor inconsistencies. Documentation is present but lacks some detail or justification.</td>
+                        <td><strong>(4 - 5 pts)</strong> Major cleaning steps missed, or the Documented Changes log is absent/very poor.</td>
+                        <td><strong>(0 - 2 pts)</strong> Raw data submitted without changes, or link is completely inaccessible.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">AI Exploration & Reflection (7 pts)</th>
+                        <td><strong>(7 pts)</strong> PDF reflection thoughtfully addresses the AI's response in the student's own words and clearly connects statistical utility to their path. The document includes the AI tool name and the full chat transcript.</td>
+                        <td><strong>(5 pts)</strong> Reflection is present but vague or overly reliant on the AI's phrasing. Missing either the stated AI tool name or the full transcript.</td>
+                        <td><strong>(3 pts)</strong> Very brief response (1-2 sentences) lacking meaningful engagement, and/or missing the chat transcript entirely.</td>
+                        <td><strong>(0 pts)</strong> Missing entirely.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="stat-phase-section" aria-labelledby="phase2-heading">
+        <h2 id="phase2-heading" class="stat-phase-header">Phase 2: Descriptive Statistics & Visualizations</h2>
+        <p><strong>Focus:</strong> Visualizing distributions and calculating measures of center and spread.</p>
+
+        <h3 class="stat-sub-header">Student Instructions</h3>
+        
+        <div class="stat-tech-tip">
+            <strong>Data Source Check:</strong> To ensure everyone is working from the same standard, you will <strong>not</strong> use your Phase 1 Google Sheet for this section. Instead, open the <strong>"Stat2050 Cleaned Master Data"</strong> file provided by your instructor in StatCrunch.
+        </div>
+
+        <h4>Step 1: Organizing the Data</h4>
+        <ul class="stat-list">
+            <li>Create distribution tables for the <code>Height_Inches</code> variable using StatCrunch.</li>
+            <li><strong>Requirement:</strong> The tables must include both <strong>Frequency</strong> and <strong>Relative Frequency</strong>.</li>
+            <li><strong>Grouping:</strong> You must group this data by <strong>Gender</strong> (e.g., separate tables or sections for Men and Women) to facilitate comparison.</li>
+        </ul>
+
+        <h4>Step 2: Visualizing the Data</h4>
+        <p>Create the following graphs. Ensure every graph has a clear title and labeled axes.</p>
         <ol class="stat-list">
-            <li><strong>Histogram:</strong> Use your frequency distribution to create a histogram for <code>Height_Inches</code>.</li>
+            <li><strong>Histogram:</strong> Create a histogram for <code>Height_Inches</code>.</li>
             <li><strong>Bar Graph:</strong> Create a bar graph for the <code>Math Anxiety Rating</code>. (Note: Pie charts are not accepted for this assignment).</li>
-            <li><strong>Comparative Boxplots:</strong> Create side-by-side boxplots for <code>Height_Inches</code>. Specifically, create one boxplot for males vs. height and one for females vs. height.</li>
+            <li><strong>Comparative Boxplots:</strong> Create side-by-side boxplots for <code>Height_Inches</code>. Specifically, create one boxplot for males vs. height and one for females vs. height on the same graph.</li>
         </ol>
 
-        <h4>Step 4: Numerical Summaries & Reflection</h4>
+        <h4>Step 3: Numerical Summaries & Reflection</h4>
         <p>Calculate the following statistics for <code>Height_Inches</code>. Create <strong>three separate summary tables</strong>: one for the full class, one specifically for males, and one specifically for females.</p>
         <ul class="stat-list">
             <li><strong>Mean</strong> (<span class="math-visual" aria-hidden="true">x&#772;</span><span class="sr-only">sample mean, x-bar</span>)</li>
@@ -279,85 +361,90 @@
             <li><strong>Standard Deviation</strong> (<span class="math-visual" aria-hidden="true">s</span><span class="sr-only">sample standard deviation, s</span>)</li>
             <li><strong>Five-Number Summary:</strong> Min, Q1, Median, Q3, Max.</li>
         </ul>
-        <p><strong>Reflection:</strong> After calculating these statistics, write a brief reflection discussing the differences you observe between the male and female summary statistics.</p>
+        <p><strong>Reflection:</strong> After calculating these statistics, write a brief reflection (2-4 sentences) discussing the differences you observe between the male and female summary statistics.</p>
 
-        <h4>Step 5: The Personal Connection</h4>
+        <h4>Step 4: The Personal Connection</h4>
         <ul class="stat-list">
-            <li><strong>Calculate:</strong> Find the <strong>z-score</strong> for <em>your own</em> height using the class mean and standard deviation.</li>
+            <li><strong>Calculate:</strong> Find the <strong>z-score</strong> for <em>your own</em> height using the FULL CLASS mean and standard deviation.</li>
             <li><strong>Requirement:</strong> You must include the <strong>z-score calculation</strong> (show the formula with your numbers plugged in) as well as the final result.</li>
             <li><strong>Interpret:</strong> Explain what this z-score tells you. Are you considered "unusual" (more than 2 standard deviations away from the mean)?</li>
         </ul>
         
-        <h4>Step 6: Methods Section</h4>
-        <p>Write a brief paragraph explaining the tools and steps you used to calculate the statistics above. <strong>Crucially, you must comment on any data cleanup challenges you encountered.</strong></p>
+        <h4>Step 5: Methods Section</h4>
+        <p>Write a brief paragraph explaining the tools and menu steps you used in StatCrunch to calculate your numerical summaries and generate your graphs.</p>
 
-        <div class="stat-submission-box" role="complementary" aria-label="Phase 1 Submission Checklist">
-            <strong>📋 Phase 1 Submission Checklist:</strong>
+        <div class="stat-submission-box" role="complementary" aria-label="Phase 2 Submission Checklist">
+            <strong>📋 Phase 2 Submission Checklist:</strong>
             <ul class="stat-list">
                 <li>Frequency and Relative Frequency tables for Height (grouped by gender).</li>
                 <li>Histogram for Height, Bar Graph for Math Anxiety, and Comparative Boxplots for Height by Gender (all titled and labeled).</li>
                 <li>Three summary statistic tables (Full Class, Males, Females) containing Mean, Median, Mode, Range, Standard Deviation, and 5-Number Summary.</li>
                 <li>Reflection paragraph comparing male and female summary statistics.</li>
                 <li>Your personal height z-score calculation and interpretation.</li>
-                <li>Your Methods section paragraph (including data cleanup comments).</li>
+                <li>Your Methods section paragraph.</li>
             </ul>
         </div>
 
         <div class="rubric-table-wrapper">
             <table class="rubric-table">
-                <caption>Instructor Grading Rubric: Phase 1 (25 Points)</caption>
+                <caption>Phase 2 Grading Rubric (25 Points)</caption>
                 <thead>
                     <tr>
-                        <th scope="col">Criteria &amp; Alignment</th>
-                        <th scope="col">Excellent (5 pts)</th>
-                        <th scope="col">Proficient (4 pts)</th>
-                        <th scope="col">Developing (2 pts)</th>
-                        <th scope="col">Beginning/Missing (0 pts)</th>
+                        <th scope="col">Criteria</th>
+                        <th scope="col">Excellent</th>
+                        <th scope="col">Proficient</th>
+                        <th scope="col">Developing</th>
+                        <th scope="col">Beginning/Missing</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row">Data Cleaning &amp; Tables<span class="clo-tag">(CLO 1)</span></th>
-                        <td>Data is accurately cleaned. Frequency/relative frequency tables are flawless and properly grouped by gender.</td>
-                        <td>Tables are present but contain minor calculation errors or are not properly grouped.</td>
-                        <td>Missing relative frequencies or major errors in data cleaning.</td>
-                        <td>Tables missing entirely.</td>
+                        <th scope="row">Tables & Distribution (5 pts)</th>
+                        <td><strong>(5 pts)</strong> Frequency and relative frequency tables are accurate and properly grouped by gender.</td>
+                        <td><strong>(4 pts)</strong> Tables are present but contain minor errors or are not properly grouped by gender.</td>
+                        <td><strong>(2.5 pts)</strong> Missing relative frequencies completely.</td>
+                        <td><strong>(0 pts)</strong> Tables missing entirely.</td>
                     </tr>
                     <tr>
-                        <th scope="row">Visualizations<span class="clo-tag">(CLO 1)</span></th>
-                        <td>All 3 required graphs included with clear titles and labeled axes. Accurately represents data.</td>
-                        <td>One graph is missing, or multiple graphs are missing proper titles/axis labels.</td>
-                        <td>Two graphs are missing, or graphs severely misrepresent the cleaned data.</td>
-                        <td>Visualizations missing entirely.</td>
+                        <th scope="row">Visualizations (6 pts)</th>
+                        <td><strong>(6 pts)</strong> All 3 required graphs (Histogram, Bar Graph, Comparative Boxplots) are included. All have clear titles, properly labeled axes, and accurately represent the data.</td>
+                        <td><strong>(4.5 pts)</strong> One graph is missing, or multiple graphs are missing titles/axis labels. Boxplots might not be comparative.</td>
+                        <td><strong>(2.5 pts)</strong> Two graphs are missing, or graphs do not accurately reflect the cleaned data.</td>
+                        <td><strong>(0 pts)</strong> Visualizations missing entirely.</td>
                     </tr>
                     <tr>
-                        <th scope="row">Numerical Summaries<span class="clo-tag">(CLO 1)</span></th>
-                        <td>All 3 summary tables (Full, Male, Female) present. Center and variance stats calculated flawlessly.</td>
-                        <td>One table is missing, or minor calculation errors exist across the tables.</td>
-                        <td>Only the full class table is present, or major calculation errors exist.</td>
-                        <td>Numerical summaries missing.</td>
+                        <th scope="row">Numerical Summaries (6 pts)</th>
+                        <td><strong>(6 pts)</strong> All 3 summary tables (Full, Male, Female) are present. All required statistics are calculated accurately.</td>
+                        <td><strong>(4.5 pts)</strong> One table is missing, or minor calculation errors exist across the tables.</td>
+                        <td><strong>(2.5 pts)</strong> Only the full class table is present. Major calculation errors.</td>
+                        <td><strong>(0 pts)</strong> Numerical summaries missing.</td>
                     </tr>
                     <tr>
-                        <th scope="row">Z-Score &amp; Reflection<span class="clo-tag">(CLO 1, CLO 5)</span></th>
-                        <td>Reflection thoughtfully compares male/female stats. Z-score calculation shows work and includes a correct, data-driven interpretation.</td>
-                        <td>Reflection is vague. Z-score is calculated but work is not shown or interpretation is lacking.</td>
-                        <td>Missing either the reflection paragraph or the z-score completely.</td>
-                        <td>Both missing entirely.</td>
+                        <th scope="row">Z-Score & Reflection (5 pts)</th>
+                        <td><strong>(5 pts)</strong> Reflection thoughtfully compares male/female stats. Z-score calculation shows plugged-in values and includes a correct interpretation.</td>
+                        <td><strong>(4 pts)</strong> Reflection is vague. Z-score is calculated but work is not shown or interpretation is incorrect.</td>
+                        <td><strong>(2.5 pts)</strong> Missing either the reflection paragraph or the z-score completely.</td>
+                        <td><strong>(0 pts)</strong> Both missing entirely.</td>
                     </tr>
                     <tr>
-                        <th scope="row">Methods &amp; Communication<span class="clo-tag">(CLO 5)</span></th>
-                        <td>Methods section clearly details software used and cleanup challenges. Formatted professionally (PDF).</td>
-                        <td>Methods mentioned but vague. Acceptable formatting with minor layout issues.</td>
-                        <td>Methods are hard to follow. Major formatting errors or not submitted as PDF.</td>
-                        <td>Missing methods or completely unreadable.</td>
+                        <th scope="row">Methods Section & Formatting (3 pts)</th>
+                        <td><strong>(3 pts)</strong> Methods section clearly details the StatCrunch tools used. Professional PDF formatting, highly organized, and easy to read.</td>
+                        <td><strong>(2 pts)</strong> Methods are mentioned but vague. Acceptable formatting but some minor layout issues (e.g., graphs cut off across pages).</td>
+                        <td><strong>(1 pts)</strong> Hard to follow, disjointed. Major formatting errors or not submitted as PDF.</td>
+                        <td><strong>(0 pts)</strong> Unreadable or missing methods.</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </section>
 
-    <section class="stat-phase-section" aria-labelledby="phase2-heading">
-        <h2 id="phase2-heading" class="stat-phase-header">Phase 2: Regression, Leverage, & Probability</h2>
+</main>
+
+</body>
+</html>
+
+    <section class="stat-phase-section" aria-labelledby="phase3-heading">
+        <h2 id="phase3-heading" class="stat-phase-header">Phase 3: Regression, Leverage, & Probability</h2>
         <p><strong>Focus:</strong> Correlation, outlier analysis, model refinement, and probability rules.</p>
 
         <h3 class="stat-sub-header">Student Instructions</h3>
@@ -434,8 +521,8 @@
         <h4>Step 6: Methods Section</h4>
         <p>Briefly describe the methods/software used to generate the scatterplots, determine leverage/residuals, remove outliers, and build the probability tables. <strong>Be sure to include any supporting plots, charts, or tables that you generated to complete this phase of the project within your report.</strong></p>
 
-        <div class="stat-submission-box" role="complementary" aria-label="Phase 2 Submission Checklist">
-            <strong>📋 Phase 2 Submission Checklist:</strong>
+        <div class="stat-submission-box" role="complementary" aria-label="Phase 3 Submission Checklist">
+            <strong>📋 Phase 3 Submission Checklist:</strong>
             <ul class="stat-list">
                 <li>Your <strong>Original</strong> and <strong>Refined Scatterplots</strong> (both with best-fit lines, titles, labels).</li>
                 <li>The equation, <span class="math-visual" aria-hidden="true">r</span><span class="sr-only">r</span>, and <span class="math-visual" aria-hidden="true">R<sup>2</sup></span><span class="sr-only">R-squared</span> listed clearly next to <em>each</em> scatterplot. <em>(Ensure correct rounding: 3 decimal places for equation/r, 4 decimal places for R<sup>2</sup>).</em></li>
@@ -449,7 +536,7 @@
 
         <div class="rubric-table-wrapper">
             <table class="rubric-table">
-                <caption>Instructor Grading Rubric: Phase 2 (25 Points)</caption>
+                <caption>Instructor Grading Rubric: Phase 3 (25 Points)</caption>
                 <thead>
                     <tr>
                         <th scope="col">Criteria &amp; Alignment</th>
@@ -500,8 +587,8 @@
         </div>
     </section>
 
-    <section class="stat-phase-section" aria-labelledby="phase3-heading">
-        <h2 id="phase3-heading" class="stat-phase-header">Phase 3: Simulation & Distributions</h2>
+    <section class="stat-phase-section" aria-labelledby="phase4-heading">
+        <h2 id="phase4-heading" class="stat-phase-header">Phase 4: Simulation & Distributions</h2>
         <p><strong>Focus:</strong> Normal models, Binomial models, and Confidence Intervals.</p>
 
         <h3 class="stat-sub-header">Student Instructions</h3>
@@ -603,8 +690,8 @@
         <h4>Step 5: Methods Section</h4>
         <p>Write a brief paragraph explaining the tools used to perform these calculations. <strong>Be sure to include any supporting images of your calculations (especially if you used StatCrunch for the Normal Model).</strong></p>
 
-        <div class="stat-submission-box" role="complementary" aria-label="Phase 3 Submission Checklist">
-            <strong>📋 Phase 3 Submission Checklist:</strong>
+        <div class="stat-submission-box" role="complementary" aria-label="Phase 4 Submission Checklist">
+            <strong>📋 Phase 4 Submission Checklist:</strong>
             <ul class="stat-list">
                 <li>Reported mean and standard deviation parameters for the simulated female heights dataset.</li>
                 <li>Histogram of simulated heights with overlaid normal curve <em>(ensure figure has a title)</em>.</li>
@@ -619,7 +706,7 @@
 
         <div class="rubric-table-wrapper">
             <table class="rubric-table">
-                <caption>Instructor Grading Rubric: Phase 3 (25 Points)</caption>
+                <caption>Instructor Grading Rubric: Phase 4 (25 Points)</caption>
                 <thead>
                     <tr>
                         <th scope="col">Criteria &amp; Alignment</th>
@@ -663,8 +750,8 @@
         </div>
     </section>
 
- <section class="stat-phase-section" aria-labelledby="phase4-heading">
-        <h2 id="phase4-heading" class="stat-phase-header">Phase 4: Hypothesis Testing & Inference</h2>
+ <section class="stat-phase-section" aria-labelledby="phase5-heading">
+        <h2 id="phase5-heading" class="stat-phase-header">Phase 5: Hypothesis Testing & Inference</h2>
         <p><strong>Focus:</strong> formal testing procedures and final synthesis.</p>
 
         <h3 class="stat-sub-header">Student Instructions</h3>
@@ -728,8 +815,8 @@
         <h4>Step 6: Methods Section</h4>
         <p>Briefly describe the software or calculator functions you used to run your Hypothesis Tests (e.g., T-Test, 2-SampTTest, 1-PropZTest, Chi-Square GOF, or StatCrunch Hypothesis tools). <strong>If you use StatCrunch (or similar statistical software), you must include a screenshot or image of the output tables for your tests, either placed directly under each corresponding question or compiled here in the methods section.</strong></p>
 
-        <div class="stat-submission-box" role="complementary" aria-label="Phase 4 Submission Checklist">
-            <strong>📋 Phase 4 Submission Checklist:</strong>
+        <div class="stat-submission-box" role="complementary" aria-label="Phase 5 Submission Checklist">
+            <strong>📋 Phase 5 Submission Checklist:</strong>
             <ul class="stat-list">
                 <li>One-Sample T-Test (all 5 steps explicitly shown, including df, hypotheses in words/symbols, and conclusion in context).</li>
                 <li>Two-Sample Independent T-Test (hypotheses in words/symbols, test statistic, df, p-value, and conclusion in context).</li>
@@ -742,7 +829,7 @@
         
         <div class="rubric-table-wrapper">
             <table class="rubric-table">
-                <caption>Instructor Grading Rubric: Phase 4 (27 Points)</caption>
+                <caption>Instructor Grading Rubric: Phase 5 (27 Points)</caption>
                 <thead>
                     <tr>
                         <th scope="col">Criteria &amp; Alignment</th>
