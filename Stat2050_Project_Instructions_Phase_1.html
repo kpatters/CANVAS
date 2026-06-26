@@ -235,23 +235,33 @@
 
         <h3 class="stat-sub-header">Student Instructions</h3>
 
-        <h4>Step 1: Identifying the Variables</h4>
-        <p>Before the semester began, you filled out a class survey. Review the questions asked in that survey. Open a blank <strong>Google Sheet</strong> and create a new tab named <strong>"Variable ID"</strong>. For <strong>each variable</strong> collected (e.g., Height, Pulse, Eye Color, Math Anxiety, etc.), create a table providing the following:</p>
+        <h4>Step 1: Setup and Scenario</h4>
+        <p><strong>The Scenario:</strong> Your boss has given you this raw class survey data to clean up before the rest of the team can analyze it. You need to review the variables, determine what reasonable values are, and define if the variables are qualitative or quantitative.</p>
+        <p>Open a blank <strong>Google Sheet</strong>. You will need to set up three separate tabs (sheets) at the bottom of the document to present your work to your boss:</p>
+        <ol class="stat-list">
+            <li><strong>Variable Analysis</strong></li>
+            <li><strong>Documented Changes</strong></li>
+            <li><strong>Cleaned Data</strong></li>
+        </ol>
+        <p><em>(You can view an example of how your final spreadsheet should be organized here: <a href="https://docs.google.com/spreadsheets/d/1Oabmx-FOJ96tNI8Tr2C5xfUkvCeQZZsHD3s74H5LyfI/edit?gid=43116206#gid=43116206" target="_blank">Example Phase 1 Spreadsheet</a>).</em></p>
+
+        <h4>Step 2: Variable Analysis (Tab 1)</h4>
+        <p>Review the questions asked in the raw class survey. In your <strong>Variable Analysis</strong> tab, create a table listing <strong>each variable</strong> collected (e.g., Height, Pulse, Eye Color, Math Anxiety, etc.), and provide the following classifications for each:</p>
         <ul class="stat-list">
             <li>Is the variable <strong>Qualitative (Categorical)</strong> or <strong>Quantitative (Numerical)</strong>?</li>
             <li>What is the level of measurement: <strong>Nominal, Ordinal, Interval, or Ratio (NOIR)</strong>?</li>
         </ul>
 
-        <h4>Step 2: Data Cleaning</h4>
-        <p>Real-world data is rarely perfect! In the same Google Sheet you used for Step 1, create a second tab named <strong>"Cleaned Data"</strong>. Paste the raw class survey data into this tab and correct the following before we can begin our analysis:</p>
-        <ol class="stat-list">
-            <li><strong>Height Variable:</strong> Convert all heights to <strong>total inches</strong> (e.g., 5'7" becomes 67). Ensure no symbols like ' or " are left in the cells.</li>
-            <li><strong>Pulse Variable:</strong> Remove any text (like "bpm") so the column contains <strong>only numbers</strong>.</li>
-            <li><strong>Categorical Cleanup:</strong> Check "Eye Color." If a specific color has fewer than 2 entries across the entire class, rename it to "Other."</li>
-        </ol>
+        <h4>Step 3: Data Cleaning & Documentation (Tabs 2 & 3)</h4>
+        <p>Real-world data is rarely perfect! Paste the raw class survey data into your <strong>Cleaned Data</strong> tab. Review the data carefully and clean it up based on the following guidelines:</p>
+        <ul class="stat-list">
+            <li><strong>Quantitative Variables:</strong> Any quantitative variables should have numeric values of the same units. For example, if you find something is "6ft2in", and it is in a variable that should be quantitative with a unit of inches, you will need to convert it to inches and remove the label.</li>
+            <li><strong>Categorical Variables:</strong> If you have a categorical variable, but the values are not entered consistently (like "blue" and "Blue", or "green" and "Green"), you will want to choose a particular capitalization and make the data consistent.</li>
+        </ul>
+        <p><strong>Crucial Requirement:</strong> Since this is for your boss, any change you make needs to be documented in your <strong>Documented Changes</strong> tab so you can later explain how you approached the project, and why you made the changes you made. Keep a clear log of the variable, the original issue, and how you fixed it.</p>
         <p><em>Submission Note: You will submit the URL to this Google Sheet to the Phase 1 Data Assignment link. Ensure the link permissions are set to "Anyone with the link can view".</em></p>
 
-        <h4>Step 3: AI Career Exploration</h4>
+        <h4>Step 4: AI Career Exploration</h4>
         <p>For this specific step, you are encouraged to use an AI assistant (like ChatGPT, Gemini, or Claude) to explore how statistics applies to your specific field of study, your personal life, and the world at large. </p>
         
         <p>Think about a few hobbies, sports, health interests, or passions you have outside of school. Then, copy and paste the following prompt into the AI tool, making sure to fill in the bracketed information with your own details:</p>
@@ -266,8 +276,8 @@
         <div class="stat-submission-box" role="complementary" aria-label="Phase 1 Submission Checklist">
             <strong>📋 Phase 1 Submission Checklist:</strong>
             <ul class="stat-list">
-                <li><strong>Submission Link 1 (Google Sheets URL):</strong> A single Google Sheet containing your "Variable ID" tab (Step 1) and your "Cleaned Data" tab (Step 2).</li>
-                <li><strong>Submission Link 2 (PDF Document):</strong> A separate PDF document containing your AI Exploration summary (Step 3).</li>
+                <li><strong>Submission Link 1 (Google Sheets URL):</strong> A single Google Sheet containing your "Variable Analysis" tab, your "Documented Changes" log, and your "Cleaned Data" tab.</li>
+                <li><strong>Submission Link 2 (PDF Document):</strong> A separate PDF document containing your AI Exploration summary (Step 4).</li>
             </ul>
         </div>
 
@@ -286,16 +296,16 @@
                 <tbody>
                     <tr>
                         <th scope="row">Variable Classification (8 pts)</th>
-                        <td><strong>(8 pts)</strong> All variables are correctly identified as qualitative/quantitative and correctly classified by level of measurement (NOIR) on the Variable ID tab.</td>
+                        <td><strong>(8 pts)</strong> All variables are correctly identified as qualitative/quantitative and correctly classified by level of measurement (NOIR) on the Variable Analysis tab.</td>
                         <td><strong>(6 pts)</strong> 1-2 minor classification errors.</td>
                         <td><strong>(3 - 4 pts)</strong> Several classification errors or missing variables.</td>
                         <td><strong>(0 - 2 pts)</strong> Mostly incorrect or missing entirely.</td>
                     </tr>
                     <tr>
-                        <th scope="row">Data Cleaning - Google Sheets (10 pts)</th>
-                        <td><strong>(10 pts)</strong> Data is flawlessly cleaned on the Cleaned Data tab. All heights are in total inches, pulse is numbers only, and rare eye colors are grouped to "Other". Link is accessible.</td>
-                        <td><strong>(7.5 pts)</strong> Mostly clean, but missed 1 or 2 entries (e.g., left a "bpm" in one cell or forgot to group eye colors).</td>
-                        <td><strong>(4 - 5 pts)</strong> Major cleaning steps missed (e.g., heights left as 5'7").</td>
+                        <th scope="row">Data Cleaning & Documentation - Google Sheets (10 pts)</th>
+                        <td><strong>(10 pts)</strong> Data is thoroughly cleaned on the Cleaned Data tab (consistent units, proper capitalization). The Documented Changes tab clearly logs and justifies all modifications made. Link is accessible and uses the 3-tab format.</td>
+                        <td><strong>(7.5 pts)</strong> Mostly clean, but missed minor inconsistencies. Documentation is present but lacks some detail or justification.</td>
+                        <td><strong>(4 - 5 pts)</strong> Major cleaning steps missed, or the Documented Changes log is absent/very poor.</td>
                         <td><strong>(0 - 2 pts)</strong> Raw data submitted without changes, or link is completely inaccessible.</td>
                     </tr>
                     <tr>
