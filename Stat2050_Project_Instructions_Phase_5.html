@@ -74,7 +74,7 @@
         border-left: 4px solid #6c757d;
     }
 
-    /* Alert Boxes - Adjusted for AAA Contrast */
+    /* Alert Boxes */
     .stat-alert {
         background-color: #fff3cd;
         border: 1px solid #ffeeba;
@@ -126,14 +126,25 @@
         border-width: 0;
     }
 
-    /* Math specific styling for sighted users */
+    /* Math specific styling */
     .math-visual {
         font-family: 'Times New Roman', serif;
         font-style: italic;
         padding: 0 2px;
         white-space: nowrap; 
     }
-
+    
+    /* Rounding Rule Callout */
+    .rounding-rule {
+        background-color: #e6f2ff;
+        border-left: 5px solid #0056b3;
+        color: #2D3B45;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 0 4px 4px 0;
+        font-size: 0.95em;
+    }
+    
     /* Table Styles */
     .rubric-table-wrapper {
         overflow-x: auto;
@@ -186,16 +197,6 @@
         margin-bottom: 8px;
     }
     
-    .rounding-rule {
-        background-color: #eef2f5;
-        border: 1px solid #c4d1db;
-        padding: 8px 12px;
-        border-radius: 4px;
-        display: inline-block;
-        margin-top: 8px;
-        font-size: 0.95em;
-    }
-    
     .clo-tag {
         font-size: 0.85em;
         color: #0056b3;
@@ -226,10 +227,9 @@
             
             <p style="margin-top: 20px;"><strong>General Instructions:</strong></p>
             <ul class="stat-list">
-                <li><strong>Data Source:</strong> The <code>Stat2050_Survey_ResultsSP2026.csv</code> file (available in Canvas Modules).</li>
-                <li><strong>Submission Format:</strong> You may create your project however you like (Word, Google Docs, etc.). The final project <strong>must be exported and uploaded as a PDF document</strong> to ensure formatting is preserved.</li>
+                <li><strong>Data Source:</strong> See individual phase instructions for which dataset file to use.</li>
+                <li><strong>Submission Format:</strong> For written components, you may create your project however you like (Word, Google Docs, etc.), but the final document <strong>must be exported and uploaded as a PDF</strong> to ensure formatting is preserved. Phase 1 requires two separate submissions: a Google Sheets link and a PDF document.</li>
                 <li><strong>Mathematical Notation:</strong> If you struggle to type mathematical symbols or formulas digitally, you may neatly hand-write your equations, take a clear photo, and insert the image directly into your final document.</li>
-                <li><strong>Methods Section:</strong> For each phase, include a brief "Methods" paragraph explaining <em>how</em> you created your statistical summaries.</li>
             </ul>
             
             <div class="integrity-alert" role="alert">
@@ -240,8 +240,8 @@
         </div>
     </header>
 
-    <section class="stat-phase-section" aria-labelledby="phase4-heading">
-        <h2 id="phase4-heading" class="stat-phase-header">Phase 4: Hypothesis Testing & Inference</h2>
+ <section class="stat-phase-section" aria-labelledby="phase5-heading">
+        <h2 id="phase5-heading" class="stat-phase-header">Phase 5: Hypothesis Testing & Inference</h2>
         <p><strong>Focus:</strong> formal testing procedures and final synthesis.</p>
 
         <h3 class="stat-sub-header">Student Instructions</h3>
@@ -305,8 +305,8 @@
         <h4>Step 6: Methods Section</h4>
         <p>Briefly describe the software or calculator functions you used to run your Hypothesis Tests (e.g., T-Test, 2-SampTTest, 1-PropZTest, Chi-Square GOF, or StatCrunch Hypothesis tools). <strong>If you use StatCrunch (or similar statistical software), you must include a screenshot or image of the output tables for your tests, either placed directly under each corresponding question or compiled here in the methods section.</strong></p>
 
-        <div class="stat-submission-box" role="complementary" aria-label="Phase 4 Submission Checklist">
-            <strong>📋 Phase 4 Submission Checklist:</strong>
+        <div class="stat-submission-box" role="complementary" aria-label="Phase 5 Submission Checklist">
+            <strong>📋 Phase 5 Submission Checklist:</strong>
             <ul class="stat-list">
                 <li>One-Sample T-Test (all 5 steps explicitly shown, including df, hypotheses in words/symbols, and conclusion in context).</li>
                 <li>Two-Sample Independent T-Test (hypotheses in words/symbols, test statistic, df, p-value, and conclusion in context).</li>
@@ -319,7 +319,7 @@
         
         <div class="rubric-table-wrapper">
             <table class="rubric-table">
-                <caption>Instructor Grading Rubric: Phase 4 (27 Points)</caption>
+                <caption>Instructor Grading Rubric: Phase 5 (27 Points)</caption>
                 <thead>
                     <tr>
                         <th scope="col">Criteria &amp; Alignment</th>
