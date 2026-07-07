@@ -2,19 +2,20 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Stat 2050 Project Instructions</title>
 <style>
-    /* WCAG 2.1 AA & AAA Compliant Stylesheet */
+    /* WCAG 2.1 AA Compliant Stylesheet
+       - High contrast text colors
+       - Readable font stack
+       - Responsive tables
+    */
     .stat-project-container {
         font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         max-width: 950px;
         margin: 0 auto;
         line-height: 1.6;
-        font-size: 1.1em; 
-        color: #2D3B45; 
+        color: #2D3B45; /* High contrast dark grey */
         background-color: #ffffff;
-        padding: 20px;
     }
     
     .stat-project-header {
@@ -24,7 +25,7 @@
     }
 
     .stat-project-title {
-        color: #0056b3; 
+        color: #0056b3; /* Accessible blue */
         font-size: 2.2em;
         margin-bottom: 10px;
         font-weight: 700;
@@ -63,89 +64,35 @@
         font-size: 1.3em;
     }
 
-    .stat-topic-divider {
-        background-color: #e9ecef;
-        padding: 10px 15px;
-        border-radius: 4px;
-        margin: 30px 0 15px 0;
-        font-size: 1.1em;
-        color: #2D3B45;
-        font-weight: bold;
-        border-left: 4px solid #6c757d;
-    }
-
-    /* Alert Boxes */
+    /* Alert Boxes - Colors verified for contrast */
     .stat-alert {
         background-color: #fff3cd;
         border: 1px solid #ffeeba;
-        color: #5c4603;
+        color: #856404; /* Contrast 4.7:1 */
         padding: 15px;
         margin-bottom: 20px;
         border-radius: 4px;
-    }
-    
-    .stat-tech-tip {
-        background-color: #e2e3e5;
-        border-left: 5px solid #6c757d;
-        color: #2b2f32;
-        padding: 15px;
-        margin: 15px 0;
-        border-radius: 0 4px 4px 0;
     }
 
     .integrity-alert {
         background-color: #ffeef0;
         border: 1px solid #f5c6cb;
-        color: #63141d;
+        color: #721c24; /* Contrast 7.2:1 */
         padding: 15px;
         margin-top: 15px;
         border-radius: 4px;
         font-weight: bold;
     }
 
-    /* Required Submissions Box */
-    .stat-submission-box {
-        background-color: #e8f5e9;
-        border: 1px solid #c8e6c9;
-        color: #154a19;
-        padding: 15px;
-        margin: 20px 0;
-        border-radius: 4px;
-    }
-
-    /* Accessibility Classes */
-    .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        white-space: nowrap;
-        border-width: 0;
-    }
-
     /* Math specific styling */
-    .math-visual {
+    .math-symbol {
         font-family: 'Times New Roman', serif;
         font-style: italic;
         padding: 0 2px;
-        white-space: nowrap; 
+        white-space: nowrap; /* Prevents line breaks inside formulas */
     }
-    
-    /* Rounding Rule Callout */
-    .rounding-rule {
-        background-color: #e6f2ff;
-        border-left: 5px solid #0056b3;
-        color: #2D3B45;
-        padding: 15px;
-        margin: 15px 0;
-        border-radius: 0 4px 4px 0;
-        font-size: 0.95em;
-    }
-    
-    /* Table Styles */
+
+    /* Table Styles for Accessibility */
     .rubric-table-wrapper {
         overflow-x: auto;
         margin-top: 20px;
@@ -156,8 +103,7 @@
     .rubric-table {
         width: 100%;
         border-collapse: collapse;
-        min-width: 600px;
-        font-size: 0.95em; 
+        min-width: 600px; /* Ensures table doesn't squish on mobile */
     }
 
     .rubric-table caption {
@@ -185,7 +131,7 @@
     .rubric-table th[scope="row"] {
         background-color: #f8f9fa;
         font-weight: bold;
-        width: 25%;
+        width: 25%; /* Increased width for headers */
     }
 
     /* List Styles */
@@ -196,148 +142,133 @@
     .stat-list li {
         margin-bottom: 8px;
     }
-    
-    .clo-tag {
-        font-size: 0.85em;
-        color: #0056b3;
-        font-weight: normal;
-        display: block;
-        margin-top: 4px;
-    }
 </style>
 </head>
 <body>
 
 <main class="stat-project-container">
 
+    <!-- Header -->
     <header class="stat-project-header">
         <h1 class="stat-project-title">STAT 2050 Project: The Class Profile</h1>
         <p><strong>Instructor & Student Guide</strong></p>
         
         <div class="stat-project-box">
-            <h2 style="font-size: 1.3em; margin-top: 0; color: #004494;">Project Overview & Learning Outcomes</h2>
-            <p><strong>Course Learning Outcomes (CLOs) Assessed:</strong></p>
-            <ul class="stat-list" style="font-size: 0.95em;">
-                <li><strong>CLO 1:</strong> Analyze data with descriptive and numerical statistics (visualizations, measures of central tendency, and variance).</li>
-                <li><strong>CLO 2:</strong> Calculate probabilities for discrete and continuous distributions with an understanding of probability concepts and randomness.</li>
-                <li><strong>CLO 3:</strong> Analyze data using regression and correlation techniques.</li>
-                <li><strong>CLO 4:</strong> Construct hypothesis tests and confidence intervals for population parameters.</li>
-                <li><strong>CLO 5:</strong> Construct clear, data-driven statistical arguments from results.</li>
-            </ul>
-            
-            <p style="margin-top: 20px;"><strong>General Instructions:</strong></p>
+            <h2 style="font-size: 1.3em; margin-top: 0; color: #004494;">Project Overview</h2>
             <ul class="stat-list">
-                <li><strong>Data Source:</strong> See individual phase instructions for which dataset file to use.</li>
-                <li><strong>Submission Format:</strong> For written components, you may create your project however you like (Word, Google Docs, etc.), but the final document <strong>must be exported and uploaded as a PDF</strong> to ensure formatting is preserved. Phase 1 requires two separate submissions: a Google Sheets link and a PDF document.</li>
-                <li><strong>Mathematical Notation:</strong> If you struggle to type mathematical symbols or formulas digitally, you may neatly hand-write your equations, take a clear photo, and insert the image directly into your final document.</li>
+                <li><strong>Data Source:</strong> The <code>Stat2050_Survey_ResultsSP2026.csv</code> file (available in Canvas Modules).</li>
+                <li><strong>Submission Format:</strong> Submit your work as a <strong>PDF Document</strong> (e.g., <code>Lastname_Phase1.pdf</code>). Export your Word/Google Doc to PDF to ensure formatting is preserved.</li>
+                <li><strong>Methods Section:</strong> For each phase, you must include a brief "Methods" paragraph explaining <em>how</em> you created your statistical summaries (e.g., "I used the 1-Var Stats function on my TI-84," or "I used Excel formulas to sort the data").</li>
             </ul>
             
             <div class="integrity-alert" role="alert">
                 Academic Integrity & AI Policy: <br>
                 <span style="font-weight: normal;">This project must be your own original work. The use of Artificial Intelligence (AI) tools (such as ChatGPT, Gemini, etc.) to generate text, analysis, or calculations is <strong>strictly prohibited</strong> and will be treated as academic dishonesty. <br><br>
-                <em>Exception:</em> You may use tools like <strong>Grammarly</strong> solely for spell-checking and sentence structure improvements. <strong>You are also permitted to use AI exclusively for the designated Phase 1 Career Exploration prompt.</strong> All <strong>Data Analysis</strong> must be your own work.</span>
+                <em>Exception:</em> You may use tools like <strong>Grammarly</strong> or other software solely for spell-checking and sentence structure improvements. However, all <strong>Data Analysis</strong> must be your own work.</span>
             </div>
         </div>
     </header>
-  
+
+    <!-- Phase 1 -->
     <section class="stat-phase-section" aria-labelledby="phase1-heading">
-        <h2 id="phase1-heading" class="stat-phase-header">Phase 1: Variable Identification, Data Cleaning & AI Exploration</h2>
-        <p><strong>Focus:</strong> Classifying data types, ensuring data integrity, and exploring the real-world utility of statistics.</p>
+        <h2 id="phase1-heading" class="stat-phase-header">Phase 1: Data Cleaning & Descriptive Statistics</h2>
+        <p><strong>Focus:</strong> Data integrity, visualization, and measures of center.</p>
 
         <h3 class="stat-sub-header">Student Instructions</h3>
 
-        <h4>Step 1: Setup and Scenario</h4>
-        <p><strong>The Scenario:</strong> Your boss has given you this raw class survey data to clean up before the rest of the team can analyze it. You need to review the variables, determine what reasonable values are, and define if the variables are qualitative or quantitative.</p>
-        <p>Open a blank <strong>Google Sheet</strong>. You will need to set up three separate tabs (sheets) at the bottom of the document to present your work to your boss:</p>
+        <h4>Step 1: Data Cleaning</h4>
+        <p>Open the class data file in <strong>Excel, Google Sheets, or StatCrunch</strong>. Correct the following before analysis:</p>
         <ol class="stat-list">
-            <li><strong>Variable Analysis</strong></li>
-            <li><strong>Documented Changes</strong></li>
-            <li><strong>Cleaned Data</strong></li>
+            <li><strong>Height Variable:</strong> Convert all heights to <strong>total inches</strong> (e.g., 5'7" becomes 67).</li>
+            <li><strong>Pulse Variable:</strong> Remove any text (like "bpm") so the column contains <strong>only numbers</strong>.</li>
+            <li><strong>Categorical Cleanup:</strong> Check "Eye Color." If a color has fewer than 2 entries, rename it to "Other."</li>
         </ol>
-        <p><em>(You can view an example of how your final spreadsheet should be organized here: <a href="https://docs.google.com/spreadsheets/d/1Oabmx-FOJ96tNI8Tr2C5xfUkvCeQZZsHD3s74H5LyfI/edit?gid=43116206#gid=43116206" target="_blank">Example Phase 1 Spreadsheet</a>).</em></p>
 
-        <h4>Step 2: Variable Analysis (Tab 1)</h4>
-        <p>Review the questions asked in the raw class survey. In your <strong>Variable Analysis</strong> tab, create a table listing <strong>each variable</strong> collected (e.g., Height, Pulse, Eye Color, Math Anxiety, etc.), and provide the following classifications for each:</p>
+        <h4>Step 2: Organizing the Data</h4>
         <ul class="stat-list">
-            <li>Is the variable <strong>Qualitative (Categorical)</strong> or <strong>Quantitative (Numerical)</strong>?</li>
-            <li>What is the level of measurement: <strong>Nominal, Ordinal, Interval, or Ratio (NOIR)</strong>?</li>
+            <li>Create distribution tables for the <code>Height_Inches</code> variable.</li>
+            <li><strong>Requirement:</strong> The tables must include both <strong>Frequency</strong> and <strong>Relative Frequency</strong>.</li>
+            <li><strong>Grouping:</strong> You must group this data by <strong>Gender</strong> (e.g., separate columns or sections for Men and Women) to facilitate comparison.</li>
         </ul>
 
-        <h4>Step 3: Data Cleaning & Documentation (Tabs 2 & 3)</h4>
-        <p>Real-world data is rarely perfect! Paste the raw class survey data into your <strong>Cleaned Data</strong> tab. Review the data carefully and clean it up based on the following guidelines:</p>
-        <ul class="stat-list">
-            <li><strong>Quantitative Variables:</strong> Any quantitative variables should have numeric values of the same units. For example, if you find something is "6ft2in", and it is in a variable that should be quantitative with a unit of inches, you will need to convert it to inches and remove the label.</li>
-            <li><strong>Categorical Variables:</strong> If you have a categorical variable, but the values are not entered consistently (like "blue" and "Blue", or "green" and "Green"), you will want to choose a particular capitalization and make the data consistent.</li>
-        </ul>
-        <p><strong>Crucial Requirement:</strong> Since this is for your boss, any change you make needs to be documented in your <strong>Documented Changes</strong> tab so you can later explain how you approached the project, and why you made the changes you made. Keep a clear log of the variable, the original issue, and how you fixed it.</p>
-        <p><em>Submission Note: You will submit the URL to this Google Sheet to the Phase 1 Data Assignment link. Ensure the link permissions are set to "Anyone with the link can view".</em></p>
+        <h4>Step 3: Visualizing the Data</h4>
+        <p>Create the following graphs. Ensure every graph has a title and labeled axes.</p>
+        <ol class="stat-list">
+            <li><strong>Histogram:</strong> Use your frequency distribution to create a histogram for <code>Height_Inches</code>.</li>
+            <li><strong>Bar Graph or Pareto Chart:</strong> Create a bar graph for the <code>Math Anxiety Rating</code>. (Note: Pie charts are not accepted for this assignment).</li>
+            <li><strong>Comparative Boxplots:</strong> Create side-by-side boxplots for <code>Height_Inches</code> separated by <code>Gender</code>.</li>
+        </ol>
 
-        <h4>Step 4: AI Career Exploration</h4>
-        <p>For this specific step, you are encouraged to use an AI assistant (like ChatGPT, Gemini, or Claude) to explore how statistics applies to your specific field of study, your personal life, and the world at large. </p>
+        <h4>Step 4: Numerical Summaries</h4>
+        <p>Calculate the following statistics for the full class <code>Height_Inches</code>:</p>
+        <ul class="stat-list">
+            <li><strong>Mean</strong> (<span class="math-symbol" aria-label="sample mean x-bar">x&#772;</span>)</li>
+            <li><strong>Median</strong> (<span class="math-symbol" aria-label="Median">M</span>)</li>
+            <li><strong>Mode</strong></li>
+            <li><strong>Range</strong></li>
+            <li><strong>Standard Deviation</strong> (<span class="math-symbol" aria-label="standard deviation s">s</span>)</li>
+            <li><strong>Five-Number Summary:</strong> Min, Q1, Median, Q3, Max.</li>
+        </ul>
+
+        <h4>Step 5: The Personal Connection</h4>
+        <ul class="stat-list">
+            <li><strong>Calculate:</strong> Find the <strong>z-score</strong> for <em>your own</em> height using the class mean and standard deviation.</li>
+            <li><strong>Requirement:</strong> You must include the <strong>z-score calculation</strong> (show the formula with your numbers plugged in) as well as the final result.</li>
+            <li><strong>Interpret:</strong> Explain what this z-score tells you. Are you considered "unusual" (more than 2 standard deviations away from the mean)?</li>
+        </ul>
         
-        <p>Think about a few hobbies, sports, health interests, or passions you have outside of school. Then, copy and paste the following prompt into the AI tool, making sure to fill in the bracketed information with your own details:</p>
+        <h4>Step 6: Methods Section</h4>
+        <p>Write a brief paragraph explaining the tools and steps you used to calculate the statistics above. <strong>Crucially, you must also comment on any data cleanup challenges you encountered (e.g., dealing with inconsistent units, removing text from numerical columns, or handling missing data).</strong></p>
 
-        <blockquote style="background-color: #f8f9fa; border-left: 4px solid #6c757d; padding: 10px 15px; font-style: italic;">
-            "I am a [Insert Your Major] major. I also enjoy [Insert 2-3 personal interests, e.g., rock climbing, playing video games, and budgeting my finances]. Explain why my degree program requires a statistics course, and explain where I might see statistics and probability in my daily life. Next, explain how AI (like yourself) uses probability to generate responses, and how the medical field uses inferential statistics to determine the effectiveness and side effects of new drugs. Finally, provide two real-world examples of how professionals in my field use inferential statistics to make decisions, and two examples of how I might use statistics or probability to better understand or improve my personal interests."
-        </blockquote>
-        
-        <p><strong>Reflection & Transparency Requirement:</strong> Read the AI's response carefully. Open a new document (Word, Google Docs, etc.) and complete the following:</p>
-        <ul class="stat-list">
-            <li><strong>Your Summary:</strong> Write a brief summary (4-5 sentences) <em>in your own words</em> explaining what you learned. Did anything surprise you about how statistics connects to your major, your hobbies, or broader topics like AI and medicine? Were there any ridiculous suggestions? If so, please share them in your summary. <strong>This portion must not be generated by AI.</strong></li>
-            <li><strong>AI Tool Used:</strong> Below your summary, explicitly state which AI assistant you used (e.g., "AI Tool Used: ChatGPT").</li>
-            <li><strong>Chat Transcript:</strong> Paste the <em>entire</em> chat transcript below your summary, including your initial customized prompt and the AI's complete response.</li>
-        </ul>
-        <p><strong>Export this final document as a PDF to submit.</strong></p>
-
-
-        <div class="stat-submission-box" role="complementary" aria-label="Phase 1 Submission Checklist">
-            <strong>📋 Phase 1 Submission Checklist:</strong>
-            <ul class="stat-list">
-                <li><strong>Submission Link 1 (Google Sheets URL):</strong> A single Google Sheet containing your "Variable Analysis" tab, your "Documented Changes" log, and your "Cleaned Data" tab.</li>
-                <li><strong>Submission Link 2 (PDF Document):</strong> A separate PDF document containing your summary (in your own words), the name of the AI tool used, and the full pasted chat transcript (Step 4).</li>
-            </ul>
-        </div>
-
+        <!-- Phase 1 Rubric -->
         <div class="rubric-table-wrapper">
             <table class="rubric-table">
-                <caption>Phase 1 Grading Rubric (25 Points)</caption>
+                <caption>Phase 1 Grading Rubric (20 Points)</caption>
                 <thead>
                     <tr>
                         <th scope="col">Criteria</th>
-                        <th scope="col">Excellent</th>
-                        <th scope="col">Proficient</th>
-                        <th scope="col">Developing</th>
-                        <th scope="col">Beginning/Missing</th>
+                        <th scope="col">Excellent (5 pts)</th>
+                        <th scope="col">Proficient (4 pts)</th>
+                        <th scope="col">Developing (2-3 pts)</th>
+                        <th scope="col">Beginning (0-1 pts)</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row">Variable Classification (8 pts)</th>
-                        <td><strong>(8 pts)</strong> All variables are correctly identified as qualitative/quantitative and correctly classified by level of measurement (NOIR) on the Variable Analysis tab.</td>
-                        <td><strong>(6 pts)</strong> 1-2 minor classification errors.</td>
-                        <td><strong>(3 - 4 pts)</strong> Several classification errors or missing variables.</td>
-                        <td><strong>(0 - 2 pts)</strong> Mostly incorrect or missing entirely.</td>
+                        <th scope="row">Data Cleaning & Org<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1)</span></th>
+                        <td>All height data converted correctly. Frequency & Relative Frequency table included and correctly grouped by Gender.</td>
+                        <td>Minor errors in conversion. Table included but missing Relative Frequency or not grouped by Gender.</td>
+                        <td>Significant mixed units (feet/inches). Text remains in numeric columns.</td>
+                        <td>Raw data used. No frequency table.</td>
                     </tr>
                     <tr>
-                        <th scope="row">Data Cleaning & Documentation - Google Sheets (10 pts)</th>
-                        <td><strong>(10 pts)</strong> Data is thoroughly cleaned on the Cleaned Data tab (consistent units, proper capitalization). The Documented Changes tab clearly logs and justifies all modifications made. Link is accessible and uses the 3-tab format.</td>
-                        <td><strong>(7.5 pts)</strong> Mostly clean, but missed minor inconsistencies. Documentation is present but lacks some detail or justification.</td>
-                        <td><strong>(4 - 5 pts)</strong> Major cleaning steps missed, or the Documented Changes log is absent/very poor.</td>
-                        <td><strong>(0 - 2 pts)</strong> Raw data submitted without changes, or link is completely inaccessible.</td>
+                        <th scope="row">Visualization<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1)</span></th>
+                        <td>Histogram, Bar Graph, and Side-by-Side Boxplots present with correct titles, labels, and units.</td>
+                        <td>All graphs present but missing minor labels. Boxplots may not share scale.</td>
+                        <td>Incorrect graph types (e.g., Pie chart). Missing titles/units.</td>
+                        <td>Graphs missing or unreadable.</td>
                     </tr>
                     <tr>
-                        <th scope="row">AI Exploration & Reflection (7 pts)</th>
-                        <td><strong>(7 pts)</strong> PDF reflection thoughtfully addresses the AI's response in the student's own words and clearly connects statistical utility to their path. The document includes the AI tool name and the full chat transcript.</td>
-                        <td><strong>(5 pts)</strong> Reflection is present but vague or overly reliant on the AI's phrasing. Missing either the stated AI tool name or the full transcript.</td>
-                        <td><strong>(3 pts)</strong> Very brief response (1-2 sentences) lacking meaningful engagement, and/or missing the chat transcript entirely.</td>
-                        <td><strong>(0 pts)</strong> Missing entirely.</td>
+                        <th scope="row">Numerical Summaries<br><span style="font-weight:normal; font-size:0.85em;">(CLO 1)</span></th>
+                        <td>Mean, Median, Mode, Range, SD, and 5-number summary precise. Correct notation (<span class="math-symbol" aria-label="x-bar">x&#772;</span>, <span class="math-symbol" aria-label="s">s</span>).</td>
+                        <td>Calculation errors minor. Notation missing/incorrect.</td>
+                        <td>Major errors due to bad data.</td>
+                        <td>Missing summary stats.</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Statistical Argument<br><span style="font-weight:normal; font-size:0.85em;">(CLO 5)</span></th>
+                        <td>Calculation shown and correct. Interpretation explicitly mentions SDs and "unusual" status.</td>
+                        <td>Z-score correct, but calculation not shown or interpretation is generic.</td>
+                        <td>Formula applied incorrectly. Interpretation contradicts math.</td>
+                        <td>Calculation missing.</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </section>
 
-</main>
+
+</div>
 
 </body>
 </html>
