@@ -241,153 +241,172 @@
     </header>
   
 
+    <!-- Phase 3 -->
     <section class="stat-phase-section" aria-labelledby="phase3-heading">
-        <h2 id="phase3-heading" class="stat-phase-header">Phase 3: Regression, Leverage, & Probability</h2>
-        <p><strong>Focus:</strong> Correlation, outlier analysis, model refinement, and probability rules.</p>
+        <h2 id="phase3-heading" class="stat-phase-header">Phase 3: Correlation & Simple Linear Regression</h2>
+        <p><strong>Focus:</strong> Bivariate data, correlation testing, outlier identification (residuals vs. leverage), and predictive modeling.</p>
 
         <h3 class="stat-sub-header">Student Instructions</h3>
-
+        
         <div class="stat-tech-tip">
-            <strong>Data Source Check:</strong> To ensure everyone is working from the same standard, you will <strong>not</strong> use your Phase 1 Google Sheet for this section. Instead, open the <strong>"Stat2050 Cleaned Master Data"</strong> file provided by your instructor in StatCrunch.
-        </div>
-        <div class="stat-topic-divider">Part I: Linear Regression & Outlier Analysis</div>
-
-        <div class="stat-alert" role="status">
-            <strong>⚠️ Real Data Alert:</strong> Real data is messy. You may calculate an initial correlation coefficient (<span class="math-visual" aria-hidden="true">r</span><span class="sr-only">r</span>) that is close to zero. This is a normal part of the data analysis process before exploring outliers.
+            <strong>Data Source Check:</strong> Continue using the <strong>"Stat2050 Cleaned Master Data"</strong> file in StatCrunch for this phase.
         </div>
 
-        <h4>Step 1: Initial Scatterplot & Analysis</h4>
+        <h4>Step 1: Scatter Plot & Outlier Analysis (Residuals vs. Leverage)</h4>
+        <p>We want to examine the relationship between a student's height and their wingspan (arm span). In StatCrunch, construct a scatter plot using <code>Height_Inches</code> as the explanatory variable (<span class="math-visual" aria-hidden="true">x</span><span class="sr-only">x</span>) and <code>Wingspan_Inches</code> as the response variable (<span class="math-visual" aria-hidden="true">y</span><span class="sr-only">y</span>).</p>
+        
+        <ul class="stat-list">
+            <li>Ensure your scatter plot has a descriptive title and clearly labeled axes with units (inches).</li>
+        </ul>
+
+        <div style="background-color: #f8f9fa; border-left: 4px solid #0056b3; padding: 15px; margin: 15px 0;">
+            <strong style="color: #0056b3;">💡 Understanding Outliers: Residuals vs. Leverage</strong>
+            <ul class="stat-list" style="margin-top: 8px; font-size: 0.95em;">
+                <li><strong>Residuals ($y$-direction):</strong> An observation has a large residual if its $y$-value is extreme relative to the <strong>line of best fit</strong> ($\hat{y}$), <em>not</em> relative to the average $y$-value ($\bar{y}$). A point has a large residual if it falls far above or below the regression line.</li>
+                <li><strong>Leverage ($x$-direction):</strong> Leverage measures how extreme an observation's $x$-value is relative to the <strong>mean of the $x$-values</strong> ($\bar{x}$). Observations with $x$-values far from $\bar{x}$ have high leverage and exert a stronger pull on the slope of the regression line.</li>
+            </ul>
+        </div>
+
+        <p><strong>Outlier Analysis Question:</strong> Examine your scatter plot carefully. Identify the single prominent outlier in this dataset (give its approximate <span class="math-visual" aria-hidden="true">(x, y)</span> coordinates) and answer the following:</p>
         <ol class="stat-list">
-            <li><strong>Variables:</strong> Use <code>Pulse</code> as the Explanatory Variable (<span class="math-visual" aria-hidden="true">x</span><span class="sr-only">x</span>) and <code>Height_Inches</code> as the Response Variable (<span class="math-visual" aria-hidden="true">y</span><span class="sr-only">y</span>).</li>
-            <li><strong>Visualize:</strong> Generate a scatterplot that includes the line of best fit. <em>(Your plot must include a title and labeled axes).</em></li>
-            <li>
-                <strong>Calculate:</strong> Find the correlation coefficient (<span class="math-visual" aria-hidden="true">r</span><span class="sr-only">r</span>), the coefficient of determination (<span class="math-visual" aria-hidden="true">R<sup>2</sup></span><span class="sr-only">R-squared</span>), and the regression equation (<span class="math-visual" aria-hidden="true">y&#770; = ax + b</span><span class="sr-only">y-hat equals a times x plus b</span>). Record these values in your report near your scatterplot.<br>
-                <div class="rounding-rule">
-                    <strong>📐 Rounding Rules:</strong> 
-                    You must report <span class="math-visual" aria-hidden="true">r</span><span class="sr-only">r</span>, the <strong>slope</strong>, and the <strong>y-intercept</strong> to three decimal places (the thousandths place). You must report <span class="math-visual" aria-hidden="true">R<sup>2</sup></span><span class="sr-only">R-squared</span> to four decimal places.
+            <li>Does this outlier represent a large residual (extreme $y$-distance relative to the line of best fit) or high leverage (extreme $x$-distance relative to $\bar{x}$)? Explain your reasoning.</li>
+            <li>How does this specific outlier affect the visual linear pattern of the data?</li>
+        </ol>
+
+        <h4>Step 2: Linear Correlation & Critical Value Test</h4>
+        <p>Calculate the sample correlation coefficient (<span class="math-visual" aria-hidden="true">r</span><span class="sr-only">r</span>) between height and wingspan in StatCrunch.</p>
+        <p>To determine if a statistically significant linear relationship exists, compare the absolute value of your correlation coefficient (<span class="math-visual" aria-hidden="true">|r|</span><span class="sr-only">absolute value of r</span>) to the corresponding critical value from the table below based on your sample size (<span class="math-visual" aria-hidden="true">n</span><span class="sr-only">n</span>).</p>
+
+        <!-- Critical Value Table -->
+        <div class="rubric-table-wrapper" style="max-width: 500px; margin: 15px 0;">
+            <table class="rubric-table" style="min-width: 100%;">
+                <caption>Critical Values for Correlation Coefficient</caption>
+                <thead>
+                    <tr>
+                        <th scope="col" style="text-align: center;">n</th>
+                        <th scope="col" style="text-align: center;">Critical Value</th>
+                        <th scope="col" style="text-align: center;">n</th>
+                        <th scope="col" style="text-align: center;">Critical Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td style="text-align: center;">3</td><td style="text-align: center;">0.997</td><td style="text-align: center;">17</td><td style="text-align: center;">0.482</td></tr>
+                    <tr><td style="text-align: center;">4</td><td style="text-align: center;">0.950</td><td style="text-align: center;">18</td><td style="text-align: center;">0.468</td></tr>
+                    <tr><td style="text-align: center;">5</td><td style="text-align: center;">0.878</td><td style="text-align: center;">19</td><td style="text-align: center;">0.456</td></tr>
+                    <tr><td style="text-align: center;">6</td><td style="text-align: center;">0.811</td><td style="text-align: center;">20</td><td style="text-align: center;">0.444</td></tr>
+                    <tr><td style="text-align: center;">7</td><td style="text-align: center;">0.754</td><td style="text-align: center;">21</td><td style="text-align: center;">0.433</td></tr>
+                    <tr><td style="text-align: center;">8</td><td style="text-align: center;">0.707</td><td style="text-align: center;">22</td><td style="text-align: center;">0.423</td></tr>
+                    <tr><td style="text-align: center;">9</td><td style="text-align: center;">0.666</td><td style="text-align: center;">23</td><td style="text-align: center;">0.413</td></tr>
+                    <tr><td style="text-align: center;">10</td><td style="text-align: center;">0.632</td><td style="text-align: center;">24</td><td style="text-align: center;">0.404</td></tr>
+                    <tr><td style="text-align: center;">11</td><td style="text-align: center;">0.602</td><td style="text-align: center;">25</td><td style="text-align: center;">0.396</td></tr>
+                    <tr><td style="text-align: center;">12</td><td style="text-align: center;">0.576</td><td style="text-align: center;">26</td><td style="text-align: center;">0.388</td></tr>
+                    <tr><td style="text-align: center;">13</td><td style="text-align: center;">0.553</td><td style="text-align: center;">27</td><td style="text-align: center;">0.381</td></tr>
+                    <tr><td style="text-align: center;">14</td><td style="text-align: center;">0.532</td><td style="text-align: center;">28</td><td style="text-align: center;">0.374</td></tr>
+                    <tr><td style="text-align: center;">15</td><td style="text-align: center;">0.514</td><td style="text-align: center;">29</td><td style="text-align: center;">0.367</td></tr>
+                    <tr><td style="text-align: center;">16</td><td style="text-align: center;">0.497</td><td style="text-align: center;">30</td><td style="text-align: center;">0.361</td></tr>
+                </tbody>
+            </table>
+            <p style="font-size: 0.85em; margin: 5px 10px; color: #555;"><em>Note: If your sample size n > 30, use the critical value for n = 30.</em></p>
+        </div>
+
+        <p><strong>Required Question & Formal Answer:</strong></p>
+        <blockquote style="background-color: #f8f9fa; border-left: 4px solid #0056b3; padding: 12px 15px; margin: 15px 0;">
+            <strong>Does a linear relation exist between height and wingspan?</strong><br>
+            State <strong>Yes</strong> or <strong>No</strong>, report your sample size (<span class="math-visual" aria-hidden="true">n</span><span class="sr-only">n</span>), report your calculated correlation coefficient (<span class="math-visual" aria-hidden="true">r</span><span class="sr-only">r</span>), and explicitly state whether <span class="math-visual" aria-hidden="true">|r|</span> is greater than the critical value from the table.
+        </blockquote>
+
+        <h4>Step 3: Simple Linear Regression Model</h4>
+        <p>Run a Simple Linear Regression in StatCrunch with Height as <span class="math-visual" aria-hidden="true">x</span><span class="sr-only">x</span> and Wingspan as <span class="math-visual" aria-hidden="true">y</span>. Report the following in your document:</p>
+        <ol class="stat-list">
+            <li><strong>Regression Equation:</strong> Write the regression equation in the form <span class="math-visual" aria-hidden="true">y&#770; = b<sub>0</sub> + b<sub>1</sub>x</span><span class="sr-only">y-hat equals b naught plus b 1 x</span> (or <span class="math-visual" aria-hidden="true">Predicted Wingspan = Intercept + Slope &bull; Height</span>). Round values to 3 decimal places.</li>
+            <li><strong>Interpret Slope:</strong> Interpret the slope (<span class="math-visual" aria-hidden="true">b<sub>1</sub></span>) in the context of height and wingspan (e.g., "For every 1 inch increase in height, wingspan is predicted to...").</li>
+            <li><strong>Interpret Y-Intercept:</strong> Interpret the y-intercept (<span class="math-visual" aria-hidden="true">b<sub>0</sub></span>) in context. Explain whether this y-intercept makes practical sense in the real world.</li>
+            <li><strong>Coefficient of Determination:</strong> Report <span class="math-visual" aria-hidden="true">R<sup>2</sup></span><span class="sr-only">R-squared</span> (as a percentage) and interpret what percentage of the variation in wingspan is explained by height.</li>
+        </ol>
+
+        <h4>Step 4: Predictions & Personal Residual</h4>
+        <ul class="stat-list">
+            <li><strong>Prediction:</strong> Use your regression equation to predict the wingspan for a student who is <strong>68 inches tall</strong>. Show your substitution work.</li>
+            <li><strong>Personal Residual Calculation:</strong> Plug your <em>own actual height</em> into the regression equation to find your <em>predicted wingspan</em>. Then, calculate your personal residual using the formula:
+                <br>
+                <div style="text-align: center; margin: 10px 0;">
+                    <span class="math-visual" aria-hidden="true">Residual = Actual Wingspan &minus; Predicted Wingspan</span>
+                    <span class="sr-only">Residual equals Actual Wingspan minus Predicted Wingspan</span>
                 </div>
             </li>
-            <li><strong>Analyze:</strong> Based on the visual scatterplot and your <span class="math-visual" aria-hidden="true">r</span><span class="sr-only">r</span> value, briefly explain whether a linear model appears appropriate for this raw data.</li>
-        </ol>
-
-        <h4>Step 2: Identifying Suspicious Points</h4>
-        <p>Look closely at your scatterplot (or refer to boxplots from Phase 1) to identify any unusual data points.</p>
-        <ol class="stat-list">
-            <li><strong>List the Outliers:</strong> Create a list of the suspected outliers written as <strong>ordered pairs (Pulse, Height)</strong>.</li>
-            <li><strong>Evaluate:</strong> For <em>each</em> outlier, state whether it has <strong>high or low leverage</strong> (extreme in the x-direction) and whether it has a <strong>large or small residual</strong> (extreme in the y-direction).</li>
-            <li><strong>Hypothesize:</strong> Do you suspect these points are <strong>influential</strong>? (You will prove this in Step 3).</li>
-        </ol>
-
-        <div class="stat-tech-tip" role="note">
-            <strong>💻 Tech Tip: Removing Outliers without Deleting Data</strong><br>
-            If you need to remove an outlier to see how the model improves, don't delete the entire row! Find the outlier in your dataset and simply add a letter to the numerical value (e.g., change a pulse of <code>200</code> to <code>x200</code>). Statistical software will ignore the text entry, dropping it from the scatterplot calculations while keeping your dataset intact.
-        </div>
-
-        <h4>Step 3: Model Refinement & Testing Influence</h4>
-        <ol class="stat-list">
-            <li><strong>Refine:</strong> Remove the suspected outlier(s) using the tip above. <em>Note: Once extreme outliers are removed, other hidden outliers may suddenly become apparent. Repeat the removal process until you feel the model is as clean as is reasonable.</em></li>
-            <li><strong>The Final Model:</strong> Generate a <strong>new scatterplot</strong> without the outliers. Include the new line of best fit, title, and axis labels. Recalculate <span class="math-visual" aria-hidden="true">r</span><span class="sr-only">r</span>, <span class="math-visual" aria-hidden="true">R<sup>2</sup></span><span class="sr-only">R-squared</span>, and the regression equation for this new data set. <em>(Remember to follow the rounding rules from Step 1).</em></li>
-            <li><strong>Confirm Influence:</strong> Compare your new regression equation to your original one. Did the slope or intercept change drastically? Based on this, were the points you removed truly <strong>influential points</strong>?</li>
-        </ol>
-
-        <h4>Step 4: Interpretation & Predictions (Using the Refined Model)</h4>
-        
-        <div class="stat-alert" role="status" style="background-color: #e2e3e5; border-color: #d6d8db; color: #2b2f32;">
-            <strong>Note:</strong> Proceed with using your refined model to complete the following interpretations and predictions, even if a linear model ultimately does not seem like the right fit for these two variables.
-        </div>
-
-        <ol class="stat-list">
-            <li><strong>Analyze <span class="math-visual" aria-hidden="true">R<sup>2</sup></span><span class="sr-only">R-squared</span>:</strong> Write a sentence explaining exactly what your new <span class="math-visual" aria-hidden="true">R<sup>2</sup></span><span class="sr-only">R-squared</span> value tells you. You must use the statistical terms "explanatory variable" and "response variable", <strong>AND</strong> contextualize it by explicitly naming the variables (Pulse and Height) and explaining what this percentage means for the accuracy of our specific model.</li>
-            <li><strong>Contextualize the Intercept:</strong> Interpret the <strong>y-intercept</strong> of your refined equation. Does this intercept make logical sense in the real world? Why or why not? (Hint: Consider what an x-value of 0 implies).</li>
-            <li><strong>Evaluate the Causality:</strong> In this model, we are using Pulse to predict Height. Think critically about this causal direction. Does a change in your pulse *cause* a change in your height? Write a brief sentence on why choosing Height as the Explanatory variable instead might have made more logical sense.</li>
-            <li><strong>Standard Prediction:</strong> Use your refined equation to predict the height of a student who has a resting pulse of <strong>75 bpm</strong>. <em>You must show your calculations (plugging 75 into your equation) as well as the final answer.</em></li>
-            <li><strong>Personal Prediction & Residual:</strong> State your <em>actual</em> resting pulse and <em>actual</em> height. Use the equation to predict your height based on your resting pulse. Calculate your <strong>Residual</strong> (<span class="math-visual" aria-hidden="true">Actual - Predicted</span><span class="sr-only">Actual minus Predicted</span>). Interpret your residual in context (e.g., <em>"My residual is negative, so my actual height is lower than the model predicted."</em>)</li>
-        </ol>
-
-        <div class="stat-topic-divider">Part II: Probability & Methods</div>
-
-        <h4>Step 5: Probability</h4>
-        <p>Create a <strong>Two-Way Table (Contingency Table)</strong> summarizing the class data using the categorical variable for <strong>Vigorous Exercise</strong> (Rows) and the ordinal variable for <strong>Math Anxiety</strong> (Columns). Ensure your columns account for all rating levels (1 through 4).<br>
-        <em>Reminder: 1 = No Math Anxiety and 4 = High Math Anxiety.</em></p>
-        
-        <p><strong>Include this contingency table in your report.</strong> Then, calculate the following probabilities based on your table (show your un-simplified fractions as your work):</p>
-        <ul class="stat-list">
-            <li><strong>P(High Anxiety):</strong> Probability a randomly selected student has High Math Anxiety (rating of 4).</li>
-            <li><strong>P(Exercises Vigorously AND Low Anxiety):</strong> Probability of the Intersection (using anxiety rating of 1).</li>
-            <li><strong>P(Does Not Exercise Vigorously OR High Anxiety):</strong> Probability of the Union (Addition Rule).</li>
-            <li><strong>P(High Anxiety | Exercises Vigorously):</strong> The conditional probability that a student has high anxiety, <em>given</em> that they exercise vigorously.</li>
-            <li><strong>P(Exercises Vigorously | High Anxiety):</strong> The conditional probability that a student exercises vigorously, <em>given</em> that they have high math anxiety.</li>
+            <li><strong>Interpretation:</strong> Is your actual wingspan above or below what the model predicted for your height? By how many inches? Note that your residual measures your deviation from the <em>regression line</em> ($\hat{y}$), not from the class average wingspan ($\bar{y}$).</li>
         </ul>
-        
-        <h4>Step 6: Methods Section</h4>
-        <p>Briefly describe the methods/software used to generate the scatterplots, determine leverage/residuals, remove outliers, and build the probability tables. <strong>Be sure to include any supporting plots, charts, or tables that you generated to complete this phase of the project within your report.</strong></p>
+
+        <h4>Step 5: Methods Section</h4>
+        <p>Write a brief paragraph describing the StatCrunch tools and menus used to produce your scatter plot, correlation coefficient, and regression analysis.</p>
 
         <div class="stat-submission-box" role="complementary" aria-label="Phase 3 Submission Checklist">
             <strong>📋 Phase 3 Submission Checklist:</strong>
             <ul class="stat-list">
-                <li>Your <strong>Original</strong> and <strong>Refined Scatterplots</strong> (both with best-fit lines, titles, labels).</li>
-                <li>The equation, <span class="math-visual" aria-hidden="true">r</span><span class="sr-only">r</span>, and <span class="math-visual" aria-hidden="true">R<sup>2</sup></span><span class="sr-only">R-squared</span> listed clearly next to <em>each</em> scatterplot. <em>(Ensure correct rounding: 3 decimal places for equation/r, 4 decimal places for R<sup>2</sup>).</em></li>
-                <li>Written Analysis: Model appropriateness (before & after refinement) and causality reflection.</li>
-                <li>Outlier Analysis: Ordered pairs, leverage/residual assessment, and proof of influence.</li>
-                <li>Predictions: <span class="math-visual" aria-hidden="true">R<sup>2</sup></span><span class="sr-only">R-squared</span> (with context) & intercept interpretation, 75 bpm prediction (with calculations shown), and your personal residual (reporting your actual height/pulse).</li>
-                <li>Your Two-Way Contingency Table and the 5 required probability calculations.</li>
-                <li>Your Methods section paragraph (including supporting visual evidence).</li>
+                <li>Scatter plot of Height vs. Wingspan (titled, axes labeled with units).</li>
+                <li>Outlier identification (coordinates, residual vs. leverage analysis relative to $\hat{y}$ and $\bar{x}$, and impact description).</li>
+                <li>Sample correlation coefficient (<span class="math-visual" aria-hidden="true">r</span><span class="sr-only">r</span>) and comparison to critical value table.</li>
+                <li>Explicit answer (Yes/No) to "Does a linear relation exist between height and wingspan?" with numerical justification.</li>
+                <li>Regression line equation (<span class="math-visual" aria-hidden="true">y&#770;</span>), interpreted slope, interpreted y-intercept, and <span class="math-visual" aria-hidden="true">R<sup>2</sup></span> interpretation.</li>
+                <li>Predicted wingspan calculation for a 68-inch student.</li>
+                <li>Personal residual calculation and short interpretation relative to the regression line.</li>
+                <li>Methods section paragraph.</li>
             </ul>
         </div>
 
+        <!-- Phase 3 Rubric -->
         <div class="rubric-table-wrapper">
             <table class="rubric-table">
-                <caption>Instructor Grading Rubric: Phase 3 (25 Points)</caption>
+                <caption>Phase 3 Grading Rubric (25 Points)</caption>
                 <thead>
                     <tr>
                         <th scope="col">Criteria &amp; Alignment</th>
-                        <th scope="col">Excellent (5 pts)</th>
-                        <th scope="col">Proficient (4 pts)</th>
-                        <th scope="col">Developing (2 pts)</th>
-                        <th scope="col">Beginning/Missing (0 pts)</th>
+                        <th scope="col">Excellent</th>
+                        <th scope="col">Proficient</th>
+                        <th scope="col">Developing</th>
+                        <th scope="col">Beginning/Missing</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row">Scatterplots &amp; Refinement<span class="clo-tag">(CLO 3)</span></th>
-                        <td>Both plots included with correct axes, titles, labels, equations, <span class="math-visual" aria-hidden="true">r</span><span class="sr-only">r</span>, and <span class="math-visual" aria-hidden="true">R<sup>2</sup></span><span class="sr-only">R-squared</span>. Rounding rules followed.</td>
-                        <td>Missing minor visual elements or rounding rules ignored.</td>
-                        <td>Only one scatterplot included, or missing multiple visual/mathematical elements.</td>
-                        <td>Scatterplots missing entirely or illegible.</td>
+                        <th scope="row">Scatter Plot &amp; Outlier (5 pts)<span class="clo-tag">(CLO 1, CLO 3)</span></th>
+                        <td><strong>(5 pts)</strong> Scatter plot includes title and labeled axes with units. Outlier correctly identified; clearly explains whether it reflects a large residual (distance from line $\hat{y}$) or leverage (distance from mean $\bar{x}$).</td>
+                        <td><strong>(4 pts)</strong> Scatter plot present but missing title/labels. Outlier identified, but residual vs. leverage explanation is vague.</td>
+                        <td><strong>(2.5 pts)</strong> Plot is flawed or missing variables. Outlier missed or incorrectly classified.</td>
+                        <td><strong>(0 pts)</strong> Missing entirely.</td>
                     </tr>
                     <tr>
-                        <th scope="row">Outlier &amp; Leverage Analysis<span class="clo-tag">(CLO 3, CLO 5)</span></th>
-                        <td>Identifies pairs, correctly assesses leverage/residual, and proves influence by comparing equations.</td>
-                        <td>Points listed, but confuses leverage/residuals or fails to prove influence with the refined equation.</td>
-                        <td>Mentions outliers generally but provides no pairs or structural analysis.</td>
-                        <td>Outlier analysis missing.</td>
+                        <th scope="row">Correlation &amp; Critical Value Test (6 pts)<span class="clo-tag">(CLO 3, CLO 5)</span></th>
+                        <td><strong>(6 pts)</strong> Correlation <span class="math-visual" aria-hidden="true">r</span> reported. Correctly identifies critical value from table for <span class="math-visual" aria-hidden="true">n</span>. Explicitly answers Yes/No to linear relationship with accurate comparison of <span class="math-visual" aria-hidden="true">|r|</span> to critical value.</td>
+                        <td><strong>(4.5 pts)</strong> <span class="math-visual" aria-hidden="true">r</span> calculated and decision made, but fails to explicitly cite the critical value or comparison math.</td>
+                        <td><strong>(2.5 pts)</strong> Confuses <span class="math-visual" aria-hidden="true">r</span> with <span class="math-visual" aria-hidden="true">R<sup>2</sup></span>, or decision contradicts the critical value rule.</td>
+                        <td><strong>(0 pts)</strong> Missing entirely.</td>
                     </tr>
                     <tr>
-                        <th scope="row">Model Interpretation &amp; Predictions<span class="clo-tag">(CLO 3, CLO 5)</span></th>
-                        <td><span class="math-visual" aria-hidden="true">R<sup>2</sup></span><span class="sr-only">R-squared</span>, intercept, and causality logically interpreted in context. Both predictions correct (calculations shown; actuals reported). Personal residual calculated and correctly interpreted.</td>
-                        <td>Calculations correct, but arguments/interpretations are generic, or missing shown calculations/actual values for predictions.</td>
-                        <td>Used wrong equation for predictions. Statistical arguments are mathematically flawed.</td>
-                        <td>Interpretations not attempted.</td>
+                        <th scope="row">Regression Model &amp; Interpretations (6 pts)<span class="clo-tag">(CLO 3, CLO 5)</span></th>
+                        <td><strong>(6 pts)</strong> Correct equation. Slope and y-intercept interpreted accurately in context (including practical reality of intercept). <span class="math-visual" aria-hidden="true">R<sup>2</sup></span> interpreted correctly as a percentage of explained variation.</td>
+                        <td><strong>(4.5 pts)</strong> Minor rounding errors in equation. Interpretations present but slightly generic or lacking units.</td>
+                        <td><strong>(2.5 pts)</strong> Swapped explanatory/response variables, or major misinterpretations of slope/intercept/<span class="math-visual" aria-hidden="true">R<sup>2</sup></span>.</td>
+                        <td><strong>(0 pts)</strong> Missing entirely.</td>
                     </tr>
                     <tr>
-                        <th scope="row">Probability &amp; Tables<span class="clo-tag">(CLO 2)</span></th>
-                        <td>Contingency table is flawless. Union, intersection, and conditional probabilities calculated accurately with fractions shown.</td>
-                        <td>Table present but minor total errors. Minor confusion on formulas or conditional directions.</td>
-                        <td>Table constructed incorrectly. Denominators incorrect for Conditional Probabilities.</td>
-                        <td>Table or probabilities missing.</td>
+                        <th scope="row">Predictions &amp; Personal Residual (5 pts)<span class="clo-tag">(CLO 3, CLO 5)</span></th>
+                        <td><strong>(5 pts)</strong> Accurate prediction for 68" height with work shown. Personal residual correctly calculated (Actual - Predicted) with correct sign and contextual interpretation relative to line $\hat{y}$.</td>
+                        <td><strong>(4 pts)</strong> Prediction accurate. Residual calculated with minor math error or inverted sign (Predicted - Actual).</td>
+                        <td><strong>(2.5 pts)</strong> Missing prediction for 68" or personal residual work/interpretation missing.</td>
+                        <td><strong>(0 pts)</strong> Missing entirely.</td>
                     </tr>
                     <tr>
-                        <th scope="row">Methods &amp; Communication<span class="clo-tag">(CLO 5)</span></th>
-                        <td>Clear explanation of software used for regression/tables. Supporting charts/plots included. Formatted professionally (PDF).</td>
-                        <td>Tools mentioned but vague. Supporting charts may be missing. Acceptable formatting with minor layout issues.</td>
-                        <td>Methods are hard to follow. Major formatting errors.</td>
-                        <td>Missing methods or completely unreadable.</td>
+                        <th scope="row">Methods Section &amp; Formatting (3 pts)<span class="clo-tag">(CLO 5)</span></th>
+                        <td><strong>(3 pts)</strong> Clear explanation of StatCrunch tools used. Professional PDF layout, neatly formatted tables and figures.</td>
+                        <td><strong>(2 pts)</strong> Methods mentioned but brief. Minor layout issues in PDF.</td>
+                        <td><strong>(1 pts)</strong> Methods unclear or major PDF formatting flaws.</td>
+                        <td><strong>(0 pts)</strong> Missing or unreadable.</td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </section>
-
 
 </main>
 
