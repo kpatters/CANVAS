@@ -239,7 +239,6 @@
             </div>
         </div>
     </header>
-  
 
 <!-- Phase 3 -->
 <section class="stat-phase-section" aria-labelledby="phase3-heading">
@@ -262,7 +261,7 @@
             <li><strong>Variables:</strong> Use <code>Height</code> as the Explanatory Variable (<span class="math-visual" aria-hidden="true">x</span><span class="sr-only">x</span>) and <code>wingspan</code> as the Response Variable (<span class="math-visual" aria-hidden="true">y</span><span class="sr-only">y</span>).</li>
             <li><strong>Visualize:</strong> Generate a scatterplot that includes the line of best fit. <em>(Your plot must include a title and labeled axes with units in inches).</em></li>
             <li>
-                <strong>Calculate:</strong> Find the correlation coefficient (<span class="math-visual" aria-hidden="true">r</span><span class="sr-only">r</span>), the coefficient of determination (<span class="math-visual" aria-hidden="true">R<sup>2</sup></span><span class="sr-only">R-squared</span>), and the regression equation (<span class="math-visual" aria-hidden="true">y&#770; = ax + b</span><span class="sr-only">y-hat equals a times x plus b</span>). Record these values in your report near your scatterplot.<br>
+                <strong>Calculate:</strong> Find the correlation coefficient (<span class="math-visual" aria-hidden="true">r</span><span class="sr-only">r</span>), the coefficient of determination (<span class="math-visual" aria-hidden="true">R<sup>2</sup></span><span class="sr-only">R-squared</span>), and the regression equation (<span class="math-visual" aria-hidden="true">y&#770; = b<sub>0</sub> + b<sub>1</sub>x</span><span class="sr-only">y-hat equals b 0 plus b 1 x</span> or <span class="math-visual" aria-hidden="true">Predicted wingspan = Intercept + Slope &bull; Height</span>). Record these values in your report near your scatterplot.<br>
                 <div class="rounding-rule">
                     <strong>📐 Rounding Rules:</strong> 
                     You must report <span class="math-visual" aria-hidden="true">r</span><span class="sr-only">r</span>, the <strong>slope</strong>, and the <strong>y-intercept</strong> to three decimal places (the thousandths place). You must report <span class="math-visual" aria-hidden="true">R<sup>2</sup></span><span class="sr-only">R-squared</span> to four decimal places.
@@ -310,6 +309,15 @@
 
         <h4>Step 2: Identifying Suspicious Points</h4>
         <p>Look closely at your scatterplot to identify any unusual data points.</p>
+        
+        <div style="background-color: #f8f9fa; border-left: 4px solid #0056b3; padding: 12px 15px; margin: 15px 0; font-size: 0.95em;">
+            <strong>💡 Conceptual Reminder: Leverage vs. Residuals</strong>
+            <ul style="margin: 5px 0 0 20px; padding: 0;">
+                <li><strong>Leverage:</strong> Measures how extreme an $x$-value is relative to the <em>mean of the $x$-values</em> ($\bar{x}$).</li>
+                <li><strong>Residual:</strong> Measures how far a $y$-value falls from the <em>regression line</em> ($\hat{y}$), not from the mean of $y$ ($\bar{y}$).</li>
+            </ul>
+        </div>
+
         <ol class="stat-list">
             <li><strong>List the Outliers:</strong> Create a list of the suspected outliers written as <strong>ordered pairs (Height, wingspan)</strong>.</li>
             <li><strong>Evaluate:</strong> For <em>each</em> outlier, state whether it has <strong>high or low leverage</strong> (extreme in the x-direction) and whether it has a <strong>large or small residual</strong> (extreme in the y-direction).</li>
@@ -337,7 +345,7 @@
         <ol class="stat-list">
             <li><strong>Analyze <span class="math-visual" aria-hidden="true">R<sup>2</sup></span><span class="sr-only">R-squared</span>:</strong> Write a sentence explaining exactly what your new <span class="math-visual" aria-hidden="true">R<sup>2</sup></span><span class="sr-only">R-squared</span> value tells you. You must use the statistical terms "explanatory variable" and "response variable", <strong>AND</strong> contextualize it by explicitly naming the variables (Height and wingspan) and explaining what this percentage means for the accuracy of our specific model.</li>
             <li><strong>Contextualize the Intercept:</strong> Interpret the <strong>y-intercept</strong> of your refined equation. Does this intercept make logical sense in the real world? Why or why not? (Hint: Consider what an x-value of 0 implies).</li>
-            <li><strong>Evaluate the Biological Relationship:</strong> In this model, we are using Height to predict wingspan. Think critically about this relationship. Does it make biological sense that height and wingspan are strongly related? How about causality, meaning, does a change in your Height *cause* a change in your wingspan?</li>
+            <li><strong>Evaluate the Biological Relationship:</strong> In this model, we are using Height to predict wingspan. Think critically about this relationship. Does it make biological sense that height and wingspan are strongly related? How about causality—meaning, does a change in your Height *cause* a change in your wingspan?</li>
             <li><strong>Standard Prediction:</strong> Use your refined equation to predict the wingspan of a student who has a height of <strong>68 inches</strong>. <em>You must show your calculations (plugging 68 into your equation) as well as the final answer.</em></li>
             <li><strong>Personal Prediction & Residual:</strong> State your <em>actual</em> height and <em>actual</em> wingspan. Use the equation to predict your wingspan based on your height. Calculate your <strong>Residual</strong> (<span class="math-visual" aria-hidden="true">Actual - Predicted</span><span class="sr-only">Actual minus Predicted</span>). Interpret your residual in context (e.g., <em>"My residual is negative, so my actual wingspan is shorter than the model predicted for my height."</em>)</li>
         </ol>
@@ -346,7 +354,7 @@
 
         <h4>Step 5: Probability</h4>
         <p>Create a <strong>Two-Way Table (Contingency Table)</strong> summarizing the class data using the categorical variable for <strong>Vigorous Exercise</strong> (Rows) and the ordinal variable for <strong>Math Anxiety</strong> (Columns). Ensure your columns account for all rating levels (1 through 4).<br>
-        <em>Reminder: 1 = No Math Anxiety and 4 = High Math Anxiety.</em></p>
+        <em>Reminder: 1 = No/Low Math Anxiety and 4 = High Math Anxiety.</em></p>
         
         <p><strong>Include this contingency table in your report.</strong> Then, calculate the following probabilities based on your table (show your un-simplified fractions as your work):</p>
         <ul class="stat-list">
