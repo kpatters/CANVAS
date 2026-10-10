@@ -241,10 +241,10 @@
     </header>
   
 
-    <!-- Phase 3 -->
+<!-- Phase 3 -->
     <section class="stat-phase-section" aria-labelledby="phase3-heading">
         <h2 id="phase3-heading" class="stat-phase-header">Phase 3: Correlation & Simple Linear Regression</h2>
-        <p><strong>Focus:</strong> Bivariate data, correlation testing, outlier identification (residuals vs. leverage), and predictive modeling.</p>
+        <p><strong>Focus:</strong> Bivariate data, correlation testing, outlier identification, and predictive modeling.</p>
 
         <h3 class="stat-sub-header">Student Instructions</h3>
         
@@ -252,26 +252,12 @@
             <strong>Data Source Check:</strong> Continue using the <strong>"Stat2050 Cleaned Master Data"</strong> file in StatCrunch for this phase.
         </div>
 
-        <h4>Step 1: Scatter Plot & Outlier Analysis (Residuals vs. Leverage)</h4>
+        <h4>Step 1: Scatter Plot & Outlier Identification</h4>
         <p>We want to examine the relationship between a student's height and their wingspan (arm span). In StatCrunch, construct a scatter plot using <code>Height_Inches</code> as the explanatory variable (<span class="math-visual" aria-hidden="true">x</span><span class="sr-only">x</span>) and <code>Wingspan_Inches</code> as the response variable (<span class="math-visual" aria-hidden="true">y</span><span class="sr-only">y</span>).</p>
-        
         <ul class="stat-list">
             <li>Ensure your scatter plot has a descriptive title and clearly labeled axes with units (inches).</li>
+            <li><strong>Outlier Analysis:</strong> Examine your plot carefully. There is <strong>one prominent outlier</strong> in this dataset. Identify the data point (give its approximate <span class="math-visual" aria-hidden="true">(x, y)</span> coordinates) and write 1-2 sentences commenting on how this outlier affects the visual linear pattern of the data.</li>
         </ul>
-
-        <div style="background-color: #f8f9fa; border-left: 4px solid #0056b3; padding: 15px; margin: 15px 0;">
-            <strong style="color: #0056b3;">💡 Understanding Outliers: Residuals vs. Leverage</strong>
-            <ul class="stat-list" style="margin-top: 8px; font-size: 0.95em;">
-                <li><strong>Residuals ($y$-direction):</strong> An observation has a large residual if its $y$-value is extreme relative to the <strong>line of best fit</strong> ($\hat{y}$), <em>not</em> relative to the average $y$-value ($\bar{y}$). A point has a large residual if it falls far above or below the regression line.</li>
-                <li><strong>Leverage ($x$-direction):</strong> Leverage measures how extreme an observation's $x$-value is relative to the <strong>mean of the $x$-values</strong> ($\bar{x}$). Observations with $x$-values far from $\bar{x}$ have high leverage and exert a stronger pull on the slope of the regression line.</li>
-            </ul>
-        </div>
-
-        <p><strong>Outlier Analysis Question:</strong> Examine your scatter plot carefully. Identify the single prominent outlier in this dataset (give its approximate <span class="math-visual" aria-hidden="true">(x, y)</span> coordinates) and answer the following:</p>
-        <ol class="stat-list">
-            <li>Does this outlier represent a large residual (extreme $y$-distance relative to the line of best fit) or high leverage (extreme $x$-distance relative to $\bar{x}$)? Explain your reasoning.</li>
-            <li>How does this specific outlier affect the visual linear pattern of the data?</li>
-        </ol>
 
         <h4>Step 2: Linear Correlation & Critical Value Test</h4>
         <p>Calculate the sample correlation coefficient (<span class="math-visual" aria-hidden="true">r</span><span class="sr-only">r</span>) between height and wingspan in StatCrunch.</p>
@@ -334,7 +320,7 @@
                     <span class="sr-only">Residual equals Actual Wingspan minus Predicted Wingspan</span>
                 </div>
             </li>
-            <li><strong>Interpretation:</strong> Is your actual wingspan above or below what the model predicted for your height? By how many inches? Note that your residual measures your deviation from the <em>regression line</em> ($\hat{y}$), not from the class average wingspan ($\bar{y}$).</li>
+            <li><strong>Interpretation:</strong> Is your actual wingspan above or below what the model predicted for your height? By how many inches?</li>
         </ul>
 
         <h4>Step 5: Methods Section</h4>
@@ -344,12 +330,12 @@
             <strong>📋 Phase 3 Submission Checklist:</strong>
             <ul class="stat-list">
                 <li>Scatter plot of Height vs. Wingspan (titled, axes labeled with units).</li>
-                <li>Outlier identification (coordinates, residual vs. leverage analysis relative to $\hat{y}$ and $\bar{x}$, and impact description).</li>
+                <li>Outlier identification (coordinates and description of visual impact).</li>
                 <li>Sample correlation coefficient (<span class="math-visual" aria-hidden="true">r</span><span class="sr-only">r</span>) and comparison to critical value table.</li>
                 <li>Explicit answer (Yes/No) to "Does a linear relation exist between height and wingspan?" with numerical justification.</li>
                 <li>Regression line equation (<span class="math-visual" aria-hidden="true">y&#770;</span>), interpreted slope, interpreted y-intercept, and <span class="math-visual" aria-hidden="true">R<sup>2</sup></span> interpretation.</li>
                 <li>Predicted wingspan calculation for a 68-inch student.</li>
-                <li>Personal residual calculation and short interpretation relative to the regression line.</li>
+                <li>Personal residual calculation and short interpretation.</li>
                 <li>Methods section paragraph.</li>
             </ul>
         </div>
@@ -370,9 +356,9 @@
                 <tbody>
                     <tr>
                         <th scope="row">Scatter Plot &amp; Outlier (5 pts)<span class="clo-tag">(CLO 1, CLO 3)</span></th>
-                        <td><strong>(5 pts)</strong> Scatter plot includes title and labeled axes with units. Outlier correctly identified; clearly explains whether it reflects a large residual (distance from line $\hat{y}$) or leverage (distance from mean $\bar{x}$).</td>
-                        <td><strong>(4 pts)</strong> Scatter plot present but missing title/labels. Outlier identified, but residual vs. leverage explanation is vague.</td>
-                        <td><strong>(2.5 pts)</strong> Plot is flawed or missing variables. Outlier missed or incorrectly classified.</td>
+                        <td><strong>(5 pts)</strong> Scatter plot includes title and labeled axes with units. Outlier correctly identified with coordinates and thoughtful description of its impact.</td>
+                        <td><strong>(4 pts)</strong> Scatter plot present but missing title/labels. Outlier identified but impact is vague.</td>
+                        <td><strong>(2.5 pts)</strong> Plot is flawed or missing variables. Outlier missed or incorrectly identified.</td>
                         <td><strong>(0 pts)</strong> Missing entirely.</td>
                     </tr>
                     <tr>
@@ -391,7 +377,7 @@
                     </tr>
                     <tr>
                         <th scope="row">Predictions &amp; Personal Residual (5 pts)<span class="clo-tag">(CLO 3, CLO 5)</span></th>
-                        <td><strong>(5 pts)</strong> Accurate prediction for 68" height with work shown. Personal residual correctly calculated (Actual - Predicted) with correct sign and contextual interpretation relative to line $\hat{y}$.</td>
+                        <td><strong>(5 pts)</strong> Accurate prediction for 68" height with work shown. Personal residual correctly calculated (Actual - Predicted) with correct sign and contextual interpretation.</td>
                         <td><strong>(4 pts)</strong> Prediction accurate. Residual calculated with minor math error or inverted sign (Predicted - Actual).</td>
                         <td><strong>(2.5 pts)</strong> Missing prediction for 68" or personal residual work/interpretation missing.</td>
                         <td><strong>(0 pts)</strong> Missing entirely.</td>
